@@ -1,6 +1,9 @@
 # Similar to guessing game played before, but instead of only having two guesses or 3 etc, we want to
 # guess until we get right -> so no repeated ifs
 import random
+import nltk
+from itertools import product
+from nltk.corpus import reuters
 
 guess = int(input("Please guess a number: "))
 correct = random.randint(1,10)
@@ -133,9 +136,6 @@ while low != high:
                      'Should I go higher or lower or am I correct '.format(guess)).casefold()
     guesses += 1
     # This is how pass would be used if we wrote the actual logic later on
-    # if high_low == 'higher':
-    #     # Guess higher - the low end of range becomes 1 greater than guess
-    #     pass
     if high_low == 'higher':
         # Guess higher - the low end of range becomes 1 greater than guess
         low = guess + 1
@@ -153,7 +153,6 @@ else:
     print('I got it in {} guesses'.format(guesses))
 
 ## Use else with the loop the same way you do with for loops
-
 available_exits = ['west','east','south','north']
 chosen_exit = " "
 while chosen_exit not in available_exits:
@@ -163,7 +162,6 @@ while chosen_exit not in available_exits:
         break
 else:
     print("You escaped")
-
 
 print('Hello my name\t is Eoin. What are\n you doing\n today')
 
@@ -198,47 +196,41 @@ while choice != 0:
         print('Exiting...')
         break
 
+print('Please choose options from list below: ')
+print('1:\tLearn Python')
+print('2:\tLearn Java')
+print('3:\tLearn KDB')
+print('4:\tEat Dinner')
+print('5:\tExit')
+choice= "-"
+while True:
+    if choice == '0':
+        break
+    elif choice in "12345":
+        print('You chose {}'.format(choice))
+    else:
+        print('Please choose options from list below: ')
+        print('1:\tLearn Python')
+        print('2:\tLearn Java')
+        print('3:\tLearn KDB')
+        print('4:\tEat Dinner')
+        print('5:\tExit')
+    choice = input()
 
-# His go at it
-# print('Please choose options from list below: ')
-# print('1:\tLearn Python')
-# print('2:\tLearn Java')
-# print('3:\tLearn KDB')
-# print('4:\tEat Dinner')
-# print('5:\tExit')
-# choice= "-"
-# while True:
-#     if choice == '0':
-#         break
-#     elif choice in "12345":
-#         print('You chose {}'.format(choice))
-#     else:
-#         print('Please choose options from list below: ')
-#         print('1:\tLearn Python')
-#         print('2:\tLearn Java')
-#         print('3:\tLearn KDB')
-#         print('4:\tEat Dinner')
-#         print('5:\tExit')
-#     choice = input()
-#
-#
-
-# while choice != 0:
-#     if choice in "12345":
-#         print('You chose {}'.format(choice))
-#     else:
-#         print('Please choose options from list below: ')
-#         print('1:\tLearn Python')
-#         print('2:\tLearn Java')
-#         print('3:\tLearn KDB')
-#         print('4:\tEat Dinner')
-#         print('5:\tExit')
-#     choice = input()
+while choice != 0:
+    if choice in "12345":
+        print('You chose {}'.format(choice))
+    else:
+        print('Please choose options from list below: ')
+        print('1:\tLearn Python')
+        print('2:\tLearn Java')
+        print('3:\tLearn KDB')
+        print('4:\tEat Dinner')
+        print('5:\tExit')
+    choice = input()
 
 
-import nltk
-from itertools import product
-from nltk.corpus import reuters
+
 corpus = [w.casefold() for w in reuters.words() if len(w)== 5]
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
