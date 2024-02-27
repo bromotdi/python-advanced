@@ -1,38 +1,32 @@
-# # Start with if statements
-# name =input("Enter your name: ")
-# age = int(input("How old are you, {0}? ".format(name)))
-#
-#
-# # if age >= 18:
-# #     print("You are old enough to vote at {}".format(age))
-# #     print("Please put an X in the box")
-# # else:
-# #     print("Please come back in {} years".format(18-age))
-#
-# # Elif
-# # Set a breakpoint by clicking in the margin and getting the red dot
-# if age<18:
-#     print("Please come back in {} years".format(18-age))
-# elif age== 900:
-#     print("Sorry Yoda you died in Return of the Jedi")
-# else:
-#     print('You are old enough to vote')
-#     print("Please put an X in the box")
+name =input("Enter your name: ")
+age = int(input("How old are you, {0}? ".format(name)))
 
-# HUUUUGE feature, multi line comment out - do ctrl + slash on highlighted block to comment out it all
+if age >= 18:
+    print("You are old enough to vote at {}".format(age))
+    print("Please put an X in the box")
+else:
+    print("Please come back in {} years".format(18-age))
 
+# Set a breakpoint by clicking in the margin and getting the red dot
+if age<18:
+    print("Please come back in {} years".format(18-age))
+elif age== 900:
+    print("Sorry Yoda you died in Return of the Jedi")
+else:
+    print('You are old enough to vote')
+    print("Please put an X in the box")
 
 # # Guessing game
-# answer = 5
-#
-# print("Please guess a number between 1 and 10: ")
-# guess = int(input())
-# if guess < answer:
-#     print("Please guess higher")
-# elif guess > answer:
-#     print("Please guess lower")
-# else:
-#     print('You guessed correctly')
+answer = 5
+
+print("Please guess a number between 1 and 10: ")
+guess = int(input())
+if guess < answer:
+    print("Please guess higher")
+elif guess > answer:
+    print("Please guess lower")
+else:
+    print('You guessed correctly')
 
 
 #################
