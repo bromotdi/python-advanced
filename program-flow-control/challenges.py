@@ -1,5 +1,7 @@
-# Similar to guessing game played before, but instead of only having two guesses or 3 etc, we want to
-# guess until we get right -> so no repeated ifs
+# Similar to guessing game played before, 
+# but instead of only having two guesses or 3 etc, 
+# we want to guess until we get right -> so no repeated ifs
+
 import random
 import nltk
 from itertools import product
@@ -39,7 +41,6 @@ while guess != answer:
         print('Too high, guess lower')
     else:
         print('Too low, guess higher')
-
 
 ## Binary chop - let computer guess a number
 
