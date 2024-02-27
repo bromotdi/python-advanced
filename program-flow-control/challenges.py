@@ -21,73 +21,66 @@ while guess != correct:
 if guess==correct:
     print('You guessed correctly! It took you {} tries'.format(guess_number))
 
-
-# His code
 answer = random.randint(1,1000)
-#print(answer)
 guess = 0
 guess_number = 0
-# while guess != answer:
-#     guess = int(input('Pick a number '))
-#     guess_number += 1
-#     if guess == 0:
-#         print('Exiting....')
-#         break
-#     if guess == answer:
-#         print('You guessed correctly, it took you {} tries'.format(guess_number))
-#     elif guess > answer:
-#         print('Too high, guess lower')
-#     else:
-#         print('Too low, guess higher')
+while guess != answer:
+    guess = int(input('Pick a number '))
+    guess_number += 1
+    if guess == 0:
+        print('Exiting....')
+        break
+    if guess == answer:
+        print('You guessed correctly, it took you {} tries'.format(guess_number))
+    elif guess > answer:
+        print('Too high, guess lower')
+    else:
+        print('Too low, guess higher')
 
 
-# Binary chop - let computer guess a number
+## Binary chop - let computer guess a number
 
-# high = 1000
-# low = 1
-# print("Please think of a number between {1} and {0}".format(high,low))
-# input("Press Enter to start: ") # Just so we can hang proc until inputs
-# guess_number = 0
-# answer = 468
-# while True:
-#     guess = low + (high -low) // 2 # midpoint
-#     guess_number += 1
-#     direction = input('Should cpu go higher or lower? The guess is {}: '.format(guess)).casefold()
-#     if direction == 'higher':
-#        low = guess
-#     if direction == 'lower':
-#         high = guess
-#     if guess == answer:
-#         print('The machine guessed it, it took {} attempts'.format(guess_number))
-#         break
+high = 1000
+low = 1
+print("Please think of a number between {1} and {0}".format(high,low))
+input("Press Enter to start: ") # Just so we can hang proc until inputs
+guess_number = 0
+answer = 468
+while True:
+    guess = low + (high -low) // 2 # midpoint
+    guess_number += 1
+    direction = input('Should cpu go higher or lower? The guess is {}: '.format(guess)).casefold()
+    if direction == 'higher':
+       low = guess
+    if direction == 'lower':
+        high = guess
+    if guess == answer:
+        print('The machine guessed it, it took {} attempts'.format(guess_number))
+        break
 
-
-# low = 1
-# high = 1000
-# print('Please think of a number between {} and {}'.format(low,high))
-# input('Press enter to start: ')
-# guesses = 0
-# while True:
-#     print('\tGuessing in the range of {} to {}'.format(low,high))
-#     guess = low +(high-low) //2
-#     high_low = input('My guess is {}. '
-#                      'Should I go higher or lower or am I correct '.format(guess)).casefold()
-#     guesses += 1
-#     # This is how pass would be used if we wrote the actual logic later on
-#     # if high_low == 'higher':
-#     #     # Guess higher - the low end of range becomes 1 greater than guess
-#     #     pass
-#     if high_low == 'higher':
-#         # Guess higher - the low end of range becomes 1 greater than guess
-#         low = guess + 1
-#     elif high_low =='lower':
-#         # Guess lower - the high end of the range becomes 1 less than guess
-#         high = guess - 1
-#     elif high_low == 'correct':
-#         print('Correct! I got it in {} guesses'.format(guesses))
-#         break
-#     else:
-#         print('Choices are only higher,lower or correct')
+low = 1
+high = 1000
+print('Please think of a number between {} and {}'.format(low,high))
+input('Press enter to start: ')
+guesses = 0
+while True:
+    print('\tGuessing in the range of {} to {}'.format(low,high))
+    guess = low +(high-low) //2
+    high_low = input('My guess is {}. '
+                     'Should I go higher or lower or am I correct '.format(guess)).casefold()
+    guesses += 1
+    # This is how pass would be used if we wrote the actual logic later on
+    if high_low == 'higher':
+        # Guess higher - the low end of range becomes 1 greater than guess
+        low = guess + 1
+    elif high_low =='lower':
+        # Guess lower - the high end of the range becomes 1 less than guess
+        high = guess - 1
+    elif high_low == 'correct':
+        print('Correct! I got it in {} guesses'.format(guesses))
+        break
+    else:
+        print('Choices are only higher,lower or correct')
 
 
 ## Augmented assignment - literally just using +=. It's binary operation combined with assignment
@@ -96,7 +89,6 @@ guess_number = 0
 x = 'Good '
 x+= 'Morning'
 print(x)
-
 
 # exercise
 number = 7
