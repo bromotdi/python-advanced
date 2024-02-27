@@ -43,7 +43,6 @@ while guess != answer:
         print('Too low, guess higher')
 
 ## Binary chop - let computer guess a number
-
 high = 1000
 low = 1
 print("Please think of a number between {1} and {0}".format(high,low))
@@ -67,6 +66,7 @@ high = 1000
 print('Please think of a number between {} and {}'.format(low,high))
 input('Press enter to start: ')
 guesses = 0
+
 while True:
     print('\tGuessing in the range of {} to {}'.format(low,high))
     guess = low +(high-low) //2
@@ -87,14 +87,14 @@ while True:
         print('Choices are only higher,lower or correct')
 
 
-## Augmented assignment - literally just using +=. It's binary operation combined with assignment
+## Augmented assignment - literally just using +=. 
+# It's binary operation combined with assignment
 # So +,-,*,/ all binary: (x+y)
 
 x = 'Good '
 x+= 'Morning'
 print(x)
 
-# exercise
 number = 7
 multiplier = 3
 answer = 0
@@ -110,8 +110,9 @@ print("*"*80)
 # v contrived example
 
 numbers = [1,45,32,12,60]
-# Here the else only fires on a successful loop through all elements, if break happens at all we wont see the else
-#  clause
+# Here the else only fires on a successful loop through all elements, 
+# if break happens at all we wont see the else
+# clause
 for num in numbers:
     if number % 8 == 0:
         #reject the list
@@ -119,7 +120,6 @@ for num in numbers:
         break
 else:
     print('These numbers are ok')
-
 
 # Using this version of else in high low game.
 # Will only work with some numbers where convergence is possible
@@ -187,9 +187,10 @@ while choice != 0:
     choice = int(input(options_msg))
     while not choice in valid_options:
         print('Invalid choice, please choose again')
-        # Could argue this is not necessary, diff between loop til you pick a valid option vs just printing the
-        # message again. Think behaviour resolves to same so maybe secondary loop not necessary and could do
-        # as below ?
+        # Could argue this is not necessary, diff between loop til 
+        # you pick a valid option vs just printing the
+        # message again. Think behaviour resolves to same so maybe secondary 
+        # loop not necessary and could do as below?
         choice = int(input(options_msg))
     if choice>0:
         print('You chose option {}'.format(choice))
