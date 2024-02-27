@@ -229,8 +229,6 @@ while choice != 0:
         print('5:\tExit')
     choice = input()
 
-
-
 corpus = [w.casefold() for w in reuters.words() if len(w)== 5]
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -240,9 +238,7 @@ three = alphabet
 four = ''.join([l for l in alphabet if not l in "pnle"])
 five = 'd'
 
-
 loop=0
-# Wordle
 print('Have letters [s][][][][d]')
 print("-"*80)
 for a,b,c,d,e in product (one, two, three, four, five):
@@ -252,5 +248,3 @@ for a,b,c,d,e in product (one, two, three, four, five):
         print(a+b+c+d+e)
     if loop % 2000 == 0:
         print('{} letter combinations checked'.format(loop))
-
-
