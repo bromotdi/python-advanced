@@ -86,7 +86,6 @@ while True:
     else:
         print('Choices are only higher,lower or correct')
 
-
 ## Augmented assignment - literally just using +=. 
 # It's binary operation combined with assignment
 # So +,-,*,/ all binary: (x+y)
