@@ -29,27 +29,26 @@ else:
     print('You guessed correctly')
 
 
-#################
-# print("Please guess a number between 1 and 10: ")
-# answer = 5
-# # Add a second guess
-# guess = int(input())
-# if guess < answer:
-#     print("Please guess higher")
-#     guess = int(input('Please guess again: '))
-#     if guess == answer:
-#         print("Well done you guessed it")
-#     else:
-#         print('Wrong again ')
-# elif guess > answer:
-#     print("Please guess lower")
-#     guess = int(input('Please guess again: '))
-#     if guess == answer:
-#         print("Well done you guessed it")
-#     else:
-#         print('Wrong again')
-# else:
-#     print('You guessed correctly')
+print("Please guess a number between 1 and 10: ")
+answer = 5
+# Add a second guess
+guess = int(input())
+if guess < answer:
+    print("Please guess higher")
+    guess = int(input('Please guess again: '))
+    if guess == answer:
+        print("Well done you guessed it")
+    else:
+        print('Wrong again ')
+elif guess > answer:
+    print("Please guess lower")
+    guess = int(input('Please guess again: '))
+    if guess == answer:
+        print("Well done you guessed it")
+    else:
+        print('Wrong again')
+else:
+    print('You guessed correctly')
 
 # Change it to be simplified
 # answer = 5
