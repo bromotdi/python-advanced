@@ -2,7 +2,6 @@
 # guess until we get right -> so no repeated ifs
 import random
 
-# my way
 guess = int(input("Please guess a number: "))
 correct = random.randint(1,10)
 print('Correct answer is {}'.format(correct))
