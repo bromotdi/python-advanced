@@ -127,27 +127,26 @@ if found_at is not None:
 else:
     print("item not found")
 
-#########################################
+
 # While loops - loop while some condition is true and stop when its false
 print("*"*80)
-print("*"*80)
-##########################
-# for i in range(10):
-#     print("i is now {}".format(i))
+
+for i in range(10):
+    print("i is now {}".format(i))
+    
 i= 0
 while i<10:
     print("i is now {}".format(i))
     i+=1
 
-
-
-## Adventure game for getting out of maze
+# Adventure game for getting out of maze
 available_exits =['North','South','East','West']
+
 # have to initialse it because of the way we created the list
-# chosen_exit = " "
-# while chosen_exit not in available_exits:
-#     chosen_exit = input("Please choose a direction: ")
-# print("You escaped")
+chosen_exit = " "
+while chosen_exit not in available_exits:
+    chosen_exit = input("Please choose a direction: ")
+print("You escaped")
 
 
 # Improving game with break
