@@ -1,6 +1,7 @@
 import nltk
 from itertools import product
 from nltk.corpus import reuters
+
 corpus = [w.casefold() for w in reuters.words() if len(w)== 5]
 corpus.append('shard')
 
@@ -12,7 +13,7 @@ four = ''.join([l for l in alphabet if not l in "pnle"])
 five = 'd'
 
 loop=0
-# Wordle
+
 print('Have letters [s][][][][d]')
 print("-"*80)
 for a,b,c,d,e in product (one, two, three, four, five):
