@@ -151,17 +151,15 @@ available_exits =['North','South','East','West']
 
 
 # Improving game with break
-# chosen_exit = " "
-# while chosen_exit not in available_exits:
-#     chosen_exit = input("Please choose a direction: ")
-#     if chosen_exit.casefold() =='quit':
-#         print('You gave up')
-#         break
-# print("You escaped")
+chosen_exit = " "
+while chosen_exit not in available_exits:
+    chosen_exit = input("Please choose a direction: ")
+    if chosen_exit.casefold() =='quit':
+        print('You gave up')
+        break
+print("You escaped")
 
 for i in range(0, 100, 7):
     print(i)
     if i>0 and i%11==0:
         break
-
-# numbers that arent divisble by 3 or 5
