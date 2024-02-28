@@ -77,10 +77,9 @@ for i in range(1,12+1):
         print("{} times {} is {}".format(i,j,i*j))
     print("#"*80)
 
-
-
 # Look at lists and their use for for loops - specifically continue & break
 shopping = ['milk','pasta','eggs','spam','bread','rice']
+
 # one way to print our list avoiding spam
 for item in shopping:
     if item != "spam":
@@ -112,11 +111,11 @@ for index in range(len(shopping)):
         break
 print("Item found at position {}".format(found_at))
 
-# for i,item in enumerate(shopping):
-#     if item == item_to_find:
-#         found_at = i
-#         break
-# print('found item at index {}'.format(found_at))
+for i,item in enumerate(shopping):
+    if item == item_to_find:
+        found_at = i
+        break
+print('found item at index {}'.format(found_at))
 
 ## Of course a much simpler way of doing all of this is
 print("*"*80)
