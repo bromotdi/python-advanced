@@ -1,7 +1,7 @@
 # Start looking at for loops
 
 # The set of values for a for loop must come from an iterable or some sequence
-#anything we can iterate over (eg string which is sequence) - is an iterable
+#  anything we can iterate over (eg string which is sequence) - is an iterable
 parrot = 'Norwegian Blue'
 for char in parrot:
     print(char)
@@ -16,9 +16,11 @@ separators = number[1::4]
 values = "".join(char if char not in separators else " " for char in number).split()
 print([int(val) for val in values])
 print('-'*80)
+
 # Do it another way with for loop
 # Get the separators quickly
-# Why do we initialise this ? - because we're going to add to this using +=
+# Why do we initialise this ? 
+# - because we're going to add to this using +=
 separators = ""
 for char in number:
     if not char.isnumeric():
