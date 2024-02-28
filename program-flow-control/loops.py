@@ -106,7 +106,8 @@ found_at = None
 
 for index in range(len(shopping)):
     if shopping[index] == item_to_find:
-        # We initialised found_at, so if we never found it we would print something instead of variable not found error
+        # We initialised found_at, so if we never found it 
+        # We would print something instead of variable not found error
         found_at = index
         break
 print("Item found at position {}".format(found_at))
@@ -146,7 +147,6 @@ chosen_exit = " "
 while chosen_exit not in available_exits:
     chosen_exit = input("Please choose a direction: ")
 print("You escaped")
-
 
 # Improving game with break
 chosen_exit = " "
