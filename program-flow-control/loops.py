@@ -64,11 +64,11 @@ print('-'*80)
 # Interesting you can step backwards
 for i in range(10,2,-2):
     print("i is {}".format(i))
+
 # range also works with "in"as boolean test
 age = 20
 if age in range(40):
     print("Age is in the range")
-
 
 ## Nested for loops
 # Do a times times tables
