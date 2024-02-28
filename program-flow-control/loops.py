@@ -70,7 +70,7 @@ age = 20
 if age in range(40):
     print("Age is in the range")
 
-## Nested for loops
+# Nested for loops
 # Do a times times tables
 for i in range(1,12+1):
     for j in range(1,12+1):
@@ -117,7 +117,7 @@ for i,item in enumerate(shopping):
         break
 print('found item at index {}'.format(found_at))
 
-## Of course a much simpler way of doing all of this is
+# Of course a much simpler way of doing all of this is
 print("*"*80)
 found_at= None
 if item_to_find in shopping:
@@ -126,7 +126,6 @@ if found_at is not None:
     print("Item found at index {}".format(found_at))
 else:
     print("item not found")
-
 
 # While loops - loop while some condition is true and stop when its false
 print("*"*80)
