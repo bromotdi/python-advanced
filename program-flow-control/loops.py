@@ -27,16 +27,16 @@ for char in number:
 print(separators)
 
 
+# Now do amethod which takes user input
+number = input('Please enter a large number separated by any separators: ')
+separators =""
+for char in number:
+    if not char.isnumeric():
+        separators += char
+#print(separators)
+values = "".join(char if char not in separators else " " for char in number).split()
+print(sum([int(val) for val in values]))
 
-# # Now do amethod which takes user input
-# number = input('Please enter a large number separated by any separators: ')
-# separators =""
-# for char in number:
-#     if not char.isnumeric():
-#         separators += char
-# #print(separators)
-# values = "".join(char if char not in separators else " " for char in number).split()
-# print(sum([int(val) for val in values]))
 print("*"*80)
 quote = """
 Alright, but apart from the Sanitation, the Medicine, Education, Wine,
