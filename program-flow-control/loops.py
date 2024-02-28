@@ -1,17 +1,16 @@
 # Start looking at for loops
 
 # The set of values for a for loop must come from an iterable or some sequence
-#  anything we can iterate over (eg string which is sequence) - is an iterable
+# anything we can iterate over (eg string which is sequence) - is an iterable
 parrot = 'Norwegian Blue'
 for char in parrot:
     print(char)
 print('-'*80)
 
-
 # Long winded way of stripping out numbers
 number = "9,223;372:036 854,775;807"
 separators = number[1::4]
-#print(separators)
+print(separators)
 
 values = "".join(char if char not in separators else " " for char in number).split()
 print([int(val) for val in values])
