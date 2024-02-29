@@ -11,15 +11,8 @@ another_result = result
 
 print(id(result))
 print(id(another_result))
+
 # Strings are immutable, when we add the extra chars a new string is created under the hood, old still exists 
 result += "ish"
 print(id(result))
 print(id(another_result))
-
-
-
-
-
-
-
-
