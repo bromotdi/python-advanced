@@ -7,35 +7,38 @@ computer_parts = [ "computer",
                    "keyboard",
                    "mouse",
                    "mouse mat" ]
-
-# replacing parts on a list
 print(computer_parts)
-#computer_parts[3] = 'trackball'
-#print(computer_parts)
+
+computer_parts[3] = 'trackball'
+print(computer_parts)
 
 # replace a slice - this wont work
-# print(computer_parts[3:])
-# computer_parts[3:] = "trackball"
-# print(computer_parts)
+print(computer_parts[3:])
+
+computer_parts[3:] = "trackball"
+print(computer_parts)
+
 # this does work
-# print(computer_parts[3:])
-# computer_parts[3:] = ["trackball"]
-# print(computer_parts)
-#
-# print(list('eoin') == ['eoin'])
+print(computer_parts[3:])
+
+computer_parts[3:] = ["trackball"]
+print(computer_parts)
+
+print(list('eoin') == ['eoin'])
 
 
-# What if we wanted to delete items ??
+# We wanted to delete items
 data = [4,5,104,105,110,120,130,140,150,160,183,1000, 2000]
-# del data[0:2]
-# print(data)
-# del data[-2:]
-# print(data)
+del data[0:2]
+print(data)
+
+del data[-2:]
+print(data)
 
 min_valid=100
 max_valid=200
-# print(data)
-#
+print(data)
+
 # # process the low values in the list
 # # work through every value until a value breaks threshold
 # # Use that value to index in our delete
