@@ -48,7 +48,6 @@ else:
     print('Final list {}'.format(computer_parts))
 
 # Same again but would list cmprehension
-print('*'*80)
 available_parts = ['computer','monitor','keyboard','mouse','mouse mat','HDMI cable']
 valid_choice =[str(i) for i in range(0,1 + len(available_parts))]
 print(valid_choice)
@@ -90,6 +89,7 @@ data = [
     "Tiger Lily - Flower",
     "Witch Hazel - Shrub",
 ]
+
 flowers = [fl for fl in data if 'Flower' in fl]
 shrubs = [fl for fl in data if 'Flower' not in fl]
 print(flowers)
