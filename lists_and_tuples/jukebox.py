@@ -39,13 +39,13 @@ albums = [
 ]
 
 # jukebox application
-# album_choice = int(input('Choose Your Album: '))
-# name,artist,year,songs = albums[album_choice]
-# print('Choose Your Song from {}: '.format(name))
-# for ind,song in songs:
-#     print('[{}] {}'.format(ind,song))
-# song_choice = int(input('Choose number: '))
-# print('Now playing: {}'.format(songs[song_choice][1]))
+album_choice = int(input('Choose Your Album: '))
+name,artist,year,songs = albums[album_choice]
+print('Choose Your Song from {}: '.format(name))
+for ind,song in songs:
+    print('[{}] {}'.format(ind,song))
+song_choice = int(input('Choose number: '))
+print('Now playing: {}'.format(songs[song_choice][1]))
 
 # Now what way would you mae this run in a loop ??
 # while True:
