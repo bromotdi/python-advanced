@@ -48,24 +48,24 @@ song_choice = int(input('Choose number: '))
 print('Now playing: {}'.format(songs[song_choice][1]))
 
 # Now what way would you mae this run in a loop ??
-# while True:
-#     print('Choose your album:')
-#     for ind,items in enumerate(albums):
-#         print('[{}] {}'.format(ind+1,items[0]))
-#     album_choice = -1+int(input('Choice: '))
-#     if album_choice >= len(items):
-#         print('Exiting...')
-#         break
-#     name,artist,year,songs = albums[album_choice]
-#     print('Choose Song from {}: '.format(name))
-#     for ind,song in songs:
-#         print('[{}] {}'.format(ind,song))
-#     song_choice = -1+int(input('Choose Number: '))
-#     if song_choice >= len(songs):
-#         print('Exiting...')
-#         break
-#     print('Now playing: {}'.format(songs[song_choice][1]))
-#     print('*'*80)
+while True:
+    print('Choose your album:')
+    for ind,items in enumerate(albums):
+        print('[{}] {}'.format(ind+1,items[0]))
+    album_choice = -1+int(input('Choice: '))
+    if album_choice >= len(items):
+        print('Exiting...')
+        break
+    name,artist,year,songs = albums[album_choice]
+    print('Choose Song from {}: '.format(name))
+    for ind,song in songs:
+        print('[{}] {}'.format(ind,song))
+    song_choice = -1+int(input('Choose Number: '))
+    if song_choice >= len(songs):
+        print('Exiting...')
+        break
+    print('Now playing: {}'.format(songs[song_choice][1]))
+
 
 
 
