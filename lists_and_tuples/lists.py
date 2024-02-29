@@ -110,8 +110,3 @@ for ind,val in enumerate(reversed(data)):
     if val < min_valid or val > max_valid:
         print(top_ind - ind,val)
         del data[top_ind - ind]
-
-
-
-
-
