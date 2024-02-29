@@ -13,8 +13,7 @@ menu = [
 # method one - remove spam and then print list
 # method two - print items in list as long as its not spam
 
-#one
-# Use reversed() not reverse
+# 1. Use reversed() not reverse
 for meal in menu:
     top_ind = len(meal)-1
     for ind,item in enumerate(reversed(meal)):
