@@ -39,29 +39,30 @@ min_valid=100
 max_valid=200
 print(data)
 
-# # process the low values in the list
-# # work through every value until a value breaks threshold
-# # Use that value to index in our delete
-# stop=0
-# for ind, val in enumerate(data):
-#     if val >= min_valid:
-#         stop = ind
-#         break
-# print(stop)
-# del data[:stop]
-# print(data)
-#
-# # process high values in list
-# # work backwards
-# # starting out its a good idea to print index numbers
-# for ind in range(len(data) - 1,-1,-1):
-#     print('We\'re on index {}'.format(ind))
-#     if val <= max_valid:
-#         #start = ind
-#
-#         start = ind + 1
-#         break
-# print(stop)
+# process the low values in the list
+# work through every value until a value breaks threshold
+# Use that value to index in our delete
+
+stop=0
+for ind, val in enumerate(data):
+    if val >= min_valid:
+        stop = ind
+        break
+print(stop)
+del data[:stop]
+print(data)
+
+# process high values in list
+# work backwards
+# starting out its a good idea to print index numbers
+for ind in range(len(data) - 1,-1,-1):
+    print('We\'re on index {}'.format(ind))
+    if val <= max_valid:
+        #start = ind
+
+        start = ind + 1
+        break
+print(stop)
 # # needs to be +1 off the index we get, cos thats the first item we wanna delete, so need to go back one to start from
 # #del data[stop + 1:]
 # del data[start:]
