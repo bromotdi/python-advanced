@@ -67,27 +67,25 @@ print(stop)
 del data[stop + 1:]
 del data[start:]
 
-
 # Do the top and bottom in one go
 for ind,val in enumerate(data):
     if not min_valid<= val <= max_valid:
         if val >= min_valid:
 
-# high,low =[],[]
-# for ind,val in enumerate(data):
-#     if min_valid >= val:
-#         low.append(1+ind)
-#     elif val >= max_valid:
-#         high.append(ind)
-#
-# #print(data[:max(low)])
-# #print(data[min(high):])
-# #print(data[max(low):min(high)])
-# # this would delete everything except the indexs
-# #del data[max(low):min(high)]
-# print(data[:max(low):min(high):])
-# #print(data)
+high,low =[],[]
+for ind,val in enumerate(data):
+    if min_valid >= val:
+        low.append(1+ind)
+    elif val >= max_valid:
+        high.append(ind)
+print(data[:max(low)])
+print(data[min(high):])
+print(data[max(low):min(high)])
 
+# this would delete everything except the indexs
+del data[max(low):min(high)]
+print(data[:max(low):min(high):])
+print(data)
 
 #How would we delete thngs working backwards
 data= [104,101,4, 105, 308, 103, 5, 107, 100, 306, 106, 102, 108]
@@ -98,11 +96,12 @@ max_valid=200
 # So go around the loop, delete the object where you see it
 # The n because we're moving backwards, ie start at 10 and go down toward 0, we always move down
 # one index at a time, and delete one at a time, so its impossible for index to go ou of range
-# for ind in range(len(data)-1,-1,-1):
-#     print('index is {}'.format(ind))
-#     if data[ind] <= min_valid or data[ind] > max_valid:
-#         print(ind,data)
-#         del data[ind]
+
+for ind in range(len(data)-1,-1,-1):
+    print('index is {}'.format(ind))
+    if data[ind] <= min_valid or data[ind] > max_valid:
+        print(ind,data)
+        del data[ind]
 
 
 
