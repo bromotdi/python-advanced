@@ -40,7 +40,7 @@ albums = [
 
 # jukebox application
 album_choice = int(input('Choose Your Album: '))
-name,artist,year,songs = albums[album_choice]
+name, artist, year, songs = albums[album_choice]
 print('Choose Your Song from {}: '.format(name))
 for ind,song in songs:
     print('[{}] {}'.format(ind,song))
@@ -81,7 +81,6 @@ while True:
     print('Please choose a song: ')
     for ind, (track_number, song) in enumerate(songs_list):
         print('[{}] {}'.format(ind+1, song))
-
     song_choice = int(input())
     if 1 <= song_choice <= len(songs_list):
         title = songs_list[song_choice - 1][SONG_TITLE_INDEX]
@@ -90,8 +89,8 @@ while True:
     print('Playing: {}'.format(title))
 
 
-# Challenge - if wrong number is chosen for songs, have it go back to start
-
+# Challenge - if wrong number is chosen for songs, 
+# have it go back to start
 while True:
     print('Choose your album:')
     for ind,items in enumerate(albums):
