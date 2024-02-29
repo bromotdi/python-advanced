@@ -10,11 +10,13 @@ print("mississipi".count('iss'))
 
 even.extend(odd)
 print(even)
+
 another_even= even
 print(another_even)
 
 even.sort(reverse=True)
 print(even)
+
 # So REMEMBER, when you set a variable equal to another varaiable, its bound to that variable not the underlying value
 print(another_even)
 
