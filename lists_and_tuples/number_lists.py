@@ -1,24 +1,22 @@
 even = [2,4,6,8]
 odd = [1,3,5,7,9]
+print(min(even))
+print(odd.max())
+print()
 
-#
-# print(min(even))
-# print(odd.max())
-# print()
-# # handy for counting item occurence in a list without for looping
-# print("mississipi".count('s'))
-# print("mississipi".count('iss'))
+# handy for counting item occurence in a list without for looping
+print("mississipi".count('s'))
+print("mississipi".count('iss'))
 
+even.extend(odd)
+print(even)
+another_even= even
+print(another_even)
 
-# even.extend(odd)
-# print(even)
-# another_even= even
-# print(another_even)
-#
-# even.sort(reverse=True)
-# print(even)
-# # So REMEMBER, when you set a variable equal to another varaiable, its bound to that variable not the underlying value
-# print(another_even)
+even.sort(reverse=True)
+print(even)
+# So REMEMBER, when you set a variable equal to another varaiable, its bound to that variable not the underlying value
+print(another_even)
 
 empty_list=[]
 #numbers= even + odd
