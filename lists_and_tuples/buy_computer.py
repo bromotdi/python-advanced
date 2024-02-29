@@ -13,7 +13,6 @@ while current_choice != '0':
 else:
     print('Final list {}'.format(computer_parts))
 
-
 # Iterate over the list
 available_parts = ['computer','monitor','keyboard','mouse','mouse mat','HDMI cable']
 current_choice= "0"
@@ -31,7 +30,6 @@ while current_choice != '0':
 else:
     print('Final list {}'.format(computer_parts))
 
-
 # Iterate over the list - use enumerate
 available_parts = ['computer','monitor','keyboard','mouse','mouse mat','HDMI cable']
 current_choice= "0"
@@ -48,7 +46,6 @@ while current_choice != '0':
     current_choice = input()
 else:
     print('Final list {}'.format(computer_parts))
-
 
 # Same again but would list cmprehension
 print('*'*80)
@@ -70,7 +67,6 @@ while current_choice != '0':
     current_choice = input()
 else:
     print('Final list {}'.format(computer_parts))
-
 
 # challenge
 data = [
@@ -110,7 +106,6 @@ current_choice= "a"
 computer_parts = [] # create empty list
 parts_dict = {'1': 'computer','2': 'monitor','3': 'keyboard','4': 'mouse','5': 'mouse mat','6':' HDMI cable'}
 price_dict = {'computer':200,'monitor':100,'keyboard':20,'mouse':10,'mouse mat':5,'HDMI cable':15}
-
 while current_choice != '0':
     if current_choice in "123456":
         part = parts_dict[current_choice]
