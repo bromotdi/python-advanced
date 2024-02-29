@@ -1,5 +1,6 @@
 even = [2,4,6,8]
 odd = [1,3,5,7,9]
+
 print(min(even))
 print(odd.max())
 print()
@@ -43,6 +44,3 @@ for ind,lst in enumerate(numbers):
     print('Printing {} list'.format(ind+1))
     for j in lst:
         print('Element {}'.format(j))
-
-
-
