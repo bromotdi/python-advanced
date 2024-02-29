@@ -50,28 +50,27 @@ else:
     print('Final list {}'.format(computer_parts))
 
 
-
 # Same again but would list cmprehension
 print('*'*80)
-# available_parts = ['computer','monitor','keyboard','mouse','mouse mat','HDMI cable']
-# valid_choice =[str(i) for i in range(0,1 + len(available_parts))]
-# print(valid_choice)
-# current_choice= "-"
-# computer_parts = [] # create empty list
-# while current_choice != '0':
-#     if current_choice in valid_choice:
-#         item = available_parts[-1+int(current_choice)]
-#         if item not in computer_parts:
-#             print('Adding {} to shopping list'.format(item))
-#             computer_parts.append(item)
-#     else:
-#         print('Please add options from the list below: ')
-#         for i,part in enumerate(available_parts):
-#             print("{0}:{1}".format(i+1,part))
-#     current_choice = input()
-# else:
-#     print('Final list {}'.format(computer_parts))
-#
+available_parts = ['computer','monitor','keyboard','mouse','mouse mat','HDMI cable']
+valid_choice =[str(i) for i in range(0,1 + len(available_parts))]
+print(valid_choice)
+current_choice= "-"
+computer_parts = [] # create empty list
+while current_choice != '0':
+    if current_choice in valid_choice:
+        item = available_parts[-1+int(current_choice)]
+        if item not in computer_parts:
+            print('Adding {} to shopping list'.format(item))
+            computer_parts.append(item)
+    else:
+        print('Please add options from the list below: ')
+        for i,part in enumerate(available_parts):
+            print("{0}:{1}".format(i+1,part))
+    current_choice = input()
+else:
+    print('Final list {}'.format(computer_parts))
+
 
 # challenge
 data = [
