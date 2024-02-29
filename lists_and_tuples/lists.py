@@ -26,7 +26,6 @@ print(computer_parts)
 
 print(list('eoin') == ['eoin'])
 
-
 # We wanted to delete items
 data = [4,5,104,105,110,120,130,140,150,160,183,1000, 2000]
 del data[0:2]
@@ -55,23 +54,24 @@ print(data)
 # process high values in list
 # work backwards
 # starting out its a good idea to print index numbers
+
 for ind in range(len(data) - 1,-1,-1):
     print('We\'re on index {}'.format(ind))
     if val <= max_valid:
-        #start = ind
-
         start = ind + 1
         break
 print(stop)
-# # needs to be +1 off the index we get, cos thats the first item we wanna delete, so need to go back one to start from
-# #del data[stop + 1:]
-# del data[start:]
+
+# needs to be +1 off the index we get, cos thats the first item 
+# we wanna delete, so need to go back one to start from
+del data[stop + 1:]
+del data[start:]
 
 
 # Do the top and bottom in one go
-# for ind,val in enumerate(data):
-#     if not min_valid<= val <= max_valid:
-#         if val >= min_valid:
+for ind,val in enumerate(data):
+    if not min_valid<= val <= max_valid:
+        if val >= min_valid:
 
 # high,low =[],[]
 # for ind,val in enumerate(data):
