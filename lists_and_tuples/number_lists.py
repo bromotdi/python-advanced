@@ -17,7 +17,8 @@ print(another_even)
 even.sort(reverse=True)
 print(even)
 
-# So REMEMBER, when you set a variable equal to another varaiable, its bound to that variable not the underlying value
+# So remember, when you set a variable equal to another varaiable, 
+# its bound to that variable not the underlying value
 print(another_even)
 
 empty_list=[]
@@ -28,10 +29,10 @@ print(numbers)
 sorted_numbers= sorted(numbers)
 print(sorted_numbers)
 
-
-# can take a copy of list in many ways
+# Can take a copy of list in many ways
 # Copy is best way since pythion3.3
-# Lots of code online will have come from old python, so uses sliciong [:] etc cos it still works well
+# Lots of code online will have come from old python, 
+# so uses sliciong [:] etc cos it still works well
 more_numbers = numbers.copy()
 more_numbers = list(numbers)
 more_numbers = numbers[:]
