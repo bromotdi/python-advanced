@@ -17,14 +17,8 @@ print(var)
 # Set multiple values equal to one list
 # a,b,c,d,e,f = another_list doesnt work because that is done for multiple returns
 a = b = c = d = e = f = another_list
-
 print(a)
+
 # Remember append happens in place!
 c.append('Henry')
 print(d)
-
-
-
-
-
-
