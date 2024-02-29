@@ -103,10 +103,7 @@ for ind in range(len(data)-1,-1,-1):
         print(ind,data)
         del data[ind]
 
-
-
-# Use a differnt type of reversal method
-# reversed()
+# Use a differnt type of reversal method: reversed()
 # Use this top thing to get back the original idexes for when we wanna delete things from real list using reverse list
 top_ind=len(data)-1
 for ind,val in enumerate(reversed(data)):
