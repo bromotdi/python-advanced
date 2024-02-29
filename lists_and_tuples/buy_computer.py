@@ -105,9 +105,6 @@ for item in enumerate(data):
     else""
         shrubs += item
 
-# write your code here
-
-
 ## Adding code to remove element from list
 current_choice= "a"
 computer_parts = [] # create empty list
@@ -130,6 +127,3 @@ while current_choice != '0':
     current_choice = input()
 else:
     print('Final list {}'.format(computer_parts))
-
-
-# Modify the above to also tally the price
