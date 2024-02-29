@@ -91,27 +91,28 @@ while True:
 
 
 # Challenge - if wrong number is chosen for songs, have it go back to start
-# while True:
-#     print('Choose your album:')
-#     for ind,items in enumerate(albums):
-#         print('[{}] {}'.format(ind+1,items[0]))
-#     album_choice = -1+int(input('Choice: '))
-#     if album_choice >= len(items):
-#         print('Exiting...')
-#         break
-#     name,artist,year,songs = albums[album_choice]
-#     print('Choose Song from {}: '.format(name))
-#     for ind,song in songs:
-#         print('[{}] {}'.format(ind,song))
-#     song_choice = -1+int(input('Choose Number: '))
-#     if song_choice >= len(songs):
-#         print('Invalid choice, resetting...')
-#         continue
-#     print('Now playing: {}'.format(songs[song_choice][1]))
-#     print('*'*80)
 
-# Another way we could do it, is not to have an explcit continue statement, but reverse the if to be the oppsoite,
-# and include the prinrt within that block, so if it fails it just repeats the while loop.
+while True:
+    print('Choose your album:')
+    for ind,items in enumerate(albums):
+        print('[{}] {}'.format(ind+1,items[0]))
+    album_choice = -1+int(input('Choice: '))
+    if album_choice >= len(items):
+        print('Exiting...')
+        break
+    name,artist,year,songs = albums[album_choice]
+    print('Choose Song from {}: '.format(name))
+    for ind,song in songs:
+        print('[{}] {}'.format(ind,song))
+    song_choice = -1+int(input('Choose Number: '))
+    if song_choice >= len(songs):
+        print('Invalid choice, resetting...')
+        continue
+    print('Now playing: {}'.format(songs[song_choice][1]))
+
+# Another way we could do it, is not to have an explcit continue statement, 
+# but reverse the if to be the oppsoite, and include the prinrt within 
+# that block, so if it fails it just repeats the while loop.
 # Not overly keen on this though cos you get no messages about an invalid choice
 # Diff between explcitly coding behaviour vs letting it be implcit 
 while True:
@@ -129,5 +130,3 @@ while True:
     song_choice = -1+int(input('Choose Number: '))
     if not song_choice >= len(songs):
         print('Now playing: {}'.format(songs[song_choice][1]))
-        print('*'*80)
-
