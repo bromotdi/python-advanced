@@ -2,12 +2,11 @@ l = "abcdefgh"
 print(l.__iter__)
 print(l.__getitem__)
 
-computer_parts =["computer",
-                 "monitor",
-                 "keyboard",
-                 "mouse",
-                 "mouse mat"]
-
+computer_parts = [ "computer",
+                   "monitor",
+                   "keyboard",
+                   "mouse",
+                   "mouse mat" ]
 
 # replacing parts on a list
 print(computer_parts)
