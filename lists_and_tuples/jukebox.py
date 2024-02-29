@@ -66,36 +66,28 @@ while True:
         break
     print('Now playing: {}'.format(songs[song_choice][1]))
 
-
-
-
-# How he does it
-#from tuples_intro import albums
-
-# this is a constant
 # Python convention for constants
-# SONGS_LIST_INDEX = 3
-# SONG_TITLE_INDEX = 1
-# while True:
-#     print("Please choose your album (invalid choice will exit):")
-#     for ind, (title,artist,year,songs) in enumerate(albums):
-#         print("[{}]: {} - {}: ".format(ind+1,artist,title))
-#     choice = int(input())
-#     if 1<= choice <= len(albums):
-#         songs_list = albums[choice -1][SONGS_LIST_INDEX]
-#     else:
-#         break
-#     print('Please choose a song: ')
-#     for ind, (track_number, song) in enumerate(songs_list):
-#         print('[{}] {}'.format(ind+1, song))
-#
-#     song_choice = int(input())
-#     if 1 <= song_choice <= len(songs_list):
-#         title = songs_list[song_choice - 1][SONG_TITLE_INDEX]
-#     else:
-#         break
-#     print('Playing: {}'.format(title))
-#     print('='*40)
+SONGS_LIST_INDEX = 3
+SONG_TITLE_INDEX = 1
+while True:
+    print("Please choose your album (invalid choice will exit):")
+    for ind, (title,artist,year,songs) in enumerate(albums):
+        print("[{}]: {} - {}: ".format(ind+1,artist,title))
+    choice = int(input())
+    if 1<= choice <= len(albums):
+        songs_list = albums[choice -1][SONGS_LIST_INDEX]
+    else:
+        break
+    print('Please choose a song: ')
+    for ind, (track_number, song) in enumerate(songs_list):
+        print('[{}] {}'.format(ind+1, song))
+
+    song_choice = int(input())
+    if 1 <= song_choice <= len(songs_list):
+        title = songs_list[song_choice - 1][SONG_TITLE_INDEX]
+    else:
+        break
+    print('Playing: {}'.format(title))
 
 
 # Challenge - if wrong number is chosen for songs, have it go back to start
