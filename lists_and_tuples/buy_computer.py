@@ -17,7 +17,7 @@ else:
 # Iterate over the list
 available_parts = ['computer','monitor','keyboard','mouse','mouse mat','HDMI cable']
 current_choice= "0"
-computer_parts = [] # create empty list
+computer_parts = []
 while current_choice != '0':
     if current_choice in "123456":
         if current_choice not in computer_parts:
