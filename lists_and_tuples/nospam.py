@@ -28,7 +28,6 @@ for meal in menu:
             del meal[ind]
     print(", ".join(meal))
 
-
 # 2.
 for meal in menu:
     clean_meal = []
@@ -37,11 +36,8 @@ for meal in menu:
             clean_meal.append(item)
     print(clean_meal)
 
-# better way to do 2
-
-# for meal in menu:
-#     for item in meal:
-#         if item != 'spam':
-#             print(item,end=", ")
-#     print()
-
+for meal in menu:
+    for item in meal:
+        if item != 'spam':
+            print(item,end=", ")
+    print()
