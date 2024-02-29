@@ -1,10 +1,6 @@
-
-
-#  Start section 5 - lists
-l= "abcdefgh"
-
-# print(l.__iter__)
-# print(l.__getitem__)
+l = "abcdefgh"
+print(l.__iter__)
+print(l.__getitem__)
 
 computer_parts =["computer",
                  "monitor",
