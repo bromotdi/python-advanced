@@ -98,11 +98,12 @@ flowers = [fl for fl in data if 'Flower' in fl]
 shrubs = [fl for fl in data if 'Flower' not in fl]
 print(flowers)
 print(shrubs)
-# for item in enumerate(data):
-#     if 'Flower' in item:
-#         flowers += item
-#     else""
-#         shrubs += item
+
+for item in enumerate(data):
+    if 'Flower' in item:
+        flowers += item
+    else""
+        shrubs += item
 
 # write your code here
 
@@ -113,22 +114,22 @@ computer_parts = [] # create empty list
 parts_dict = {'1': 'computer','2': 'monitor','3': 'keyboard','4': 'mouse','5': 'mouse mat','6':' HDMI cable'}
 price_dict = {'computer':200,'monitor':100,'keyboard':20,'mouse':10,'mouse mat':5,'HDMI cable':15}
 
-# while current_choice != '0':
-#     if current_choice in "123456":
-#         part = parts_dict[current_choice]
-#         if part not in computer_parts:
-#             print('Adding {} to shopping list'.format(part))
-#             computer_parts.append(parts_dict[current_choice])
-#         else:
-#             computer_parts.remove(parts_dict[current_choice])
-#             print('Removing {} from shopping list'.format(part))
-#         print('Your list is now {}'.format(computer_parts))
-#     else:
-#         print('Please add options from the list below: ')
-#         print("1: computer\n2: monitor\n3: keyboard\n4: mouse\n5: mouse mat\n6: HDMI cable\n0: to finish ")
-#     current_choice = input()
-# else:
-#     print('Final list {}'.format(computer_parts))
+while current_choice != '0':
+    if current_choice in "123456":
+        part = parts_dict[current_choice]
+        if part not in computer_parts:
+            print('Adding {} to shopping list'.format(part))
+            computer_parts.append(parts_dict[current_choice])
+        else:
+            computer_parts.remove(parts_dict[current_choice])
+            print('Removing {} from shopping list'.format(part))
+        print('Your list is now {}'.format(computer_parts))
+    else:
+        print('Please add options from the list below: ')
+        print("1: computer\n2: monitor\n3: keyboard\n4: mouse\n5: mouse mat\n6: HDMI cable\n0: to finish ")
+    current_choice = input()
+else:
+    print('Final list {}'.format(computer_parts))
 
 
 # Modify the above to also tally the price
