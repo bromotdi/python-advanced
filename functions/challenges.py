@@ -1,67 +1,61 @@
-# Similar to guessing game played before, but instead of only having two guesses or 3 etc, we want to
-# guess until we get right -> so no repeated ifs
+# Similar to guessing game played before, but instead of only having two guesses 
+# or 3 etc, we want to guess until we get right -> so no repeated ifs
 import random
 
+guess = int(input("Please guess a number: "))
+correct = random.randint(1,10)
+print('Correct answer is {}'.format(correct)) # TODO: Remove after tests
+guess_number = 0
+while guess != correct:
+    guess_number += 1
+    if guess == 0:
+        print('Exiting game...')
+        break
+    elif guess > correct:
+        print('Too high, guess lower')
+    else:
+        print('Too low, guess lower')
+    guess = int(input("Please guess again "))
 
-# # my way
-# guess = int(input("Please guess a number: "))
-# correct = random.randint(1,10)
-# print('Correct answer is {}'.format(correct)) # TODO: Remove after tests
-# guess_number = 0
-# while guess != correct:
-#     guess_number += 1
-#     if guess == 0:
-#         print('Exiting game...')
-#         break
-#     elif guess > correct:
-#         print('Too high, guess lower')
-#     else:
-#         print('Too low, guess lower')
-#     guess = int(input("Please guess again "))
-#
-# if guess==correct:
-#     print('You guessed correctly! It took you {} tries'.format(guess_number))
+if guess==correct:
+    print('You guessed correctly! It took you {} tries'.format(guess_number))
 
-
-# His code
 answer = random.randint(1,1000)
-#print(answer)
+print(answer)
 guess = 0
 guess_number = 0
-# while guess != answer:
-#     guess = int(input('Pick a number '))
-#     guess_number += 1
-#     if guess == 0:
-#         print('Exiting....')
-#         break
-#     if guess == answer:
-#         print('You guessed correctly, it took you {} tries'.format(guess_number))
-#     elif guess > answer:
-#         print('Too high, guess lower')
-#     else:
-#         print('Too low, guess higher')
-
+while guess != answer:
+    guess = int(input('Pick a number '))
+    guess_number += 1
+    if guess == 0:
+        print('Exiting....')
+        break
+    if guess == answer:
+        print('You guessed correctly, it took you {} tries'.format(guess_number))
+    elif guess > answer:
+        print('Too high, guess lower')
+    else:
+        print('Too low, guess higher')
 
 # Binary chop - let computer guess a number
-# Doing it my way
 
-# high = 1000
-# low = 1
-# print("Please think of a number between {1} and {0}".format(high,low))
-# input("Press Enter to start: ") # Just so we can hang proc until inputs
-# guess_number = 0
-# answer = 468
-# while True:
-#     guess = low + (high -low) // 2 # midpoint
-#     guess_number += 1
-#     direction = input('Should cpu go higher or lower? The guess is {}: '.format(guess)).casefold()
-#     if direction == 'higher':
-#        low = guess
-#     if direction == 'lower':
-#         high = guess
-#     if guess == answer:
-#         print('The machine guessed it, it took {} attempts'.format(guess_number))
-#         break
+high = 1000
+low = 1
+print("Please think of a number between {1} and {0}".format(high,low))
+input("Press Enter to start: ") # Just so we can hang proc until inputs
+guess_number = 0
+answer = 468
+while True:
+    guess = low + (high -low) // 2 # midpoint
+    guess_number += 1
+    direction = input('Should cpu go higher or lower? The guess is {}: '.format(guess)).casefold()
+    if direction == 'higher':
+       low = guess
+    if direction == 'lower':
+        high = guess
+    if guess == answer:
+        print('The machine guessed it, it took {} attempts'.format(guess_number))
+        break
 
 
 # low = 1
