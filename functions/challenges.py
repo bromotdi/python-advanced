@@ -165,16 +165,16 @@ else:
 # print('Hello my name\t is Eoin. What are\n you doing\n today')
 
 # Ending challenges
-#print('-'*80)
-#options = {1:'Hello ',2:'Fuck off', 3:'20:10', 4:'-.-',5:'quit'}
-# while True:
-#     print('[1] Say hello\n[2] Be rude\n[3] Display time\n[4] Smile\n[5] Quit')
-#     choice = options[int(input('Choose an option: '))]
-#     if choice=='quit':
-#         print('Exiting...')
-#         break
-#     else:
-#         print(choice)
+print('-'*80)
+options = {1:'Hello ',2:'Fuck off', 3:'20:10', 4:'-.-',5:'quit'}
+while True:
+    print('[1] Say hello\n[2] Be rude\n[3] Display time\n[4] Smile\n[5] Quit')
+    choice = options[int(input('Choose an option: '))]
+    if choice=='quit':
+        print('Exiting...')
+        break
+    else:
+        print(choice)
 
 
 # My attempt at it
