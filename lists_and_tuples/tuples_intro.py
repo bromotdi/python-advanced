@@ -1,7 +1,6 @@
 # same thing
-# t= "a","b","c"
+t = "a", "b", "c"
 t = ("a", "b", "c")
-
 print(t)
 
 # need parenthesis when pass as arg to a function
