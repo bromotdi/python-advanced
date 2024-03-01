@@ -1,5 +1,5 @@
 def multiply(x: float,y: float = 300) -> float:
-    result = x*y
+    result = x * y
     return result
 
 def check_palindrome(x):
@@ -12,37 +12,32 @@ def is_palindrome(string):
     backwards = string[::-1]
     return backwards == string
 
-# better again
 def is_palindrome(string: str) -> bool:
     """
     Check if a string is a palindrome.
-
     A palindrome is a string that reads the same forwards as backwards.
 
     :param string: The string to check.
     :return: True if `string` is a palindrome, False otherwise.
     """
     return string.casefold() == string[::-1].casefold()
-#
-#
-# # Doing it with a simple lambda
-# test = lambda x: True if x == x[::-1] else False
-#
-#
-# val1 = is_palindrome("abcddcba")
-# val2 = test("abcddcba")
-#
-# print(val1)
-# print(val2)
 
-# while True:
-#     word = input("Please input your word: ").casefold()
-#     if word == 'stop':
-#         break
-#     if is_palindrome(word) == True:
-#         print("{} is a palindrome".format(word))
-#     else:
-#         print("{} is not a palindrome - try again".format(word))
+
+# Doing it with a simple lambda
+test = lambda x: True if x == x[::-1] else False
+val1 = is_palindrome("abcddcba")
+val2 = test("abcddcba")
+print(val1)
+print(val2)
+
+while True:
+    word = input("Please input your word: ").casefold()
+    if word == 'stop':
+        break
+    if is_palindrome(word) == True:
+        print("{} is a palindrome".format(word))
+    else:
+        print("{} is not a palindrome - try again".format(word))
 
 # create a palindrome sentence checker
 # Only use alphanumeric
