@@ -4,10 +4,11 @@ t = ("a", "b", "c")
 print(t)
 
 # need parenthesis when pass as arg to a function
-# eg (name,age,python, 2020)
+# eg (name, age, python, 2020)
 name = "Eoin"
 age = 26
 print(name, age, "Python", 2020)
+
 # So print one thing, the tuple vs 4 things ^
 print((name, age, "Python", 2020))
 
