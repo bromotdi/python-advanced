@@ -52,22 +52,20 @@ albums = [("Welcome to my nightmare", 'Alice Cooper', 1975,(('0','first song'),(
 print(albums)
 
 # Me trying to do something
-# for album,(x,y) in albums:
-#     print('VAL is {}'.format(album))
-#     print('X is {}'.format(x))
-#     #print('Y is {}'.format(y))
-#     #print('Z is {}'.format(z))
-
+for album,(x,y) in albums:
+    print('VAL is {}'.format(album))
+    print('X is {}'.format(x))
+    print('Y is {}'.format(y))
+    print('Z is {}'.format(z))
 
 # Other way of doing it
 # Think about enumerate, we can do ind,val even though enumerate creates a list of tuples, album is the same thing
-# for name,artist,year in albums:
-#     print("Album: {}, Artist: {}, Year:{} ".format(name,artist,year))
+for name,artist,year in albums:
+    print("Album: {}, Artist: {}, Year:{} ".format(name,artist,year))
 
-
-# for album in albums:
-#     name,artist,year=album
-#     print("Album: {}, Artist: {}, Year:{} ".format(name,artist,year))
+for album in albums:
+    name,artist,year=album
+    print("Album: {}, Artist: {}, Year:{} ".format(name,artist,year))
 
 albums = [
     ("Welcome to my Nightmare", "Alice Cooper", 1975,
@@ -114,17 +112,18 @@ for name,artist,year,songs in albums:
     print('Album: {}, Artist: {}, Year: {}, Songs: {}'.format(name,artist,year,songs))
 
 print()
-album=albums[2]
+album = albums[2]
 print(album)
 
-songs=album[3]
+songs = album[3]
 print(songs)
 
-song= songs[1]
+song = songs[1]
 print(song)
 print(song[1])
 print(80*'*')
 print(albums[1][3][2][1])
+
 albums = [
     ("Welcome to my Nightmare", "Alice Cooper", 1975,
      [
