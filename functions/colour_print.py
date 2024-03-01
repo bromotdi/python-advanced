@@ -30,7 +30,7 @@ def colour_print(text: str, effect: str) -> None:
     """
     output = "{}{}{}".format(effect,text,RESET)
     print(output)
-
+    
 colorama.init()
 
 print("This should be in the default terminal colour")
@@ -41,6 +41,7 @@ colour_print("Hello, Bold", BOLD)
 colour_print("Hello, Underline", UNDERLINE)
 colour_print("Hello, Reverse", REVERSE)
 colour_print("Hello, Black", BLACK)
+
 colorama.deinit()
 
 # Improve function to allow more than one ANSI sequence to be printed by using *args
