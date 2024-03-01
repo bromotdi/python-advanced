@@ -10,5 +10,5 @@ def fibonacci(n):
         fib.append(fib[i] + fib[i+1])
     return fib
 
-result =  fibonacci(20)
+result = fibonacci(20)
 print(len(result))
