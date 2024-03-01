@@ -30,6 +30,7 @@ print(year)
 
 table = ("Coffee table", 200, 100, 75, 34.5)
 print(table[1] * table[2])
+
 # unpack instead to make operations more obvious
 name, length, width, height, price = table
 print(length * width)
@@ -58,7 +59,8 @@ for album,(x,y) in albums:
     print('Z is {}'.format(z))
 
 # Other way of doing it
-# Think about enumerate, we can do ind,val even though enumerate creates a list of tuples, album is the same thing
+# Think about enumerate, we can do ind, val even though enumerate  
+# creates a list of tuples, album is the same thing
 for name,artist,year in albums:
     print("Album: {}, Artist: {}, Year:{} ".format(name,artist,year))
 
