@@ -197,30 +197,28 @@ while True:
 #         print('Exiting...')
 #         break
 
+print('Please choose options from list below: ')
+print('1:\tLearn Python')
+print('2:\tLearn Java')
+print('3:\tLearn KDB')
+print('4:\tEat Dinner')
+print('5:\tExit')
+choice= "-"
+while True:
+    if choice == '0':
+        break
+    elif choice in "12345":
+        print('You chose {}'.format(choice))
+    else:
+        print('Please choose options from list below: ')
+        print('1:\tLearn Python')
+        print('2:\tLearn Java')
+        print('3:\tLearn KDB')
+        print('4:\tEat Dinner')
+        print('5:\tExit')
+    choice = input()
 
-# His go at it
-# print('Please choose options from list below: ')
-# print('1:\tLearn Python')
-# print('2:\tLearn Java')
-# print('3:\tLearn KDB')
-# print('4:\tEat Dinner')
-# print('5:\tExit')
-# choice= "-"
-# while True:
-#     if choice == '0':
-#         break
-#     elif choice in "12345":
-#         print('You chose {}'.format(choice))
-#     else:
-#         print('Please choose options from list below: ')
-#         print('1:\tLearn Python')
-#         print('2:\tLearn Java')
-#         print('3:\tLearn KDB')
-#         print('4:\tEat Dinner')
-#         print('5:\tExit')
-#     choice = input()
-#
-#
+
 
 while choice != 0:
     if choice in "12345":
