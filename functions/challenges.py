@@ -116,7 +116,6 @@ else:
 
 # Using this version of else in high low game.
 # Will only work with some numbers where convergence is possible
-
 low = 1
 high = 1000
 print('Please think of a number between {} and {}'.format(low,high))
@@ -154,9 +153,6 @@ while chosen_exit not in available_exits:
         break
 else:
     print("You escaped")
-
-
-# print('Hello my name\t is Eoin. What are\n you doing\n today')
 
 # Ending challenges
 print('-'*80)
