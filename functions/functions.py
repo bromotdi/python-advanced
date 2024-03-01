@@ -16,12 +16,10 @@ def is_palindrome(string: str) -> bool:
     """
     Check if a string is a palindrome.
     A palindrome is a string that reads the same forwards as backwards.
-
     :param string: The string to check.
     :return: True if `string` is a palindrome, False otherwise.
     """
     return string.casefold() == string[::-1].casefold()
-
 
 # Doing it with a simple lambda
 test = lambda x: True if x == x[::-1] else False
@@ -51,18 +49,17 @@ def check_pal(x):
             output.append(letter)
     result = ''.join(output)
     return result==result[::-1]
-
 print(check_pal('Was it a car, or a cat, I saw?'))
 
-
 # Much better code for palindrome
-# Create an empty string instead of making a list we have to keep collpasing. Can just use '+' to combine strings
-# def sentence_palindrome(sentence):
-#     string=""
-#     for char in sentence:
-#         if char.isalnum():
-#             string += char
-#     return string==string[::-1]
+# Create an empty string instead of making a list we have to keep collpasing. 
+# Can just use '+' to combine strings
+def sentence_palindrome(sentence):
+    string=""
+    for char in sentence:
+        if char.isalnum():
+            string += char
+    return string==string[::-1]
 
 # Do it using the other function
 def sentence_palindrome(sentence: str) -> bool:
