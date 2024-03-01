@@ -56,7 +56,6 @@ def colour_print_improved(text: str, *effects: str) -> None:
     output = "{}{}{}".format(effect_string,text,RESET)
     print(output)
 
-print('*'*80)
 colour_print_improved("Hello, Red", RED)
 colour_print_improved("Hello, Blue", BLUE)
 colour_print_improved("Hello, Blue reversed", BLUE,REVERSE)
