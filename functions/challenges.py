@@ -222,17 +222,17 @@ while True:
 #
 #
 
-# while choice != 0:
-#     if choice in "12345":
-#         print('You chose {}'.format(choice))
-#     else:
-#         print('Please choose options from list below: ')
-#         print('1:\tLearn Python')
-#         print('2:\tLearn Java')
-#         print('3:\tLearn KDB')
-#         print('4:\tEat Dinner')
-#         print('5:\tExit')
-#     choice = input()
+while choice != 0:
+    if choice in "12345":
+        print('You chose {}'.format(choice))
+    else:
+        print('Please choose options from list below: ')
+        print('1:\tLearn Python')
+        print('2:\tLearn Java')
+        print('3:\tLearn KDB')
+        print('4:\tEat Dinner')
+        print('5:\tExit')
+    choice = input()
 
 
 import nltk
