@@ -169,7 +169,6 @@ while True:
     else:
         print(choice)
 
-# My attempt at it
 choice = None
 valid_options = [0,1,2,3,4,5]
 while choice != 0:
