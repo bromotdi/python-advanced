@@ -28,7 +28,7 @@ tokens=numbers.split(',')
 for ind in range(len(tokens)):
     tokens[ind] = int(tokens[ind])
 a,b,c = tokens
-result = a+b-c
+result = a + b - c
 print(result)d
 
 out=0
