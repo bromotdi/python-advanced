@@ -65,10 +65,7 @@ def sentence_palindrome(sentence):
 def sentence_palindrome(sentence: str) -> bool:
     """
     Check if a sentence is a palindrome.
-
-    The function ignores whitespace, capitalisation and
-        punctuation in the sentence.
-
+    The function ignores whitespace, capitalisation and punctuation in the sentence.
     :param sentence: The sentence to check.
     :return: True if `sentence` is a palindrome, False otherwise.
     """
@@ -77,30 +74,23 @@ def sentence_palindrome(sentence: str) -> bool:
         if char.isalnum():
             string += char
     return is_palindrome(string)
-
 print(sentence_palindrome('Was it a car, or a cat, I saw?'))
 
-#
-# answer = 5
-#
-# guess = int(input("Please guess a number between 1 and 10: "))
-#
-# if guess == answer:
-#     print('Congrats you guessed correctly first time')
-# else:
-#     if guess < answer:
-#         print('Please guess higher: ')
-#     else:
-#         print('Please guess lower: ')
-#     guess = int(input('You must guess again: '))
-#     if guess == answer:
-#         print('Well done you got it')
-#     else:
-#         print('Sorry you guessed wrong again')
-#
-#
+answer = 5
+guess = int(input("Please guess a number between 1 and 10: "))
+if guess == answer:
+    print('Congrats you guessed correctly first time')
+else:
+    if guess < answer:
+        print('Please guess higher: ')
+    else:
+        print('Please guess lower: ')
+    guess = int(input('You must guess again: '))
+    if guess == answer:
+        print('Well done you got it')
+    else:
+        print('Sorry you guessed wrong again')
 
-# my way
 # Sum even or odd numbers in a range
 # if t is e then sum all even numbers <n
 # if t is o then its all off numbers
