@@ -98,7 +98,6 @@ else:
 def sum_eo(n,t):
     """
     Sum the even or odd numbers in a given range based
-
     :param n: Integer range we will use for sum
     :param t: String to determine if we sum even or odd numbers in range
     :return: Sum of even/odd numbers in range
@@ -112,7 +111,6 @@ def sum_eo(n,t):
             numbers[i] += 1
     return sum([i for i in numbers if i<n])
 
-#
 print(sum_eo(10,'e'))
 print(sum_eo(7,'o'))
 print(sum_eo(11,'spam'))
@@ -148,7 +146,6 @@ def fibonacci(n):
         fib.append(fib[i] + fib[i+1])
     return fib
 
-# His way of doing fibonacci
 # Doesnt use list or indexes, just creates placeholder values to update each time
 def fibonacci(n: int) -> int:
     """Return the `n` th Fibonacci number, for positive `n`"""
