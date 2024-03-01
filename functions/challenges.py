@@ -4,7 +4,8 @@ import random
 
 guess = int(input("Please guess a number: "))
 correct = random.randint(1,10)
-print('Correct answer is {}'.format(correct)) # TODO: Remove after tests
+print('Correct answer is {}'.format(correct))
+
 guess_number = 0
 while guess != correct:
     guess_number += 1
@@ -80,15 +81,14 @@ while True:
     else:
         print('Choices are only higher,lower or correct')
 
-## Augmented assignment - literally just using +=. It's binary operation combined with assignment
+# Augmented assignment - literally just using +=. 
+# It's binary operation combined with assignment
 # So +,-,*,/ all binary: (x+y)
 
 x = 'Good '
 x+= 'Morning'
 print(x)
 
-
-# exercise
 number = 7
 multiplier = 3
 answer = 0
@@ -104,8 +104,8 @@ print("*"*80)
 # v contrived example
 
 numbers= [1,45,32,12,60]
-# Here the else only fires on a successful loop through all elements, if break happens at all we wont see the else
-#  clause
+# Here the else only fires on a successful loop through 
+# all elements, if break happens at all we wont see the else
 for num in numbers:
     if number % 8 == 0:
         #reject the list
