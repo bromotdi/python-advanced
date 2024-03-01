@@ -2,17 +2,15 @@ def multiply(x: float,y: float = 300) -> float:
     result = x*y
     return result
 
+def check_palindrome(x):
+    if x == x[::-1]:
+        return True
+    else:
+        return False
 
-# def check_palindrome(x):
-#     if x == x[::-1]:
-#         return True
-#     else:
-#         return False
-
-# better way
-# def is_palindrome(string):
-#     backwards = string[::-1]
-#     return backwards == string
+def is_palindrome(string):
+    backwards = string[::-1]
+    return backwards == string
 
 # better again
 def is_palindrome(string: str) -> bool:
