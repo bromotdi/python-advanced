@@ -166,26 +166,26 @@ while True:
     else:
         print(choice)
 
-
 # My attempt at it
-# choice = None
-# valid_options = [0,1,2,3,4,5]
-# while choice != 0:
-#     options_msg = '[1] Learn Python\n[2] learn Java\n[3] ' \
-#                   'Learn KDB\n[4] ' \
-#                   'Have Dinner\n[5] Go to Bed\n[0] Exit\n Please choose your options from the list above: '
-#     choice = int(input(options_msg))
-#     while not choice in valid_options:
-#         print('Invalid choice, please choose again')
-#         # Could argue this is not necessary, diff between loop til you pick a valid option vs just printing the
-#         # message again. Think behaviour resolves to same so maybe secondary loop not necessary and could do
-#         # as below ?
-#         choice = int(input(options_msg))
-#     if choice>0:
-#         print('You chose option {}'.format(choice))
-#     else:
-#         print('Exiting...')
-#         break
+choice = None
+valid_options = [0,1,2,3,4,5]
+while choice != 0:
+    options_msg = '[1] Learn Python\n[2] learn Java\n[3] ' \
+                  'Learn KDB\n[4] ' \
+                  'Have Dinner\n[5] Go to Bed\n[0] Exit\n Please choose your options from the list above: '
+    choice = int(input(options_msg))
+    while not choice in valid_options:
+        print('Invalid choice, please choose again')
+        # Could argue this is not necessary, diff between loop til you pick 
+        # a valid option vs just printing the message again. 
+        # Think behaviour resolves to same so maybe secondary loop not 
+        # necessary and could do as below ?
+        choice = int(input(options_msg))
+    if choice>0:
+        print('You chose option {}'.format(choice))
+    else:
+        print('Exiting...')
+        break
 
 print('Please choose options from list below: ')
 print('1:\tLearn Python')
@@ -207,8 +207,6 @@ while True:
         print('4:\tEat Dinner')
         print('5:\tExit')
     choice = input()
-
-
 
 while choice != 0:
     if choice in "12345":
