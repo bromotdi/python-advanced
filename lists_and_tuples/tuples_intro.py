@@ -4,7 +4,6 @@ t = ("a", "b", "c")
 print(t)
 
 # need parenthesis when pass as arg to a function
-# eg (name, age, python, 2020)
 name = "Eoin"
 age = 26
 print(name, age, "Python", 2020)
@@ -35,12 +34,12 @@ print(table[1] * table[2])
 name, length, width, height, price = table
 print(length * width)
 
-# albums = ["Welcome to my nightmare", 'Alice Cooper', 1975,
-#           "Bad company", "Bad company", 1974,
-#           "Nightflight", "Budgie", 1981
-#           "More Mayhem", "Imelda May", 2011
-#           "Ride the lightning", "Metallica", 1984,
-#           ]
+albums = ["Welcome to my nightmare", 'Alice Cooper', 1975,
+          "Bad company", "Bad company", 1974,
+          "Nightflight", "Budgie", 1981
+          "More Mayhem", "Imelda May", 2011
+          "Ride the lightning", "Metallica", 1984,
+          ]
 
 albums = [("Welcome to my nightmare", 'Alice Cooper', 1975,(('0','first song'),('1','second song'))),
           ("Bad company", "Bad company", 1974,(('0','first song'),('1','second song'))),
