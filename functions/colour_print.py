@@ -1,7 +1,6 @@
 # doesnt do much, just enables ANSI in windows terminal, and redirectes our print statements to windows API
 import colorama
 
-
 # Some ANSI escape sequences for colours and effects
 # These are hexidecimal unicode character
 BLACK = '\u001b[30m'
@@ -24,6 +23,7 @@ print('Hello')
 def colour_print(text: str, effect: str) -> None:
     """
     Print `text` using the ANSI sequences to change colour, etc
+    
     :param text: The text to print.
     :param effect: The colour/affect we want.
         One of constants defined at start of the module
