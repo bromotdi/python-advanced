@@ -40,19 +40,19 @@ while True:
         print("{} is not a palindrome - try again".format(word))
 
 # create a palindrome sentence checker
-# Only use alphanumeric
+# only use alphanumeric
 # remove the punctuation
-#ss='Was it a car, or a cat, I saw?'
-# def check_pal(x):
-#     letters = ''.join(x.casefold().split())
-#     output = []
-#     for letter in letters:
-#         if letter.isalnum():
-#             output.append(letter)
-#     result = ''.join(output)
-#     return result==result[::-1]
-#
-# print(check_pal('Was it a car, or a cat, I saw?'))
+ss='Was it a car, or a cat, I saw?'
+def check_pal(x):
+    letters = ''.join(x.casefold().split())
+    output = []
+    for letter in letters:
+        if letter.isalnum():
+            output.append(letter)
+    result = ''.join(output)
+    return result==result[::-1]
+
+print(check_pal('Was it a car, or a cat, I saw?'))
 
 
 # Much better code for palindrome
