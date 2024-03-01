@@ -141,7 +141,6 @@ def fibonacci(n):
     :return: List of fibonacci numbers
     """
     fib = [0,1]
-    # -2 cos we start off with first two
     for i in range(n-2):
         fib.append(fib[i] + fib[i+1])
     return fib
@@ -161,6 +160,7 @@ def fibonacci(n: int) -> int:
 
 result = fibonacci(20)
 print(len(result))
+
 for i in range(36):
     print(i,fibonacci(i))
 p = sentence_palindrome(10)
