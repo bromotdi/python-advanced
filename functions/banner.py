@@ -3,7 +3,6 @@ def banner_text(text):
     screen_width = 80
     if len(text) > screen_width - 4:
         print('EEK!\nTHE TEXT IS TOO LONG TO FIT IN THE WINDOW')
-
     if text=='*':
         print('*'*screen_width)
     else:
@@ -18,6 +17,7 @@ banner_text('Next line')
 banner_text(' ')
 banner_text('what about here')
 banner_text('*')
+
 # Havent specified what to return so its returning None
 result = banner_text('Eoin is here ')
 print(result)
@@ -29,7 +29,6 @@ print(result == None)
 def banner_text(text,screen_width=80):
     if len(text) > screen_width - 4:
         raise ValueError("String {} is larger than specified width {}".format(text,screen_width))
-
     if text=='*':
         print('*'*screen_width)
     else:
