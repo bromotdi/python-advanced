@@ -7,7 +7,6 @@ def banner_text(text):
         print('*'*screen_width)
     else:
         centered_text = text.center(screen_width-4)
-        # this starts bit is neatly done
         output_string = '**{0}**'.format(centered_text)
         print(output_string)
 
@@ -33,7 +32,6 @@ def banner_text(text,screen_width=80):
         print('*'*screen_width)
     else:
         centered_text = text.center(screen_width-4)
-        # this centered  bit is neatly done
         output_string = '**{0}**'.format(centered_text)
         print(output_string)
 
@@ -44,12 +42,10 @@ banner_text(' ')
 banner_text('what about here',80)
 banner_text('*',80)
 
-
 # Improve the func with keyword args defaults
 def banner_text(text: str = ' ',screen_width: int = 80) -> None:
     """
     Print a centered text banner enclosed by two asterix on either side
-
 
     :param text: String to print to console
     :param screen_width: Console screen size metric
@@ -57,12 +53,10 @@ def banner_text(text: str = ' ',screen_width: int = 80) -> None:
     """
     if len(text) > screen_width - 4:
         raise ValueError("String {} is larger than specified width {}".format(text,screen_width))
-
     if text=='*':
         print('*'*screen_width)
     else:
         centered_text = text.center(screen_width-4)
-        # this centered  bit is neatly done
         output_string = '**{0}**'.format(centered_text)
         print(output_string)
 
