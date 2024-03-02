@@ -21,14 +21,11 @@ def get_integer():
             return int(guess)
         print('Thats not a number')
 
-
 highest = 1000
 answer = random.randint(1,highest)
 guess=0
-#print('Please guess a number between 1 and {}'.format(highest))
+print('Please guess a number between 1 and {}'.format(highest))
 
-
-# My attempt
 # while guess != answer:
 #     guess = get_integer()
 #     if guess == 0:
