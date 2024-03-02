@@ -1,15 +1,15 @@
 import random
 
-# Two approaches. 1 is to terminate if the function gets nonsense, ie set the value to 0
+# First approach is to terminate if the function gets nonsense, ie set the value to 0
 # Second approach is to loop until we get a valid number
-# def get_integer():
-#     while True:
-#         guess = input('Please guess a number between 1 and {}: '.format(highest))
-#         if guess.isnumeric():
-#             break
-#         else:
-#             print('Thats not a number')
-#     return int(guess)
+def get_integer():
+    while True:
+        guess = input('Please guess a number between 1 and {}: '.format(highest))
+        if guess.isnumeric():
+            break
+        else:
+            print('Thats not a number')
+    return int(guess)
 
 # really interesting way to make the else part implicit, we dont need to actually write it
 # because the else wont run if we return, so can leave it out entirely
@@ -20,7 +20,6 @@ def get_integer():
         if guess.isnumeric():
             return int(guess)
         print('Thats not a number')
-
 
 
 highest = 1000
