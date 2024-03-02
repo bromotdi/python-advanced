@@ -1,3 +1,5 @@
+import math
+
 LOW = 1
 HIGH = 1000
 
@@ -78,7 +80,6 @@ for i in range(1,100):
             print('ANSWER WAS: {}'.format(out))
             break
 
-# His way of doing it
 print(80*'*')
 print('STARTING GAME')
 print(80*'*')
@@ -101,7 +102,6 @@ while next_number< 99:
         print('All Done!')
 
 # Write a factorial function
-import math
 def factorial(n: int) -> int:
     '''
     Calculate factorial for a given n
@@ -126,15 +126,14 @@ def factorial(n: int) -> int:
     for x in range(3, n + 1):
         result *= x
 
-# Using recursion his way, dont like this
-# def factorial(n: int) -> int:
-#     """
-#     Return n! (0! is 1).
-#
-#     Valid for `n` in the range 0 to 998 (inclusive).
-#     Larger values of `n` will cause a RecursionError.
-#     """
-#     if n <= 1:
-#         return 1
-#
-#     return n * factorial(n - 1)
+# Using recursion
+def factorial(n: int) -> int:
+    """
+    Return n! (0! is 1).
+
+    Valid for `n` in the range 0 to 998 (inclusive).
+    Larger values of `n` will cause a RecursionError.
+    """
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)
