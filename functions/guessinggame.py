@@ -26,35 +26,31 @@ answer = random.randint(1,highest)
 guess=0
 print('Please guess a number between 1 and {}'.format(highest))
 
-# while guess != answer:
-#     guess = get_integer()
-#     if guess == 0:
-#         break
-#     if guess == answer:
-#         print('Congrats you guessed it')
-#         break
-#     else:
-#         if guess < answer:
-#             print('Please guess higher')
-#         else:
-#             print('Please guess lower')
-#
-#
+while guess != answer:
+    guess = get_integer()
+    if guess == 0:
+        break
+    if guess == answer:
+        print('Congrats you guessed it')
+        break
+    else:
+        if guess < answer:
+            print('Please guess higher')
+        else:
+            print('Please guess lower')
 
-
-#original
-# while guess != answer:
-#     guess = int(input('Please guess a number between 1 and {}: '.format(highest)))
-#     if guess == 0:
-#         break
-#     if guess == answer:
-#         print('Congrats you guessed it')
-#         break
-#     else:
-#         if guess < answer:
-#             print('Please guess higher')
-#         else:
-#             print('Please guess lower')
+while guess != answer:
+    guess = int(input('Please guess a number between 1 and {}: '.format(highest)))
+    if guess == 0:
+        break
+    if guess == answer:
+        print('Congrats you guessed it')
+        break
+    else:
+        if guess < answer:
+            print('Please guess higher')
+        else:
+            print('Please guess lower')
 
 
 
