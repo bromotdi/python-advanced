@@ -1,8 +1,7 @@
 numbers = (0,1,2,3,4,5)
-# print(numbers)
-# print(*numbers)
-# print(0,1,2,3,4,5)
-
+print(numbers)
+print(*numbers)
+print(0,1,2,3,4,5)
 
 # The star indiates that this arg will be replaced by an unpacked tuple.
 # ie when we're invoking the function, we can pass
