@@ -52,9 +52,6 @@ while guess != answer:
         else:
             print('Please guess lower')
 
-
-
-# the way he does it
 def get_integer(prompt):
     """
     Get an integer from standard input (stdin).
