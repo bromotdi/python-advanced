@@ -10,9 +10,7 @@ def guess_binary(answer, low, high):
     while True:
         print("\tGuessing in the range {} to {}".format(low, high))
         guess = low + (high - low) // 2
-        # high_low = input("My guess is {}. Should I guess higher or lower? Enter h or l, or c if my guess was correct."
-        #                  .format(guess)).casefold()
-
+        high_low = input("My guess is {}. Should I guess higher or lower? Enter h or l, or c if my guess was correct.".format(guess)).casefold()
         # if high_low == "h":
         if guess < answer:
             # I have to guess higher.  The low end of the range becomes 1 greater than the guess.
