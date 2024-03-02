@@ -1,8 +1,9 @@
 # Function with each type of arg
-# p1,p2 are positional args
+# p1, p2 are positional args
 # *args
 # k is keyword parameter, nees to be passed with it's keyword (because its after the variable args obvs)
 # **kwargs "var keyword parameter". Also called keyword args - these are optional keyword args
+
 def func(p1,p2,*args,k, **kwargs):
     print('positional-or-keyword:...{}, {}'.format(p1,p2))
     print('var-positional (*args):..{}'.format(args))
@@ -15,7 +16,6 @@ print(80*'*')
 def sum_numbers(*args: tuple) -> float:
     '''
     Sum all numbers passed to function
-
     :param args: tuple of numbers to be summed
     :return: cumulative sum of input tuple
     '''
@@ -30,8 +30,6 @@ print(sum_numbers(0,0,0))
 print(sum_numbers(1))
 print(sum_numbers())
 
-
-# His solution
 def sum_numbers(*values: float) -> float:
     """ calculates the sum of all the numbers passed as arguments """
     result = 0
@@ -39,12 +37,10 @@ def sum_numbers(*values: float) -> float:
         result += number
     return result
 
-
 print(sum_numbers(1, 2, 3))
 print(sum_numbers(8, 20, 2))
 print(sum_numbers(12.5, 3.147, 98.1))
 print(sum_numbers(1.1, 2.2, 5.5))
-
 
 # Way better solution
 def sum_numbers(*values: float) -> float:
