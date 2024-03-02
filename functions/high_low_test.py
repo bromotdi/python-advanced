@@ -21,12 +21,11 @@ def guess_binary(answer, low, high):
             high = guess - 1
         # elif high_low == "c":
         elif guess == answer:
-            # print("I got it in {} guesses!".format(guesses))
+            print("I got it in {} guesses!".format(guesses))
             # break
             return guesses
-        # else:
-        #     print("Please enter h, l or c")
-
+        else:
+            print("Please enter h, l or c")
         guesses += 1
 
 correct_count = 0
