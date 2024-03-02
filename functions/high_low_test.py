@@ -33,24 +33,16 @@ max_guesses = 0
 for number in range(LOW, HIGH + 1):
     number_of_guesses = guess_binary(number, LOW, HIGH)
     print("{} guessed in {}".format(number, number_of_guesses))
-
     if number_of_guesses > max_guesses:
         max_guesses, correct_count = number_of_guesses,1
     elif number_of_guesses == max_guesses:
         correct_count += 1
-
-
 print('I guessed without being told {} times. Max {} guesses'.format(correct_count, max_guesses))
-
-
-
 
 # Fizz buzz
 def fizz_buzz(n: int) -> str:
     '''
     Play fizz buzz game
-
-
     :param n: Integer to check
     :return: 'fizz' if number is divisible by 3
         'buzz' if number is divisble by 5
@@ -65,29 +57,26 @@ def fizz_buzz(n: int) -> str:
         return 'buzz'
     return str(n)
 
-
 for i in range(1,101):
     out = fizz_buzz(i)
     print(out)
-
-
-
+    
 # Create a loop to play the game agaisnt the computer
-# print(80*'*')
-# print('STARTING GAME')
-# print(80*'*')
-# for i in range(1,100):
-#     if i ==1:
-#         print('Starting at 1')
-#     out = fizz_buzz(i)
-#     if i %2 == 0:
-#         print('Computer says: {}'.format(out))
-#     else:
-#         say = input('User: ')
-#         if say != out:
-#             print('WRONG - GAME OVER.')
-#             print('ANSWER WAS: {}'.format(out))
-#             break
+print(80*'*')
+print('STARTING GAME')
+print(80*'*')
+for i in range(1,100):
+    if i ==1:
+        print('Starting at 1')
+    out = fizz_buzz(i)
+    if i %2 == 0:
+        print('Computer says: {}'.format(out))
+    else:
+        say = input('User: ')
+        if say != out:
+            print('WRONG - GAME OVER.')
+            print('ANSWER WAS: {}'.format(out))
+            break
 
 # His way of doing it
 print(80*'*')
