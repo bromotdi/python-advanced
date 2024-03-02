@@ -9,13 +9,11 @@ def test_star(*args):
     print(args)
     for x in args:
         print(x)
-
 test_star(0,1,2,3,4,5)
 
-# Could also do no value for *args and it'll still work
-# def test_star(*args,test):
-#     print(args)
-#     print(test)
-#
-#
-# test_star(test=(0,1,2,3,4,5))
+Could also do no value for *args and it'll still work
+def test_star(*args,test):
+    print(args)
+    print(test)
+
+test_star(test=(0,1,2,3,4,5))
