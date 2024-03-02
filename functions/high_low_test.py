@@ -1,13 +1,14 @@
 LOW = 1
 HIGH = 1000
 
-# print("Please think of a number between 1 and 1000")
-# input("Press ENTER to start")
+print("Please think of a number between 1 and 1000")
+input("Press ENTER to start")
+
 # function is reworked to output the number of guesses, not to just exit when we guess correctly
 def guess_binary(answer, low, high):
     guesses = 1
     while True:
-        # print("\tGuessing in the range {} to {}".format(low, high))
+        print("\tGuessing in the range {} to {}".format(low, high))
         guess = low + (high - low) // 2
         # high_low = input("My guess is {}. Should I guess higher or lower? Enter h or l, or c if my guess was correct."
         #                  .format(guess)).casefold()
