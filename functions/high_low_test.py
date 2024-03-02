@@ -86,28 +86,26 @@ print(80*'*')
 # In thsi was instead of douing one move at a time, within the loop we're doing computers turn and my turn
 # less code and less for lops. Dont have to do the even/odd check to decide who goes too.
 
-# input('Play fizz Buzz. Press Enter to start')
-# print()
-# next_number = 0
-# while next_number< 99:
-#     next_number+=1
-#     print(fizz_buzz(next_number))
-#     next_number += 1
-#     correct_answer = fizz_buzz(next_number)
-#     players_answer = input('Your turn: ')
-#     if players_answer != correct_answer:
-#         print('WRONG, the correct answer was {}'.format(correct_answer))
-#         break
-# else:
-#     print('All Done!')
-
+input('Play fizz Buzz. Press Enter to start')
+print()
+next_number = 0
+while next_number< 99:
+    next_number+=1
+    print(fizz_buzz(next_number))
+    next_number += 1
+    correct_answer = fizz_buzz(next_number)
+    players_answer = input('Your turn: ')
+    if players_answer != correct_answer:
+        print('WRONG, the correct answer was {}'.format(correct_answer))
+        break
+else:
+    print('All Done!')
 
 # Write a factorial function
 import math
 def factorial(n: int) -> int:
     '''
     Calculate factorial for a given n
-
 
     :param n: Integer for factorial calculation
     :return: n!
