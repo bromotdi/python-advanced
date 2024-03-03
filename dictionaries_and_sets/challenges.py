@@ -66,6 +66,7 @@ high = 1000
 print('Please think of a number between {} and {}'.format(low,high))
 input('Press enter to start: ')
 guesses = 0
+
 while True:
     print('\tGuessing in the range of {} to {}'.format(low,high))
     guess = low +(high-low) //2
@@ -194,6 +195,7 @@ print('3:\tLearn KDB')
 print('4:\tEat Dinner')
 print('5:\tExit')
 choice= "-"
+
 while True:
     if choice == '0':
         break
@@ -219,8 +221,6 @@ while choice != 0:
         print('4:\tEat Dinner')
         print('5:\tExit')
     choice = input()
-
-
 
 corpus = [w.casefold() for w in reuters.words() if len(w)== 5]
 
