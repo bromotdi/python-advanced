@@ -6,8 +6,9 @@ available_parts = {
     '5':'hdmi cable',
     '6':'dvd drive',
 }
-# My way
-# current_choice = None
+
+current_choice = None
+
 # Challenge
 # while current_choice != '0':
 #     if current_choice in available_parts:
