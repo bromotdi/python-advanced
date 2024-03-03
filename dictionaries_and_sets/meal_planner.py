@@ -77,32 +77,31 @@ while True:
 
 # the way he does the quantity choice
 # he utilises get() for the dictionary method as well
-# while True:
-#     print('Please choose your recipe')
-#     print('---------------------------')
-#     print('0 - Exit')
-#     for key, value in display_dict.items():
-#         print(f'{key} - {value}')
-#
-#     choice = input('>: ')
-#     if choice == '0':
-#         break
-#     elif choice in display_dict:
-#         selected_item = display_dict[choice]
-#         print(f'You have selected {selected_item}')
-#         print('checking ingredients...')
-#         ingredients = recipes[selected_item]
-#         print(ingredients)
-#
-#         for food_item,required_quantity in ingredients.items():
-#             # very useful, grab the quanity, if its not there use 0
-#             # Allows us to see what we need when we're short an item
-#             quantity_in_pantry = pantry.get(food_item,0)
-#             if required_quantity <= quantity_in_pantry:
-#                 print(f'\t{food_item} OK')
-#             else:
-#                 quantity_to_buy = required_quantity - quantity_in_pantry
-#                 print(f"\tYou need to buy {quantity_to_buy} of {food_item}")
+while True:
+    print('Please choose your recipe')
+    print('---------------------------')
+    print('0 - Exit')
+    for key, value in display_dict.items():
+        print(f'{key} - {value}')
+
+    choice = input('>: ')
+    if choice == '0':
+        break
+    elif choice in display_dict:
+        selected_item = display_dict[choice]
+        print(f'You have selected {selected_item}')
+        print('checking ingredients...')
+        ingredients = recipes[selected_item]
+        print(ingredients)
+        for food_item,required_quantity in ingredients.items():
+            # very useful, grab the quanity, if its not there use 0
+            # Allows us to see what we need when we're short an item
+            quantity_in_pantry = pantry.get(food_item,0)
+            if required_quantity <= quantity_in_pantry:
+                print(f'\t{food_item} OK')
+            else:
+                quantity_to_buy = required_quantity - quantity_in_pantry
+                print(f"\tYou need to buy {quantity_to_buy} of {food_item}")
 
 
 # Challenge - have this program output some kind of data structure we can use to build a shopping list
