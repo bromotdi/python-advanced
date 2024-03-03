@@ -107,6 +107,7 @@ while True:
 def shopping():
     '''
     Function to create a shopping list for the week
+    
     :return: A list of ingredients and the quantity to get
     '''
     meals, shopping_list = build_shopping_list()
@@ -127,39 +128,36 @@ def add_to_list(ingredients):
             add_to_list = quantity_to_buy + current_amount_on_list
             shopping_list[food_item] = add_to_list
     return shopping_list
-#
-# def build_shopping_list() -> str:
-#     '''
-#     Build a shopping list based off user input for meals during the week
-#
-#     :returns: The meals planned for the week. The list of ingredients and quantity needed to purchase.
-#
-#     '''
-#     meal_plan = []
-#     shopping_list={}
-#     while True:
-#         print('Please choose your recipe')
-#         print('---------------------------')
-#         print('0 - Exit')
-#         for key, value in display_dict.items():
-#             print(f'{key} - {value}')
-#         choice = input('>: ')
-#         if choice == '0':
-#             break
-#         elif choice in display_dict:
-#             selected_item = display_dict[choice]
-#             if not selected_item in meal_plan:
-#                 meal_plan.append(selected_item)
-#                 print(f'Adding {selected_item} to meal plan')
-#
-#             else:
-#                 meal_plan.remove(selected_item)
-#                 print(f'Removing {selected_item} from meal plan')
-#                 continue
-#
-#             ingredients_needed = recipes[selected_item]
-#             shopping_list = add_to_list(ingredients_needed)
-#     return meal_plan, shopping_list
+
+def build_shopping_list() -> str:
+    '''
+    Build a shopping list based off user input for meals during the week
+
+    :returns: The meals planned for the week. The list of ingredients and quantity needed to purchase.
+    '''
+    meal_plan = []
+    shopping_list={}
+    while True:
+        print('Please choose your recipe')
+        print('---------------------------')
+        print('0 - Exit')
+        for key, value in display_dict.items():
+            print(f'{key} - {value}')
+        choice = input('>: ')
+        if choice == '0':
+            break
+        elif choice in display_dict:
+            selected_item = display_dict[choice]
+            if not selected_item in meal_plan:
+                meal_plan.append(selected_item)
+                print(f'Adding {selected_item} to meal plan')
+            else:
+                meal_plan.remove(selected_item)
+                print(f'Removing {selected_item} from meal plan')
+                continue
+            ingredients_needed = recipes[selected_item]
+            shopping_list = add_to_list(ingredients_needed)
+    return meal_plan, shopping_list
 
 def add_shopping_item(data: dict, item: str,amount: int)-> None:
     """Add a tuple containing item and `amount` to the data `dict` """
