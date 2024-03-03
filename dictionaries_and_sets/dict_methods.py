@@ -25,7 +25,6 @@ for item in d:
 for key in d.keys():
     print(key)
 
-# Update method
 # Just lets you amend value of one dictionary using another dictionary
 # Whichever one you pass as arg will be used to update the other one, its pretty self-explanatory
 print("UPDATE METHOD\n"+80*'-')
@@ -56,7 +55,6 @@ if "four" in values:
     key = keys[index]
     print(f"{d[key]} was found with the key {key}")
 
-# More obvious way to do it
 # This would also work if value four appeared a few times
 # In general, work with keys on dict, shouldnt really be focusing on the values 
 for key,value in d.items():
