@@ -20,7 +20,6 @@ def simple_hash(s: str) -> int:
     # Scramble bits of key in some way, we do a divide by 10
     return basic_hash % 10
 
-
 def get(k: str) ->str:
     """Return the value for a key, or None if the key doesn't exist"""
     hash_code = simple_hash(k)
@@ -29,23 +28,18 @@ def get(k: str) ->str:
     else:
         return None
 
-
 keys = [""] * 10
 values = keys.copy()
 
 for key,value in data:
-    #Using our one
     h = simple_hash(key)
-    #Pythons hash function
-    #h = hash(key)
+    # pythons hash function
+    # h = hash(key)
     print(key,h)
     keys[h] = key
     values[h] = value
-
 print(keys)
 print(values)
 print()
 value = get("lemon")
 print(value)
-
-
