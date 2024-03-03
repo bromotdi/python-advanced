@@ -1,4 +1,5 @@
 from contents import pantry, recipes
+from contents_quantities import pantry, recipes
 
 print(pantry)
 print(recipes)
@@ -9,45 +10,41 @@ display_dict = {str(index + 1): meal for index, meal in enumerate(recipes)}
 display_dict = {}
 for index, key in enumerate(recipes):
     display_dict[str(index + 1)] = key
-# while True:
-#     print('Please choose your recipe')
-#     print('---------------------------')
-#     print('0 - Exit')
-#     for key, value in display_dict.items():
-#         print(f'{key} - {value}')
-#
-#     choice = input('>: ')
-#     if choice == '0':
-#         break
-#     elif choice in display_dict:
-#         selected_item = display_dict[choice]
-#         print(f'You have selected {selected_item}')
-#         print('checking ingredients...')
-#         ingredients = recipes[selected_item]
-#         print(ingredients)
-#         # Check the pantry and confirm we have it all - all or nothing
-#         # supplies = [food_item in pantry for food_item in ingredients]
-#         # if all(supplies):
-#         #     print('We have all the ingredients, enjoy the food')
-#         # else:
-#         #     missing_items=[]
-#         #     for i,bool in enumerate(supplies):
-#         #         if bool == False:
-#         #             missing_items.append(ingredients[i])
-#         #     print(f"We're short on supplies, we don't have {missing_items}")
-#
-#         # Just print out when we're missing stuff
-#         # Basically achieving the same thing as above but with less code and neater
-#         # It actually prints the list with an "ok" beside each ingredient
-#         for food_item in ingredients:
-#             if food_item in pantry:
-#                 print(f'\t{food_item} OK')
-#             else:
-#                 print(f"\tYou don't have a necessary ingredient: {food_item}")
+    
+while True:
+    print('Please choose your recipe')
+    print('---------------------------')
+    print('0 - Exit')
+    for key, value in display_dict.items():
+        print(f'{key} - {value}')
 
-
-# Adapting this to check quantities as well
-from contents_quantities import pantry, recipes
+    choice = input('>: ')
+    if choice == '0':
+        break
+    elif choice in display_dict:
+        selected_item = display_dict[choice]
+        print(f'You have selected {selected_item}')
+        print('checking ingredients...')
+        ingredients = recipes[selected_item]
+        print(ingredients)
+        # Check the pantry and confirm we have it all - all or nothing
+        # supplies = [food_item in pantry for food_item in ingredients]
+        if all(supplies):
+            print('We have all the ingredients, enjoy the food')
+        else:
+            missing_items=[]
+            for i,bool in enumerate(supplies):
+                if bool == False:
+                    missing_items.append(ingredients[i])
+            print(f"We're short on supplies, we don't have {missing_items}")
+        # Just print out when we're missing stuff
+        # Basically achieving the same thing as above but with less code and neater
+        # It actually prints the list with an "ok" beside each ingredient
+        for food_item in ingredients:
+            if food_item in pantry:
+                print(f'\t{food_item} OK')
+            else:
+                print(f"\tYou don't have a necessary ingredient: {food_item}")
 
 display_dict = {}
 for index, key in enumerate(recipes):
