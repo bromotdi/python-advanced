@@ -1,26 +1,24 @@
-# Similar to guessing game played before, but instead of only having two guesses or 3 etc, we want to
+# similar to guessing game played before, but instead of only having two guesses or 3 etc
 # guess until we get right -> so no repeated ifs
 import random
 
+guess = int(input("Please guess a number: "))
+correct = random.randint(1,10)
+print('Correct answer is {}'.format(correct)) # TODO: Remove after tests
+guess_number = 0
+while guess != correct:
+    guess_number += 1
+    if guess == 0:
+        print('Exiting game...')
+        break
+    elif guess > correct:
+        print('Too high, guess lower')
+    else:
+        print('Too low, guess lower')
+    guess = int(input("Please guess again "))
 
-# # my way
-# guess = int(input("Please guess a number: "))
-# correct = random.randint(1,10)
-# print('Correct answer is {}'.format(correct)) # TODO: Remove after tests
-# guess_number = 0
-# while guess != correct:
-#     guess_number += 1
-#     if guess == 0:
-#         print('Exiting game...')
-#         break
-#     elif guess > correct:
-#         print('Too high, guess lower')
-#     else:
-#         print('Too low, guess lower')
-#     guess = int(input("Please guess again "))
-#
-# if guess==correct:
-#     print('You guessed correctly! It took you {} tries'.format(guess_number))
+if guess==correct:
+    print('You guessed correctly! It took you {} tries'.format(guess_number))
 
 
 # His code
