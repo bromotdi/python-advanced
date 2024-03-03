@@ -162,36 +162,34 @@ else:
 
 # print('Hello my name\t is Eoin. What are\n you doing\n today')
 
-#options = {1:'Hello ',2:'Fuck off', 3:'20:10', 4:'-.-',5:'quit'}
-# while True:
-#     print('[1] Say hello\n[2] Be rude\n[3] Display time\n[4] Smile\n[5] Quit')
-#     choice = options[int(input('Choose an option: '))]
-#     if choice=='quit':
-#         print('Exiting...')
-#         break
-#     else:
-#         print(choice)
+options = {1:'Hello ',2:'Fuck off', 3:'20:10', 4:'-.-',5:'quit'}
+while True:
+    print('[1] Say hello\n[2] Be rude\n[3] Display time\n[4] Smile\n[5] Quit')
+    choice = options[int(input('Choose an option: '))]
+    if choice=='quit':
+        print('Exiting...')
+        break
+    else:
+        print(choice)
 
-
-# My attempt at it
-# choice = None
-# valid_options = [0,1,2,3,4,5]
-# while choice != 0:
-#     options_msg = '[1] Learn Python\n[2] learn Java\n[3] ' \
-#                   'Learn KDB\n[4] ' \
-#                   'Have Dinner\n[5] Go to Bed\n[0] Exit\n Please choose your options from the list above: '
-#     choice = int(input(options_msg))
-#     while not choice in valid_options:
-#         print('Invalid choice, please choose again')
-#         # Could argue this is not necessary, diff between loop til you pick a valid option vs just printing the
-#         # message again. Think behaviour resolves to same so maybe secondary loop not necessary and could do
-#         # as below ?
-#         choice = int(input(options_msg))
-#     if choice>0:
-#         print('You chose option {}'.format(choice))
-#     else:
-#         print('Exiting...')
-#         break
+choice = None
+valid_options = [0,1,2,3,4,5]
+while choice != 0:
+    options_msg = '[1] Learn Python\n[2] learn Java\n[3] ' \
+                  'Learn KDB\n[4] ' \
+                  'Have Dinner\n[5] Go to Bed\n[0] Exit\n Please choose your options from the list above: '
+    choice = int(input(options_msg))
+    while not choice in valid_options:
+        print('Invalid choice, please choose again')
+        # Could argue this is not necessary, diff between loop til you pick a valid option vs just printing the
+        # message again. Think behaviour resolves to same so maybe secondary loop not necessary and could do
+        # as below ?
+        choice = int(input(options_msg))
+    if choice>0:
+        print('You chose option {}'.format(choice))
+    else:
+        print('Exiting...')
+        break
 
 
 # His go at it
