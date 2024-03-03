@@ -62,4 +62,3 @@ recipes = {
         "spoon": 1,
     },
 }
-
