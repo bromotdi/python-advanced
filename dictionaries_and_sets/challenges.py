@@ -1,6 +1,9 @@
 # similar to guessing game played before, but instead of only having two guesses or 3 etc
 # guess until we get right -> so no repeated ifs
 import random
+import nltk
+from itertools import product
+from nltk.corpus import reuters
 
 guess = int(input("Please guess a number: "))
 correct = random.randint(1,10)
@@ -115,8 +118,8 @@ for num in numbers:
 else:
     print('These numbers are ok')
 
-# Using this version of else in high low game. Will only work with some numbers where convergence is possible, ie 72
-# but not 73
+# Using this version of else in high low game. 
+# Will only work with some numbers where convergence is possible
 
 low = 1
 high = 1000
@@ -129,10 +132,6 @@ while low != high:
     high_low = input('My guess is {}. '
                      'Should I go higher or lower or am I correct '.format(guess)).casefold()
     guesses += 1
-    # This is how pass would be used if we wrote the actual logic later on
-    # if high_low == 'higher':
-    #     # Guess higher - the low end of range becomes 1 greater than guess
-    #     pass
     if high_low == 'higher':
         # Guess higher - the low end of range becomes 1 greater than guess
         low = guess + 1
@@ -229,9 +228,7 @@ while choice != 0:
 #     choice = input()
 
 
-import nltk
-from itertools import product
-from nltk.corpus import reuters
+
 corpus = [w.casefold() for w in reuters.words() if len(w)== 5]
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -241,9 +238,7 @@ three = alphabet
 four = ''.join([l for l in alphabet if not l in "pnle"])
 five = 'd'
 
-
 loop=0
-# Wordle
 print('Have letters [s][][][][d]')
 print("-"*80)
 for a,b,c,d,e in product (one, two, three, four, five):
@@ -253,5 +248,3 @@ for a,b,c,d,e in product (one, two, three, four, five):
         print(a+b+c+d+e)
     if loop % 2000 == 0:
         print('{} letter combinations checked'.format(loop))
-
-
