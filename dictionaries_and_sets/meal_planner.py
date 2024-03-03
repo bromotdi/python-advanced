@@ -162,23 +162,18 @@ while True:
 #             ingredients_needed = recipes[selected_item]
 #             shopping_list = add_to_list(ingredients_needed)
 #     return meal_plan, shopping_list
-#
 
-
-
-# His attempt
-# def add_shopping_item(data: dict, item: str,amount: int)-> None:
-#     """Add a tuple containing item and `amount` to the data `dict` """
-#     if item in data:
-#         data[item] += amount
-#     else:
-#         data[item] += amount
+def add_shopping_item(data: dict, item: str,amount: int)-> None:
+    """Add a tuple containing item and `amount` to the data `dict` """
+    if item in data:
+        data[item] += amount
+    else:
+        data[item] += amount
 
 # Using setdefault method instead
 def add_shopping_item(data: dict, item: str,amount: int)-> None:
     """Add a tuple containing item and `amount` to the data `dict` """
     data[item] = data.setdefault(item,0) + amount
-
 
 shopping_list= {}
 while True:
@@ -208,11 +203,6 @@ while True:
                 quantity_to_buy = required_quantity - quantity_in_pantry
                 print(f"\tYou need to buy {quantity_to_buy} of {food_item}")
                 add_shopping_item(shopping_list, food_item, quantity_to_buy)
+
 for things in shopping_list.items():
     print(things)
-
-
-
-
-
-
