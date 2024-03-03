@@ -106,7 +106,6 @@ print("*"*80)
 
 numbers= [1,45,32,12,60]
 # Here the else only fires on a successful loop through all elements, if break happens at all we wont see the else
-#  clause
 for num in numbers:
     if number % 8 == 0:
         #reject the list
