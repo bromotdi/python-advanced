@@ -59,8 +59,8 @@ else:
     print('Exiting...')
     print(f'Final shopping list {computer_parts}')
 
-
 current_choice = None
+
 # Using computer_parts as a dictionary instead of a list
 computer_parts= {}
 while current_choice != '0':
@@ -83,5 +83,3 @@ while current_choice != '0':
 else:
     print('Exiting...')
     print(f'Final shopping list {computer_parts}')
-
-
