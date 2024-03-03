@@ -50,34 +50,30 @@ display_dict = {}
 for index, key in enumerate(recipes):
     display_dict[str(index + 1)] = key
 
-
-# my attempt
-# while True:
-#     print('Please choose your recipe')
-#     print('---------------------------')
-#     print('0 - Exit')
-#     for key, value in display_dict.items():
-#         print(f'{key} - {value}')
-#
-#     choice = input('>: ')
-#     if choice == '0':
-#         break
-#     elif choice in display_dict:
-#         selected_item = display_dict[choice]
-#         print(f'You have selected {selected_item}')
-#         print('checking ingredients...')
-#         ingredients = recipes[selected_item]
-#         print(ingredients)
-#         for food_item, quantity_needed in ingredients.items():
-#             if food_item not in pantry:
-#                 print(f"\t{food_item.upper()}: Out of Stock")
-#                 # Check we have the required quantities
-#             else:
-#                 if pantry[food_item] >= quantity_needed:
-#                     print(f'\t{food_item.upper()}: OK')
-#                 else:
-#                     print(f'\t{food_item.upper()}: Insufficient Quantity')
-
+while True:
+    print('Please choose your recipe')
+    print('---------------------------')
+    print('0 - Exit')
+    for key, value in display_dict.items():
+        print(f'{key} - {value}')
+    choice = input('>: ')
+    if choice == '0':
+        break
+    elif choice in display_dict:
+        selected_item = display_dict[choice]
+        print(f'You have selected {selected_item}')
+        print('checking ingredients...')
+        ingredients = recipes[selected_item]
+        print(ingredients)
+        for food_item, quantity_needed in ingredients.items():
+            if food_item not in pantry:
+                print(f"\t{food_item.upper()}: Out of Stock")
+                # Check we have the required quantities
+            else:
+                if pantry[food_item] >= quantity_needed:
+                    print(f'\t{food_item.upper()}: OK')
+                else:
+                    print(f'\t{food_item.upper()}: Insufficient Quantity')
 
 # the way he does the quantity choice
 # he utilises get() for the dictionary method as well
