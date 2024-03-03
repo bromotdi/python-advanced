@@ -27,7 +27,6 @@ print((20*'*') + ' TRYING ITEMS METHOD ' + (20*'*'))
 for key, value in vehicles.items():
     print(key,value,sep=' ')
 
-
 vehicles['starfighter'] = 'Lockheed F-104'
 vehicles['learjet'] = 'Bombardier Learjet 75'
 vehicles['toy'] = 'glider'
@@ -39,11 +38,8 @@ print(vehicles)
 
 del vehicles['starfighter']
 # This will delete the toy key, and if it doesnt exist it won't fail, it'll return None
-out = vehicles.pop('toy',None)
+out = vehicles.pop('toy', None)
 print(out)
 # This would throw error if key didnt exist - need to specifiy default or it acts like del
-#vehicles.pop('fake_key')
+vehicles.pop('fake_key')
 print(vehicles)
-# What if we try remove something that doesnt exist ?
-
-
