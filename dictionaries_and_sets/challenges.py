@@ -106,7 +106,6 @@ print("*"*80)
 
 # use else in a loop - actually has another purpose
 # v contrived example
-
 numbers= [1,45,32,12,60]
 # here the else only fires on a successful loop through all elements,
 # if break happens at all we wont see the else
@@ -120,7 +119,6 @@ else:
 
 # Using this version of else in high low game. 
 # Will only work with some numbers where convergence is possible
-
 low = 1
 high = 1000
 print('Please think of a number between {} and {}'.format(low,high))
@@ -159,8 +157,7 @@ while chosen_exit not in available_exits:
 else:
     print("You escaped")
 
-# print('Hello my name\t is Eoin. What are\n you doing\n today')
-
+print('Hello my name\t is Eoin. What are\n you doing\n today')
 options = {1:'Hello ',2:'Fuck off', 3:'20:10', 4:'-.-',5:'quit'}
 while True:
     print('[1] Say hello\n[2] Be rude\n[3] Display time\n[4] Smile\n[5] Quit')
@@ -190,42 +187,38 @@ while choice != 0:
         print('Exiting...')
         break
 
+print('Please choose options from list below: ')
+print('1:\tLearn Python')
+print('2:\tLearn Java')
+print('3:\tLearn KDB')
+print('4:\tEat Dinner')
+print('5:\tExit')
+choice= "-"
+while True:
+    if choice == '0':
+        break
+    elif choice in "12345":
+        print('You chose {}'.format(choice))
+    else:
+        print('Please choose options from list below: ')
+        print('1:\tLearn Python')
+        print('2:\tLearn Java')
+        print('3:\tLearn KDB')
+        print('4:\tEat Dinner')
+        print('5:\tExit')
+    choice = input()
 
-# His go at it
-# print('Please choose options from list below: ')
-# print('1:\tLearn Python')
-# print('2:\tLearn Java')
-# print('3:\tLearn KDB')
-# print('4:\tEat Dinner')
-# print('5:\tExit')
-# choice= "-"
-# while True:
-#     if choice == '0':
-#         break
-#     elif choice in "12345":
-#         print('You chose {}'.format(choice))
-#     else:
-#         print('Please choose options from list below: ')
-#         print('1:\tLearn Python')
-#         print('2:\tLearn Java')
-#         print('3:\tLearn KDB')
-#         print('4:\tEat Dinner')
-#         print('5:\tExit')
-#     choice = input()
-#
-#
-
-# while choice != 0:
-#     if choice in "12345":
-#         print('You chose {}'.format(choice))
-#     else:
-#         print('Please choose options from list below: ')
-#         print('1:\tLearn Python')
-#         print('2:\tLearn Java')
-#         print('3:\tLearn KDB')
-#         print('4:\tEat Dinner')
-#         print('5:\tExit')
-#     choice = input()
+while choice != 0:
+    if choice in "12345":
+        print('You chose {}'.format(choice))
+    else:
+        print('Please choose options from list below: ')
+        print('1:\tLearn Python')
+        print('2:\tLearn Java')
+        print('3:\tLearn KDB')
+        print('4:\tEat Dinner')
+        print('5:\tExit')
+    choice = input()
 
 
 
