@@ -24,7 +24,6 @@ for letter in text.casefold():
 for letter, count in sorted(word_count.items()):
     print(letter, count)
 
-# solution
 # We need an empty dictionary, to store and display the letter frequencies.
 word_count = {}
 
