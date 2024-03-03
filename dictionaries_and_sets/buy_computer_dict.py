@@ -33,4 +33,3 @@ while current_choice != '0':
             print(f"{key}: {value}")
         print('0: To Finish')
     current_choice = input('> ')
-
