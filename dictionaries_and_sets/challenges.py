@@ -150,21 +150,18 @@ else:
     print('I got it in {} guesses'.format(guesses))
 
 # Use else with the loop the same way you do with for loops
-# available_exits = ['west','east','south','north']
-# chosen_exit = " "
-# while chosen_exit not in available_exits:
-#     chosen_exit = input("Please choose a direction: ")
-#     if chosen_exit.casefold() =='quit':
-#         print('You gave up')
-#         break
-# else:
-#     print("You escaped")
-
+available_exits = ['west','east','south','north']
+chosen_exit = " "
+while chosen_exit not in available_exits:
+    chosen_exit = input("Please choose a direction: ")
+    if chosen_exit.casefold() =='quit':
+        print('You gave up')
+        break
+else:
+    print("You escaped")
 
 # print('Hello my name\t is Eoin. What are\n you doing\n today')
 
-# Ending challenges
-#print('-'*80)
 #options = {1:'Hello ',2:'Fuck off', 3:'20:10', 4:'-.-',5:'quit'}
 # while True:
 #     print('[1] Say hello\n[2] Be rude\n[3] Display time\n[4] Smile\n[5] Quit')
