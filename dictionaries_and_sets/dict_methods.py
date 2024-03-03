@@ -13,11 +13,8 @@ d = {
 
 pantry_items = ['chicken','spam', 'egg', "bread", "lemon"]
 
-
-
-# fromkeys
-# new_dict = dict.fromkeys(pantry_items,10)
-# print(new_dict)
+new_dict = dict.fromkeys(pantry_items,10)
+print(new_dict)
 
 # keys() method produces a view object, you cant add or subtract keys to the object, its kinda a link to the saved
 # keys of the real dict on the mem, like a pointer. So if you update the real dict, this updates.
@@ -45,7 +42,6 @@ for key,value in d.items():
 d.update(enumerate(pantry_items))
 for key,value in d.items():
     print(key,value)
-
 
 # dict.values() - works the exact same ways as keys() but for the values
 # Cant index into these objects in keys(), values() becaus ethey operate like sets and so dont have indexes
