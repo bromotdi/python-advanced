@@ -39,28 +39,24 @@ while guess != answer:
     else:
         print('Too low, guess higher')
 
-
 # Binary chop - let computer guess a number
-# Doing it my way
-
-# high = 1000
-# low = 1
-# print("Please think of a number between {1} and {0}".format(high,low))
-# input("Press Enter to start: ") # Just so we can hang proc until inputs
-# guess_number = 0
-# answer = 468
-# while True:
-#     guess = low + (high -low) // 2 # midpoint
-#     guess_number += 1
-#     direction = input('Should cpu go higher or lower? The guess is {}: '.format(guess)).casefold()
-#     if direction == 'higher':
-#        low = guess
-#     if direction == 'lower':
-#         high = guess
-#     if guess == answer:
-#         print('The machine guessed it, it took {} attempts'.format(guess_number))
-#         break
-
+high = 1000
+low = 1
+print("Please think of a number between {1} and {0}".format(high,low))
+input("Press Enter to start: ") # Just so we can hang proc until inputs
+guess_number = 0
+answer = 468
+while True:
+    guess = low + (high -low) // 2 # midpoint
+    guess_number += 1
+    direction = input('Should cpu go higher or lower? The guess is {}: '.format(guess)).casefold()
+    if direction == 'higher':
+       low = guess
+    if direction == 'lower':
+        high = guess
+    if guess == answer:
+        print('The machine guessed it, it took {} attempts'.format(guess_number))
+        break
 
 # low = 1
 # high = 1000
