@@ -58,41 +58,36 @@ while True:
         print('The machine guessed it, it took {} attempts'.format(guess_number))
         break
 
-# low = 1
-# high = 1000
-# print('Please think of a number between {} and {}'.format(low,high))
-# input('Press enter to start: ')
-# guesses = 0
-# while True:
-#     print('\tGuessing in the range of {} to {}'.format(low,high))
-#     guess = low +(high-low) //2
-#     high_low = input('My guess is {}. '
-#                      'Should I go higher or lower or am I correct '.format(guess)).casefold()
-#     guesses += 1
-#     # This is how pass would be used if we wrote the actual logic later on
-#     # if high_low == 'higher':
-#     #     # Guess higher - the low end of range becomes 1 greater than guess
-#     #     pass
-#     if high_low == 'higher':
-#         # Guess higher - the low end of range becomes 1 greater than guess
-#         low = guess + 1
-#     elif high_low =='lower':
-#         # Guess lower - the high end of the range becomes 1 less than guess
-#         high = guess - 1
-#     elif high_low == 'correct':
-#         print('Correct! I got it in {} guesses'.format(guesses))
-#         break
-#     else:
-#         print('Choices are only higher,lower or correct')
+low = 1
+high = 1000
+print('Please think of a number between {} and {}'.format(low,high))
+input('Press enter to start: ')
+guesses = 0
+while True:
+    print('\tGuessing in the range of {} to {}'.format(low,high))
+    guess = low +(high-low) //2
+    high_low = input('My guess is {}. '
+                     'Should I go higher or lower or am I correct '.format(guess)).casefold()
+    guesses += 1
+    # This is how pass would be used if we wrote the actual logic later on
+    if high_low == 'higher':
+        # Guess higher - the low end of range becomes 1 greater than guess
+        low = guess + 1
+    elif high_low =='lower':
+        # Guess lower - the high end of the range becomes 1 less than guess
+        high = guess - 1
+    elif high_low == 'correct':
+        print('Correct! I got it in {} guesses'.format(guesses))
+        break
+    else:
+        print('Choices are only higher,lower or correct')
 
-
-## Augmented assignment - literally just using +=. It's binary operation combined with assignment
+# Augmented assignment - literally just using +=.
+# It's binary operation combined with assignment
 # So +,-,*,/ all binary: (x+y)
-
 x = 'Good '
-x+= 'Morning'
+x += 'Morning'
 print(x)
-
 
 # exercise
 number = 7
