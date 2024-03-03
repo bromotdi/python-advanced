@@ -103,32 +103,30 @@ while True:
                 quantity_to_buy = required_quantity - quantity_in_pantry
                 print(f"\tYou need to buy {quantity_to_buy} of {food_item}")
 
-
 # Challenge - have this program output some kind of data structure we can use to build a shopping list
-#My attempt works but is a bit nasty, lets see his code
-# def shopping():
-#     '''
-#     Function to create a shopping list for the week
-#     :return: A list of ingredients and the quantity to get
-#     '''
-#     meals, shopping_list = build_shopping_list()
-#     print(f"Meal plan for this week is {', '.join(meals)}")
-#     print(f'Shopping list is {shopping_list}')
-#     return shopping_list
-#
-# def add_to_list(ingredients):
-#     shopping_list = {}
-#     for food_item, required_quantity in ingredients.items():
-#         # very useful, grab the quanity, if its not there use 0
-#         # Allows us to see what we need when we're short an item
-#         quantity_in_pantry = pantry.get(food_item, 0)
-#         if required_quantity >= quantity_in_pantry:
-#             quantity_to_buy = required_quantity - quantity_in_pantry
-#             print(f"\tYou need to buy {quantity_to_buy} of {food_item}")
-#             current_amount_on_list = shopping_list.get(food_item,0)
-#             add_to_list = quantity_to_buy + current_amount_on_list
-#             shopping_list[food_item] = add_to_list
-#     return shopping_list
+def shopping():
+    '''
+    Function to create a shopping list for the week
+    :return: A list of ingredients and the quantity to get
+    '''
+    meals, shopping_list = build_shopping_list()
+    print(f"Meal plan for this week is {', '.join(meals)}")
+    print(f'Shopping list is {shopping_list}')
+    return shopping_list
+
+def add_to_list(ingredients):
+    shopping_list = {}
+    for food_item, required_quantity in ingredients.items():
+        # very useful, grab the quanity, if its not there use 0
+        # Allows us to see what we need when we're short an item
+        quantity_in_pantry = pantry.get(food_item, 0)
+        if required_quantity >= quantity_in_pantry:
+            quantity_to_buy = required_quantity - quantity_in_pantry
+            print(f"\tYou need to buy {quantity_to_buy} of {food_item}")
+            current_amount_on_list = shopping_list.get(food_item,0)
+            add_to_list = quantity_to_buy + current_amount_on_list
+            shopping_list[food_item] = add_to_list
+    return shopping_list
 #
 # def build_shopping_list() -> str:
 #     '''
