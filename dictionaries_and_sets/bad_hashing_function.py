@@ -38,8 +38,10 @@ for key,value in data:
     print(key,h)
     keys[h] = key
     values[h] = value
+    
 print(keys)
 print(values)
 print()
+
 value = get("lemon")
 print(value)
