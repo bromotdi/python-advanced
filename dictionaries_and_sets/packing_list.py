@@ -49,8 +49,8 @@ if mode == "2":
         pack.discard(forbidden_item)
 
 # using difference_update to directly remove items
-# if mode == "2":
-#     pack.difference_update(restricted_items)
+if mode == "2":
+    pack.difference_update(restricted_items)
 
 # Using the -= operator (think set + set operations, works the same way)
 # Sets use a lot of mathematical formula
