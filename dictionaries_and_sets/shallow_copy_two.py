@@ -21,10 +21,7 @@ things = animals.copy()
 print(animals['teddy'])
 print(things['teddy'])
 
-print()
-
-
-#things["teddy"].append("toy")
+things["teddy"].append("toy")
 teddy_list.append('toy')
 print(animals['teddy'])
 print(things['teddy'])
