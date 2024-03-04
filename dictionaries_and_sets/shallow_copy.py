@@ -62,9 +62,7 @@ from contents_quantities import recipes
 new_dict = copy_dict(recipes)
 print(id(animals))
 print(id(new_dict))
-print()
+
 new_dict['Butter chicken']['lemon'] = 100
 print(new_dict['Butter chicken'])
 print(recipes['Butter chicken'])
-
-
