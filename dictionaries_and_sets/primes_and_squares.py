@@ -39,7 +39,7 @@ if __name__ == '__main__':
     squares = list(squares_generator(1000))
     print(squares)
     print("Generated {} squares.".format(len(squares)))
-
+    
     print("Primes up to 1000")
     primes = set(primes_generator(1000))
     print(sorted(primes))
@@ -63,4 +63,3 @@ if __name__ == '__main__':
              877, 881, 883, 887, 907, 911, 919, 929, 937, 941,
              947, 953, 967, 971, 977, 983, 991, 997}
     print(primes == check)
-
