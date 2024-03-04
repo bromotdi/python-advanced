@@ -14,11 +14,11 @@ numbers.add(1)
 print(numbers)
 
 # get 4 numbers from a user
-# while len(numbers) < 5:
-#     next_value = int(input("Give me a number >: "))
-#     numbers.add(next_value)
-# else:
-#     print(numbers)
+while len(numbers) < 5:
+    next_value = int(input("Give me a number >: "))
+    numbers.add(next_value)
+else:
+    print(numbers)
 
 
 data = ['blue','red','blue','green','red','blue','white']
