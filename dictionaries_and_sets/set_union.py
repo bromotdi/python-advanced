@@ -1,14 +1,16 @@
+from prescription_data import adverse_interactions
+
 farm_animals = {"sheep","hen","cow","horse","goat"}
 wild_animals = {"lion","elephant","tiger","goat","panther","horse"}
 print(farm_animals | wild_animals)
 
 meds_to_watch = set()
 
-# for interaction in adverse_interactions:
-#     #meds_to_watch = meds_to_watch.union(interaction)
-#     #meds_to_watch = meds_to_watch | interaction
-#     #meds_to_watch |= interaction
-#     meds_to_watch.update(interaction)
+for interaction in adverse_interactions:
+    meds_to_watch = meds_to_watch.union(interaction)
+    meds_to_watch = meds_to_watch | interaction
+    meds_to_watch |= interaction
+    meds_to_watch.update(interaction)
 
 # This does the same thing but obvs looks shite, dont do this way. Unpack with tuple
 # meds_to_watch.update(adverse_interactions[0],
