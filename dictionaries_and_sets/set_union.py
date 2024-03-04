@@ -13,14 +13,14 @@ for interaction in adverse_interactions:
     meds_to_watch.update(interaction)
 
 # This does the same thing but obvs looks shite, dont do this way. Unpack with tuple
-# meds_to_watch.update(adverse_interactions[0],
-#                      adverse_interactions[1],
-#                      adverse_interactions[2],
-#                      adverse_interactions[3],
-#                      adverse_interactions[4],
-#                      adverse_interactions[5],
-#                      adverse_interactions[6],
-#                      adverse_interactions[7])
+meds_to_watch.update(adverse_interactions[0],
+                     adverse_interactions[1],
+                     adverse_interactions[2],
+                     adverse_interactions[3],
+                     adverse_interactions[4],
+                     adverse_interactions[5],
+                     adverse_interactions[6],
+                     adverse_interactions[7])
 
 # Do it this way
 print("START HERE")
