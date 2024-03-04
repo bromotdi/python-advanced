@@ -39,16 +39,16 @@ print(animals['teddy'])
 print(things['teddy'])
 
 # challenge - create a function which copies a dictionary
-# def copy_dict(dictionary: dict)->dict:
-#     """ Make a copy of a dictionary"""
-#     new_dict={}
-#     for key,value in dictionary.items():
-#         new_dict[key] = new_dict.setdefault(key,value)
-#     return new_dict
+def copy_dict(dictionary: dict)->dict:
+    """ Make a copy of a dictionary"""
+    new_dict={}
+    for key,value in dictionary.items():
+        new_dict[key] = new_dict.setdefault(key,value)
+    return new_dict
 
-# def copy_dict(dictionary: dict)->dict:
-#     """ Make a copy of a dictionary"""
-#     return {k:v.copy() for k,v in dictionary.items()}
+def copy_dict(dictionary: dict)->dict:
+    """ Make a copy of a dictionary"""
+    return {k:v.copy() for k,v in dictionary.items()}
 
 # His solution
 def copy_dict(d: dict) -> dict:
