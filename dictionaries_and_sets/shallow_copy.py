@@ -1,4 +1,5 @@
 import copy
+from contents_quantities import recipes
 
 # behaviour before, animlas and things are same object, use copy to make a new one
 animals = {
@@ -49,7 +50,6 @@ def copy_dict(dictionary: dict)->dict:
     """ Make a copy of a dictionary"""
     return {k:v.copy() for k,v in dictionary.items()}
 
-# His solution
 def copy_dict(d: dict) -> dict:
     new_dict = {}
     for key,value in d.items():
@@ -57,7 +57,6 @@ def copy_dict(d: dict) -> dict:
         new_dict[key] = new_value
     return new_dict
 
-from contents_quantities import recipes
 new_dict = copy_dict(recipes)
 print(id(animals))
 print(id(new_dict))
