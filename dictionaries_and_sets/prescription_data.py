@@ -30,10 +30,10 @@ for a in adverse_interactions:
     print()
 
 print("PRINTING SECOND LEVEL ONLY")
-# for a,b in adverse_interactions:
-#     print(f"A is {a}")
-#     print(f"B is {b}")
-#     print()
+for a,b in adverse_interactions:
+    print(f"A is {a}")
+    print(f"B is {b}")
+    print()
 #
 #
 # print("PRINTING THIRD LEVEL ONLY")
