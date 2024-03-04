@@ -1,15 +1,15 @@
 from typing import Generator
 
-
 def squares_generator(n: int) -> Generator[int, None, None]:
-    """Generator to return the perfect squares less than `n`."""
+    """
+        Generator to return the perfect squares less than `n`.
+    """
     if n > 0:
         i = next_square = 1
         while next_square < n:
             yield next_square
             i += 1
             next_square = i * i
-
 
 def primes_generator(n: int) -> Generator[int, None, None]:
     """
