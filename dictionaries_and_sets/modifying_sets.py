@@ -1,11 +1,13 @@
 # this creates an empty set, but dont do this its hard to read. ^ creates an empty dict
 # this works because we can use * to unpack a sequence or iterable.
 # unpacking an empty sequence produces no values, so it initialises an empty set within braces
+
+numbers = {}
 numbers = {*""}
-Might also see this as
+
+# Might also see this as
 numbers = {*{}}
 print(type(numbers))
-
 
 numbers = set()
 numbers.add(1)
