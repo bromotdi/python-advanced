@@ -20,11 +20,10 @@ while len(numbers) < 5:
 else:
     print(numbers)
 
-
 data = ['blue','red','blue','green','red','blue','white']
 
-# unique_data = sorted(set(data))
-# print(unique_data)
+unique_data = sorted(set(data))
+print(unique_data)
 
 # create a list of unique colours in the order they appeared
 unique_data = list(dict.fromkeys(data))
