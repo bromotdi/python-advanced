@@ -2,7 +2,7 @@ from typing import Generator
 
 def squares_generator(n: int) -> Generator[int, None, None]:
     """
-        Generator to return the perfect squares less than `n`.
+    Generator to return the perfect squares less than `n`.
     """
     if n > 0:
         i = next_square = 1
@@ -33,7 +33,6 @@ def primes_generator(n: int) -> Generator[int, None, None]:
             # Remove all multiples of `next_prime`.
             integers.difference_update(range(next_prime, n + 1, 2 * next_prime))
             next_prime = min(integers, default=None)  # None if set is empty.
-
 
 if __name__ == '__main__':
     print("Squares less than 1000:")
