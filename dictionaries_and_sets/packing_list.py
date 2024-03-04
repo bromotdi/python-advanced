@@ -81,5 +81,4 @@ basket = {'garlic crusher',
           'bush hat',
           }
 
-# Add your code here.
 suggestions = sorted(favourites - basket)
