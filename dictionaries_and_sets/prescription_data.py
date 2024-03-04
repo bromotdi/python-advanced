@@ -24,13 +24,12 @@ adverse_interactions = [
     {warfarin, amlodipine},
 ]
 
-# print("PRINTING TOP LEVEL ONLY")
-# for a in adverse_interactions:
-#     print(f"A is {a}")
-#     print()
-#
-# print("PRINTING SECOND LEVEL ONLY")
-#
+print("PRINTING TOP LEVEL ONLY")
+for a in adverse_interactions:
+    print(f"A is {a}")
+    print()
+
+print("PRINTING SECOND LEVEL ONLY")
 # for a,b in adverse_interactions:
 #     print(f"A is {a}")
 #     print(f"B is {b}")
