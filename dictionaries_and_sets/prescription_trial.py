@@ -1,10 +1,10 @@
 from prescription_data import *
-trial_patients = ['Denise',"Eddie", "Frank", "Georgia","Kenny"]
+trial_patients = ["Denise", "Eddie", "Frank", "Georgia", "Kenny"]
 
 # Remove Warfarin and add edoxaban
-# for patient in trial_patients:
-#     patients[patient].remove(warfarin)
-#     patients[patient].add(edoxaban)
+for patient in trial_patients:
+    patients[patient].remove(warfarin)
+    patients[patient].add(edoxaban)
 
 for patient in trial_patients:
     prescription = patients[patient]
@@ -18,12 +18,3 @@ for patient in trial_patients:
         print(f"Patient {patient} is not taking warfarin. "
               f"Please remove {patient} from the trial")
     print(patient,prescription)
-
-
-
-
-
-
-
-
-
