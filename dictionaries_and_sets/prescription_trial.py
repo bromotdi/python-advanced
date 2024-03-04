@@ -1,4 +1,5 @@
 from prescription_data import *
+
 trial_patients = ["Denise", "Eddie", "Frank", "Georgia", "Kenny"]
 
 # Remove Warfarin and add edoxaban
