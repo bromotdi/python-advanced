@@ -22,15 +22,11 @@ meds_to_watch.update(adverse_interactions[0],
                      adverse_interactions[6],
                      adverse_interactions[7])
 
-# Do it this way
 print("START HERE")
 # This is a really good way to see how a tuple is unpacking, or what its made up of. Print each part on a new line
 # and you'll see what one level is made up of, and what could be unpacked from there
-
 print(*adverse_interactions, sep="\n")
 meds_to_watch.update(*adverse_interactions)
+
 print("MEDS TO WATCH")
 print(*meds_to_watch,sep ="\n")
-
-
-# neat trick to print out visually
