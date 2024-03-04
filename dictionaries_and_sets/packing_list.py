@@ -54,9 +54,8 @@ if mode == "2":
 
 # Using the -= operator (think set + set operations, works the same way)
 # Sets use a lot of mathematical formula
-# if mode == "2":
-#     pack -= restricted_items
-
+if mode == "2":
+    pack -= restricted_items
 
 print("You need to pack:")
 for item in sorted(pack):
