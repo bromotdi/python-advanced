@@ -43,11 +43,10 @@ for key,value in travel_mode.items():
 mode='-'
 while mode not in travel_mode:
     mode = input("> ")
-
-#Boring way
-# if mode == "2":
-#     for forbidden_item in restricted_items:
-#         pack.discard(forbidden_item)
+    
+if mode == "2":
+    for forbidden_item in restricted_items:
+        pack.discard(forbidden_item)
 
 # using difference_update to directly remove items
 # if mode == "2":
