@@ -30,10 +30,9 @@ things = animals.copy()
 
 # This does a deep copy
 things = copy.deepcopy(animals)
-
 print(id(things['teddy']),things['teddy'])
 print(id(animals['teddy']), animals['teddy'])
-print()
+
 things["teddy"].append("toy")
 print(animals['teddy'])
 print(things['teddy'])
