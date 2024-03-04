@@ -62,7 +62,6 @@ patients = {
     "Kenny": {amlodipine, citalopram, metformin},
 }
 
-
 t = [
     {('X','Y'),("Z","K")},
     {(1,2),(3,4)},
@@ -75,12 +74,10 @@ for a in t:
     print()
 
 print("PRINTING a,b ONLY")
-
 for a,b in t:
     print(f"A is {a}")
     print(f"B is {b}")
     print()
-
 
 print("PRINTING a,(b,c) ONLY")
 
