@@ -19,19 +19,15 @@ print(animals)
 print(things)
 print(other_thing)
 
-
-
-
-# shallow copy
-print(80*'-')
-
 animals = {
     'lion':["scary","cat"],
     "elephant":["big","grey"],
     "teddy": ["cuddly","stuffed"]
 }
+
 # This does a shallow copy
-#things = animals.copy()
+things = animals.copy()
+
 # This does a deep copy
 things = copy.deepcopy(animals)
 
