@@ -1,7 +1,5 @@
 trial_1 = {"Bob","Charlie","Georgia","John"}
 trial_2 = {"Anne","Charley","Eddie","Georgia"}
-
-
 print(trial_1.intersection(trial_2))
 
 
