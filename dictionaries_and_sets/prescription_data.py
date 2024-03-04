@@ -34,15 +34,14 @@ for a,b in adverse_interactions:
     print(f"A is {a}")
     print(f"B is {b}")
     print()
-#
-#
-# print("PRINTING THIRD LEVEL ONLY")
-# for (a,b),(c,d) in adverse_interactions:
-#     print(f"A is {a}")
-#     print(f"B is {b}")
-#     print(f"C is {c}")
-#     print(f"D is {d}")
-#     print()
+
+print("PRINTING THIRD LEVEL ONLY")
+for (a,b),(c,d) in adverse_interactions:
+    print(f"A is {a}")
+    print(f"B is {b}")
+    print(f"C is {c}")
+    print(f"D is {d}")
+    print()
 
 for a,(b,c) in adverse_interactions:
     print(f"first thing is: {a}")
