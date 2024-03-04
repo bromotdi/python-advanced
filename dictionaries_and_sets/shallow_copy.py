@@ -1,4 +1,5 @@
 import copy
+
 # behaviour before, animlas and things are same object, use copy to make a new one
 animals = {
     'lion':"scary",
