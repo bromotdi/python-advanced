@@ -1,10 +1,7 @@
-# farm_animals = {"sheep","hen","cow","horse","goat"}
-#
-# wild_animals = {"lion","elephant","tiger","goat","panther","horse"}
-#
-# print(farm_animals | wild_animals)
+farm_animals = {"sheep","hen","cow","horse","goat"}
+wild_animals = {"lion","elephant","tiger","goat","panther","horse"}
+print(farm_animals | wild_animals)
 
-from prescription_data import adverse_interactions
 meds_to_watch = set()
 
 # for interaction in adverse_interactions:
