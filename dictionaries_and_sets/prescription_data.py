@@ -80,7 +80,6 @@ for a,b in t:
     print()
 
 print("PRINTING a,(b,c) ONLY")
-
 for a,(b,c) in t:
     print(f"A is {a}")
     print(f"B is {b}")
