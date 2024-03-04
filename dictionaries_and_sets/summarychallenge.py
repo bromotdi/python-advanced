@@ -1,4 +1,5 @@
-choice = "-"  # initialise choice to something invalid
+# initialise choice to something invalid
+choice = "-" 
 while choice != "0":
     #if choice in ('1','2','3','4','5'):
     #if choice in list('12345'):
@@ -12,9 +13,4 @@ while choice != "0":
         print("4:\tHave dinner")
         print("5:\tGo to bed")
         print("0:\tExit")
-
     choice = input()
-
-
-
-
