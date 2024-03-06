@@ -1,5 +1,4 @@
 import csv
-
 filename='country_info.txt'
 
 # this does work cos you're loading as one string then trying to stip that whoile thing, so individual bits dont get
@@ -10,7 +9,6 @@ print(text.strip('\n').split('|'))
 
 with open(filename) as country_info:
     text = [line.strip('\n').split('|') for line in country_info.readlines()]
-
 print(text)
 
 # Create a dictionary out of our loaded data
@@ -45,6 +43,3 @@ while True:
     elif chosen_country == 'exit':
         print('Exiting...')
         break
-
-
-
