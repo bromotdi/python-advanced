@@ -5,10 +5,7 @@ with open(filename,encoding='utf-8',newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         print(row)
-
 print(reader)
-
-
 
 input_filename = 'country_info.txt'
 dialect = csv.excel
