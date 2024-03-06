@@ -32,7 +32,6 @@ def next_invoice_number(invoice_number: str) -> str:
         the new invoice number will contain the current year, and the
         numerical part will be set to "0001".
     """
-    
     year,number = parse_invoice_number(invoice_number)
     current_year = get_year()
     if year != current_year:
@@ -78,7 +77,6 @@ def record_invoice(invoice_file: TextIO,
         # if the file is empty, we'll start numbering from 1
         year = get_year()
         new_invoice_number = f'{year}-{1:04d}'
-
     last_line_ptr = invoice_file.tell()
     print(f'{new_invoice_number}\t{company}\t{amount}', file=invoice_file)
     return last_line_ptr
@@ -103,7 +101,7 @@ for test_string, result, next_number in test_data:
         print(f'{test_string} parsed successfully')
     else:
         print(f'{test_string} failed to parse. Expected {result} got {parts}')
-
+        
     new_number = next_invoice_number(test_string)
     if next_number == new_number:
         print(f'New number {new_number} generated correctly for {test_string}')
