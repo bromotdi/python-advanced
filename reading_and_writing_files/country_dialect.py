@@ -21,7 +21,6 @@ with open(filename,encoding='utf-8',newline='') as countries_data:
     for row in country_reader:
         print(row)
 
-print('*'*80)
 attributes = ['delimiter',
               'doublequote',
               'escapechar',
