@@ -11,7 +11,6 @@ input_filename = 'country_info.txt'
 dialect = csv.excel
 dialect.delimiter = '|'
 
-
 countries = {}
 with open(input_filename,encoding='utf-8',newline='') as country_file:
     headings = country_file.readline().strip('\n').split(dialect.delimiter)
@@ -22,8 +21,6 @@ with open(input_filename,encoding='utf-8',newline='') as country_file:
     reader = csv.DictReader(country_file, delimiter='|',dialect=dialect,fieldnames=headings)
     for row in reader:
         countries[row['country'].casefold()] = row
-
-
 print(countries)
 
 while True:
