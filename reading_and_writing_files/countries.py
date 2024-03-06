@@ -14,29 +14,27 @@ with open(filename) as country_info:
 print(text)
 
 # Create a dictionary out of our loaded data
-# countries = {}
-# with open(filename) as country_file:
-#     # Doing this reads the first level
-#     country_file.readline()
-#     # So when you start here, you're doing from the second line onward
-#     for row in country_file:
-#         data = row.strip('\n').split('|')
-#         country,capital,code,code3,dialing,timezone,currency = data
-#         country_dict = {
-#                 'name':country,
-#                 'capital':capital,
-#                 'country_code':code,
-#                 'cc3':code3,
-#                 'dialing_code':dialing,
-#                 'timezone':timezone,
-#                 'currency':currency,
-#             }
-#         countries[country.casefold()] = country_dict
-#         #countries[code.casefold()] = country_dict
-#         # using a tuple to see how that works
-#         #countries[(country.casefold(),code.casefold())] = country_dict
-
-
+countries = {}
+with open(filename) as country_file:
+    # Doing this reads the first level
+    country_file.readline()
+    # So when you start here, you're doing from the second line onward
+    for row in country_file:
+        data = row.strip('\n').split('|')
+        country,capital,code,code3,dialing,timezone,currency = data
+        country_dict = {
+                'name':country,
+                'capital':capital,
+                'country_code':code,
+                'cc3':code3,
+                'dialing_code':dialing,
+                'timezone':timezone,
+                'currency':currency,
+            }
+        countries[country.casefold()] = country_dict
+        countries[code.casefold()] = country_dict
+        # using a tuple to see how that works
+        countries[(country.casefold(),code.casefold())] = country_dict
 
 while True:
     chosen_country = input("Please choose a country: ").casefold()
