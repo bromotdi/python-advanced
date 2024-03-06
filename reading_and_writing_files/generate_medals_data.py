@@ -23,12 +23,9 @@ with open('OlympicMedals_2020.csv', encoding='utf-8', newline='') as data,\
             if value.isnumeric():
                 value = int(value)
             new_dict[key.casefold()] = value
-
         # print the dictionary to the output file
         # (indented by 4 spaces, with a trailing comma).
         print(f'    {new_dict},', file=output_file)
-
     # All the data rows have been written, print the terminating ]
     print(']', file=output_file)
     print(file=output_file)  # and finish with a blank line.
-
