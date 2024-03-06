@@ -38,15 +38,15 @@ filename='country_info.txt'
 
 
 
-# while True:
-#     chosen_country = input("Please choose a country: ").casefold()
-#     #chosen_country = tuple([i.strip() for i in ''.join(chosen_country).split(',')])
-#     if chosen_country in countries:
-#         country_data = countries[chosen_country]
-#         [print(f"{k}: {v}") for k,v in country_data.items()]
-#     elif chosen_country == 'exit':
-#         print('Exiting...')
-#         break
-#
+while True:
+    chosen_country = input("Please choose a country: ").casefold()
+    #chosen_country = tuple([i.strip() for i in ''.join(chosen_country).split(',')])
+    if chosen_country in countries:
+        country_data = countries[chosen_country]
+        [print(f"{k}: {v}") for k,v in country_data.items()]
+    elif chosen_country == 'exit':
+        print('Exiting...')
+        break
+
 
 
