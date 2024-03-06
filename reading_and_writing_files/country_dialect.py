@@ -2,13 +2,13 @@ import csv
 filename='country_info.txt'
 
 # not really efficient way to do it, read whole thing, sniff, then restart whole file
-# with open(filename,encoding='utf-8',newline='') as countries_data:
-#     sample = countries_data.read()
-#     country_dialect = csv.Sniffer().sniff(sample)
-#     countries_data.seek(0)
-#     country_reader = csv.reader(countries_data, dialect=country_dialect)
-#     for row in country_reader:
-#         print(row)
+with open(filename,encoding='utf-8',newline='') as countries_data:
+    sample = countries_data.read()
+    country_dialect = csv.Sniffer().sniff(sample)
+    countries_data.seek(0)
+    country_reader = csv.reader(countries_data, dialect=country_dialect)
+    for row in country_reader:
+        print(row)
 
 # Instead, read first few lines, sniff that and then restart
 with open(filename,encoding='utf-8',newline='') as countries_data:
