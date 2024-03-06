@@ -2,11 +2,9 @@ import datetime
 from os import SEEK_SET
 from typing import TextIO
 
-
 def get_year() -> int:
     """Return the current year as an integer."""
     return datetime.datetime.now().year
-
 
 def parse_invoice_number(invoice_number: str) -> tuple[int, int]:
     """Split a well-formed invoice "number" into its component parts.
@@ -19,15 +17,12 @@ def parse_invoice_number(invoice_number: str) -> tuple[int, int]:
         the 4 digit year as an integer,
         the invoice number as an integer.
     """
-    # My way
     #return tuple([int(num) for num in invoice_number.split('-')])
-    # his way
     year,number = invoice_number.split('-')
     return int(year), int(number)
 
 def next_invoice_number(invoice_number: str) -> str:
     """ Produce the next invoice "number" in sequence.
-
     The format of `invoice_number` is described in `parse_invoice_number`.
 
     :param invoice_number: A string representing an invoice number.
@@ -37,14 +32,14 @@ def next_invoice_number(invoice_number: str) -> str:
         the new invoice number will contain the current year, and the
         numerical part will be set to "0001".
     """
-    # My way
-    # year,number = parse_invoice_number(invoice_number)
-    # current_year = get_year()
-    # if year != current_year:
-    #     year = current_year
-    #     number = 0
-    # return '-'.join([str(year).rjust(4,'0'),str(number+1).rjust(4,'0')])
-    # His way
+    
+    year,number = parse_invoice_number(invoice_number)
+    current_year = get_year()
+    if year != current_year:
+        year = current_year
+        number = 0
+    return '-'.join([str(year).rjust(4,'0'),str(number+1).rjust(4,'0')])
+
     invoice_year, number = parse_invoice_number(invoice_number)
     year = get_year()
     if year == invoice_year:
@@ -54,8 +49,6 @@ def next_invoice_number(invoice_number: str) -> str:
         number = 1
     new_invoice_number = f'{invoice_year}-{number:04d}'
     return new_invoice_number
-
-
 
 def record_invoice(invoice_file: TextIO,
                    company: str,
