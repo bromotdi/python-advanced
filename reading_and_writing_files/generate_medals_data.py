@@ -9,7 +9,6 @@ with open('OlympicMedals_2020.csv', encoding='utf-8', newline='') as data,\
     print('import csv', file=output_file)
     print(file=output_file)
     print('medals_table = [', file=output_file)
-
     reader = csv.DictReader(data)
     # Read each row from the CSV file, as a dictionary,
     # and produce a new dictionary containing the key/value
