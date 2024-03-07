@@ -30,9 +30,6 @@ with open(filename,'w',encoding='utf-8',newline='') as csv_file:
     writer.writeheader()
     writer.writerows(album_list)
 
-
-
-# His way of doing it
 filename = 'albums.csv'
 
 with open(filename,'w',encoding='utf-8',newline='') as csv_file:
