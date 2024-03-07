@@ -15,12 +15,11 @@ with open('Jabberwocky.txt','r') as jabber:
     lines = jabber.readlines()
 print(lines)
 
-
 print("Doing read")
 with open('Jabberwocky.txt','r') as jabber:
     text = jabber.read()
 print(text)
-#
+
 # #lastly readlines
 # print("Doing readline")
 # with open('Jabberwocky.txt','r') as jabber:
