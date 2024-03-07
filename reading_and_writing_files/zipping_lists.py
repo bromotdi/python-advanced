@@ -14,7 +14,6 @@ for row in albums:
     for thing in zip_object:
         print('\t',thing)
 
-# To create the dict
 album_list = []
 for row in albums:
     empty_dict = {}
