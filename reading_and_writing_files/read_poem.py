@@ -4,11 +4,9 @@ for line in jabber:
     print(line.rstrip())
 jabber.close()
 
-
-# using with
-# with open('Jabberwocky.txt','r') as jabber:
-#     for line in jabber:
-#         print(line.rstrip())
+with open('Jabberwocky.txt','r') as jabber:
+    for line in jabber:
+        print(line.rstrip())
 
 # Using readlines()
 # print("Doing readlines")
