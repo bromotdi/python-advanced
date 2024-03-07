@@ -28,11 +28,7 @@ with open('Jabberwocky.txt','r') as jabber:
         print(line)
         if 'jubjub' in line.casefold():
             break
-#
-#
-# print(80*'-')
-# # equivlent to
-#
+
 with open('Jabberwocky.txt', encoding='utf-8') as jabber:
     for line in jabber:
         print(line.rstrip())
