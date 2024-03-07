@@ -36,13 +36,10 @@ with open(filename) as plants:
         new_list.append(line.strip('\n'))
 print(new_list)
 
-
-
 plants_filename = "flowers_write.txt"
 with open(plants_filename,"w") as plants:
     for plant in data:
         plants.write(plant)
-
 
 numbers_file = "test_numbers.txt"
 with open(numbers_file,'w') as test:
