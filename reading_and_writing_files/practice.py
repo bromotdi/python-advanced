@@ -1,6 +1,3 @@
-# rewrite down the python file for invoices
-# Doing this because the tab looks wonky on intelliJ, was confirming if i reloaded and resaved it still came out wrong
-# It does
 import csv
 
 filename = 'invoices.csv'
