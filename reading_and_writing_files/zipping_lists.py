@@ -9,19 +9,18 @@ albums = [("Welcome to my Nightmare", "Alice Cooper", 1975),
 
 headings = ['album','artist','year']
 
+for row in albums:
+    zip_object = zip(headings, row)
+    for thing in zip_object:
+        print('\t',thing)
 
-# for row in albums:
-#     zip_object = zip(headings, row)
-#     for thing in zip_object:
-#         print('\t',thing)
-#
-# # To create the dict
-# album_list = []
-# for row in albums:
-#     empty_dict = {}
-#     for head,value in zip(headings,row):
-#          empty_dict[head] = value
-#     album_list.append(empty_dict)
+# To create the dict
+album_list = []
+for row in albums:
+    empty_dict = {}
+    for head,value in zip(headings,row):
+         empty_dict[head] = value
+    album_list.append(empty_dict)
 #
 # filename = 'albums.csv'
 # dialect = csv.excel
