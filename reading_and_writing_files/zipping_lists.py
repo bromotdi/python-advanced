@@ -21,15 +21,15 @@ for row in albums:
     for head,value in zip(headings,row):
          empty_dict[head] = value
     album_list.append(empty_dict)
-#
-# filename = 'albums.csv'
-# dialect = csv.excel
-# print(f"dialect quoting is {dialect.quoting}")
-# with open(filename,'w',encoding='utf-8',newline='') as csv_file:
-#     writer = csv.DictWriter(csv_file,fieldnames=headings,extrasaction='ignore', quoting=csv.QUOTE_NONNUMERIC)
-#     writer.writeheader()
-#     writer.writerows(album_list)
-#
+
+filename = 'albums.csv'
+dialect = csv.excel
+print(f"dialect quoting is {dialect.quoting}")
+with open(filename,'w',encoding='utf-8',newline='') as csv_file:
+    writer = csv.DictWriter(csv_file,fieldnames=headings,extrasaction='ignore', quoting=csv.QUOTE_NONNUMERIC)
+    writer.writeheader()
+    writer.writerows(album_list)
+
 
 
 # His way of doing it
