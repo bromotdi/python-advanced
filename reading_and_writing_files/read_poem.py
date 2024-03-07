@@ -20,14 +20,14 @@ with open('Jabberwocky.txt','r') as jabber:
     text = jabber.read()
 print(text)
 
-# #lastly readlines
-# print("Doing readline")
-# with open('Jabberwocky.txt','r') as jabber:
-#     while True:
-#         line = jabber.readline().rstrip()
-#         print(line)
-#         if 'jubjub' in line.casefold():
-#             break
+# lastly readlines
+print("Doing readline")
+with open('Jabberwocky.txt','r') as jabber:
+    while True:
+        line = jabber.readline().rstrip()
+        print(line)
+        if 'jubjub' in line.casefold():
+            break
 #
 #
 # print(80*'-')
