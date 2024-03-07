@@ -96,9 +96,8 @@ medals_table = [
     {'country': 'Syria', 'gold': 0, 'silver': 0, 'bronze': 1, 'rank': 86},
 ]
 
-
 filename = 'country_medals.csv'
-columns = ['country','gold','silver','bronze']
+columns = ['country', 'gold', 'silver', 'bronze']
 
 with open(filename,'w',encoding='utf-8', newline='') as csv_file:
     writer = csv.DictWriter(csv_file,fieldnames=columns,extrasaction='ignore')
