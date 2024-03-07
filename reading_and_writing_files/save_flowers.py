@@ -26,9 +26,9 @@ with open(filename,'w') as plants:
     for plant in data:
         print(plant, file=plants)
 
-# with open(filename) as plants:
-#     text = plants.readlines()
-# print(text)
+with open(filename) as plants:
+    text = plants.readlines()
+print(text)
 
 new_list=[]
 with open(filename) as plants:
