@@ -39,6 +39,3 @@ with open(filename,'w',encoding='utf-8',newline='') as csv_file:
         zip_object = zip(headings, row)
         albums_dict = dict(zip_object)
         writer.writerow(albums_dict)
-
-
-
