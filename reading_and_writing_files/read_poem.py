@@ -1,8 +1,8 @@
-# jabber = open('Jabberwocky.txt','r')
-# print(jabber)
-# for line in jabber:
-#     print(line.rstrip())
-# jabber.close()
+jabber = open('Jabberwocky.txt','r')
+print(jabber)
+for line in jabber:
+    print(line.rstrip())
+jabber.close()
 
 
 # using with
