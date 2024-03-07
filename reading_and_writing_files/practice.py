@@ -8,7 +8,6 @@ with open(filename, encoding='utf-8',newline='') as readfile:
     for row in reader:
         data.append(row)
 
-# looks ok
 print(data)
 savefile = 'invoices2.csv'
 with open(savefile,'w',encoding='utf-8',newline='') as writefile:
