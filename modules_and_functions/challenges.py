@@ -21,8 +21,6 @@ while guess != correct:
 if guess==correct:
     print('You guessed correctly! It took you {} tries'.format(guess_number))
 
-
-# His code
 answer = random.randint(1,1000)
 #print(answer)
 guess = 0
