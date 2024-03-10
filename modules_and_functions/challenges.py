@@ -111,10 +111,9 @@ print("*"*80)
 
 # use else in a loop - actually has another purpose
 # v contrived example
-
 numbers= [1,45,32,12,60]
+
 # Here the else only fires on a successful loop through all elements, if break happens at all we wont see the else
-#  clause
 for num in numbers:
     if number % 8 == 0:
         #reject the list
@@ -122,7 +121,6 @@ for num in numbers:
         break
 else:
     print('These numbers are ok')
-
 
 
 # Using this version of else in high low game. Will only work with some numbers where convergence is possible, ie 72
