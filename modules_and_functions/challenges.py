@@ -70,10 +70,6 @@ while True:
     high_low = input('My guess is {}. '
                      'Should I go higher or lower or am I correct '.format(guess)).casefold()
     guesses += 1
-    # This is how pass would be used if we wrote the actual logic later on
-    # if high_low == 'higher':
-    #     # Guess higher - the low end of range becomes 1 greater than guess
-    #     pass
     if high_low == 'higher':
         # Guess higher - the low end of range becomes 1 greater than guess
         low = guess + 1
