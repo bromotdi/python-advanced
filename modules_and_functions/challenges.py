@@ -82,14 +82,13 @@ while True:
     else:
         print('Choices are only higher,lower or correct')
 
-
-## Augmented assignment - literally just using +=. It's binary operation combined with assignment
+# Augmented assignment - literally just using +=.
+# It's binary operation combined with assignment
 # So +,-,*,/ all binary: (x+y)
 
 x = 'Good '
 x+= 'Morning'
 print(x)
-
 
 # exercise
 number = 7
@@ -127,10 +126,6 @@ while low != high:
     high_low = input('My guess is {}. '
                      'Should I go higher or lower or am I correct '.format(guess)).casefold()
     guesses += 1
-    # This is how pass would be used if we wrote the actual logic later on
-    # if high_low == 'higher':
-    #     # Guess higher - the low end of range becomes 1 greater than guess
-    #     pass
     if high_low == 'higher':
         # Guess higher - the low end of range becomes 1 greater than guess
         low = guess + 1
