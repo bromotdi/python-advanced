@@ -1,6 +1,9 @@
 # Similar to guessing game played before, but instead of only having two guesses or 3 etc, we want to
 # guess until we get right -> so no repeated ifs
 import random
+import nltk
+from itertools import product
+from nltk.corpus import reuters
 
 guess = int(input("Please guess a number: "))
 correct = random.randint(1,10)
@@ -102,8 +105,7 @@ for n in range(multiplier):
 print(answer)
 print("*"*80)
 
-# use else in a loop - actually has another purpose
-# v contrived example
+# use else in a loop - actually has another purpose v contrived example
 numbers= [1,45,32,12,60]
 
 # Here the else only fires on a successful loop through all elements, if break happens at all we wont see the else
@@ -120,6 +122,7 @@ high = 1000
 print('Please think of a number between {} and {}'.format(low,high))
 input('Press enter to start: ')
 guesses = 0
+
 while low != high:
     #print('\tGuessing in the range of {} to {}'.format(low,high))
     guess = low +(high-low) //2
@@ -153,7 +156,6 @@ while chosen_exit not in available_exits:
 else:
     print("You escaped")
 
-
 print('Hello my name\t is Eoin. What are\n you doing\n today')
 options = {1:'Hello ',2:'Fuck off', 3:'20:10', 4:'-.-',5:'quit'}
 
@@ -168,6 +170,7 @@ while True:
 
 choice = None
 valid_options = [0,1,2,3,4,5]
+
 while choice != 0:
     options_msg = '[1] Learn Python\n[2] learn Java\n[3] ' \
                   'Learn KDB\n[4] ' \
@@ -218,11 +221,7 @@ while choice != 0:
         print('4:\tEat Dinner')
         print('5:\tExit')
     choice = input()
-
-
-import nltk
-from itertools import product
-from nltk.corpus import reuters
+    
 corpus = [w.casefold() for w in reuters.words() if len(w)== 5]
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -232,11 +231,9 @@ three = alphabet
 four = ''.join([l for l in alphabet if not l in "pnle"])
 five = 'd'
 
-
 loop=0
-# Wordle
 print('Have letters [s][][][][d]')
-print("-"*80)
+
 for a,b,c,d,e in product (one, two, three, four, five):
     loop += 1
     word = a+b+c+d+e
@@ -244,5 +241,3 @@ for a,b,c,d,e in product (one, two, three, four, five):
         print(a+b+c+d+e)
     if loop % 2000 == 0:
         print('{} letter combinations checked'.format(loop))
-
-
