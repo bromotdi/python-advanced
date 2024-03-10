@@ -9,11 +9,9 @@ aware_local_time = pytz.utc.localize(local_time)
 aware_utc_time = pytz.utc.localize(utc_time)
 print(f"Aware local time {aware_local_time}\nAware UTC {aware_utc_time}")
 
-
 # Convert it to timezone we actually want, ie NOT utc
 aware_utc_time = pytz.utc.localize(utc_time).astimezone()
 print(f"Aware local time {aware_local_time}\nAware UTC {aware_utc_time}")
-
 
 # localise two utc times
 gap_time = dt.datetime(2015,10,25,1,30,0,0)
@@ -27,6 +25,7 @@ gb = pytz.timezone("GB")
 
 dt1 = pytz.utc.localize(dt.datetime.utcfromtimestamp(s)).astimezone(gb)
 print(dt1)
+
 dt2 = pytz.utc.localize(dt.datetime.utcfromtimestamp(t)).astimezone(gb)
 print(dt2)
 
