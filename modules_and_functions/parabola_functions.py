@@ -19,7 +19,6 @@ def circle(page, radius, g, h, colour = "red"):
         plot(page, 2 * g - x, y)
         plot(page, 2 * g - x, 2 * h - y)
 
-
 def draw_axes(page):
     page.update()
     x_origin = page.winfo_width() / 2
@@ -32,10 +31,7 @@ def draw_axes(page):
 def plot(page, x, y):
     page.create_line(x, -y, x+1, -y+1, fill='red')
 
-
 mainWindow = tk.Tk()
-
-
 mainWindow.title("Parabola")
 mainWindow.geometry("640x480")
 
@@ -46,7 +42,6 @@ draw_axes(canvas)
 
 parabola(canvas, 100)
 parabola(canvas, 200)
-
 
 circle(canvas, 100, 100, 100, 'green')
 circle(canvas, 100, 100, -100, 'red')
