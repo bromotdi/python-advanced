@@ -36,6 +36,7 @@ for zone in os.listdir('/Windows/System32'):
 # Add the scroll bar
 # Command associates actions with ui events
 listScroll = tkinter.Scrollbar(mainWindow, orient= tkinter.VERTICAL, command=fileList.yview)
+
 # Add it to the grid
 listScroll.grid(row=1, column=1, sticky='nsw', rowspan=2)
 fileList['yscrollcommand'] = listScroll.set
