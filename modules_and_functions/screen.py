@@ -1,7 +1,6 @@
 import os
 import tkinter
 
-
 # Build a full menu GUI, can look over this code for an example - Section 9: Modules & Functions in Python
 # this is grid geometry manager
 mainWindow = tkinter.Tk()
@@ -15,7 +14,7 @@ label = tkinter.Label(mainWindow, text = 'TKinter Grid Demo')
 label.grid(row=0, column=0, columnspan=3)
 
 # How did we get these weight values
-# isnt necessary to compute specific values, a range of vals would work correctly together here
+# isn't necessary to compute specific values, a range of vals would work correctly together here
 mainWindow.columnconfigure(0, weight=1)
 mainWindow.columnconfigure(1, weight=1)
 mainWindow.columnconfigure(2, weight=3)
@@ -30,7 +29,6 @@ mainWindow.rowconfigure(4, weight=3)
 fileList = tkinter.Listbox(mainWindow)
 fileList.grid(row=1, column=0, sticky='nsew', rowspan=2)
 fileList.config(border=2, relief='sunken')
-
 
 for zone in os.listdir('/Windows/System32'):
     fileList.insert(tkinter.END, zone)
