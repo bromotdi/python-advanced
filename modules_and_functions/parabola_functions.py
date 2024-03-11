@@ -1,7 +1,6 @@
 import math
 import tkinter as tk
 
-
 def parabola(page, size):
     for x in range(size):
         y = x * x / size
@@ -52,6 +51,5 @@ circle(canvas, 10, 30, -30, 'yellow')
 circle(canvas, 10, -30, 30)
 circle(canvas, 10, -30, -30)
 circle(canvas, 30, 0, 0)
-
 
 mainWindow.mainloop()
