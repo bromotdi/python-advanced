@@ -13,55 +13,55 @@ print(card_values)
 
 
 # play blackjack
-# def deal_card(n):
-#     '''Deal n number of cards'''
-#     cards = random.choices(list(card_values), k=n)
-#     value = 0
-#     for card in cards:
-#         value += int(card_values[card])
-#     return cards, value
-#
-#
-#
-# while True:
-#     input("Press Enter to play Blackjack: ")
-#     dealer_cards, dealer_value = deal_card(1)
-#     player_cards, player_value = deal_card(1)
-#     # print(f'Player Hand is {player_cards} ({player_value})')
-#     # print(f'Dealer Hand is {dealer_cards} ({dealer_value})')
-#     # play = input('Hit/Stick or quit: ').casefold()
-#     play='hit'
-#     while True:
-#         if play == 'quit':
-#             break
-#         if play == 'hit':
-#             player_hit_card, player_hit_value = deal_card(1)
-#             player_value += player_hit_value
-#             [player_cards.append(c) for c in player_hit_card]
-#         if dealer_value < 17:
-#             print('Dealer hits')
-#             dealer_hit_card, dealer_hit_value = deal_card(1)
-#             dealer_value += dealer_hit_value
-#             [dealer_cards.append(c) for c in dealer_hit_card]
-#         if player_value > 21:
-#             print('PLAYER BUST ')
-#             break
-#         if dealer_value > 21:
-#             print('DEALER BUST')
-#             break
-#         if play == 'stick' and dealer_value >= 17:
-#             break
-#         print(f"Player hand is {player_cards} ({player_value})")
-#         print(f"Dealer hand is {dealer_cards} ({dealer_value})")
-#         play = input('Hit/Stick or quit: ').casefold()
-#     if play =='quit':
-#         print('Exiting...')
-#         break
-#     if player_value > dealer_value and player_value <= 21:
-#         print(f'PLAYER BEAT DEALER')
-#     elif player_value <= dealer_value and dealer_value <= 21:
-#         print(f'DEALER BEAT PLAYER')
-#     print(f'PLAYER {player_cards} ({player_value}) vs DEALER {dealer_cards} ({dealer_value})')
+def deal_card(n):
+    '''Deal n number of cards'''
+    cards = random.choices(list(card_values), k=n)
+    value = 0
+    for card in cards:
+        value += int(card_values[card])
+    return cards, value
+
+
+
+while True:
+    input("Press Enter to play Blackjack: ")
+    dealer_cards, dealer_value = deal_card(1)
+    player_cards, player_value = deal_card(1)
+    # print(f'Player Hand is {player_cards} ({player_value})')
+    # print(f'Dealer Hand is {dealer_cards} ({dealer_value})')
+    # play = input('Hit/Stick or quit: ').casefold()
+    play='hit'
+    while True:
+        if play == 'quit':
+            break
+        if play == 'hit':
+            player_hit_card, player_hit_value = deal_card(1)
+            player_value += player_hit_value
+            [player_cards.append(c) for c in player_hit_card]
+        if dealer_value < 17:
+            print('Dealer hits')
+            dealer_hit_card, dealer_hit_value = deal_card(1)
+            dealer_value += dealer_hit_value
+            [dealer_cards.append(c) for c in dealer_hit_card]
+        if player_value > 21:
+            print('PLAYER BUST ')
+            break
+        if dealer_value > 21:
+            print('DEALER BUST')
+            break
+        if play == 'stick' and dealer_value >= 17:
+            break
+        print(f"Player hand is {player_cards} ({player_value})")
+        print(f"Dealer hand is {dealer_cards} ({dealer_value})")
+        play = input('Hit/Stick or quit: ').casefold()
+    if play =='quit':
+        print('Exiting...')
+        break
+    if player_value > dealer_value and player_value <= 21:
+        print(f'PLAYER BEAT DEALER')
+    elif player_value <= dealer_value and dealer_value <= 21:
+        print(f'DEALER BEAT PLAYER')
+    print(f'PLAYER {player_cards} ({player_value}) vs DEALER {dealer_cards} ({dealer_value})')
 
 
 
