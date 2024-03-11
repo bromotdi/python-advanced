@@ -135,6 +135,7 @@ def play_blackjack():
             break
         winner = evaluate_winner(dealer_value, player_value)
         print(f"{winner} WINS")
+        
 # The hard functions
 def run_round(dealer, player):
     last_dealer_value = get_hand_value(dealer)
@@ -158,13 +159,14 @@ def run_round(dealer, player):
         last_player_value = player_value
         last_dealer_value = dealer_value
     return dealer, dealer_value, player, player_value
-#run_round(['K','10'], ['9','3'])
+
+run_round(['K','10'], ['9','3'])
 play_blackjack()
 
-#print(get_hand_value(['6','5']))
-#print(f"output value is {get_hand_value(['3','A'])}")
-#print(get_hand_value(['A','10']))
-#print(get_hand_value(['A','A']))
+print(get_hand_value(['6','5']))
+print(f"output value is {get_hand_value(['3','A'])}")
+print(get_hand_value(['A','10']))
+print(get_hand_value(['A','A']))
 
 
 # Fix this
