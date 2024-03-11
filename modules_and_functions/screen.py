@@ -102,9 +102,9 @@ daySpin.grid(row=1, column=0)
 monthSpin.grid(row=1, column=1)
 yearSpin.grid(row=1, column=2)
 
-
 # Adding Ok and cancel buttons and align to right edges
 okButton = tkinter.Button(mainWindow, text="OK")
+
 # .quit() is what actually closes the box. could also use destroy method. Make sure not to use quit()
 # Destroy closes everything behind it a bit better
 cancelButton = tkinter.Button(mainWindow, text="Cancel", command=mainWindow.quit)
@@ -112,9 +112,5 @@ cancelButton = tkinter.Button(mainWindow, text="Cancel", command=mainWindow.quit
 okButton.grid(row=4, column=3, sticky='e')
 cancelButton.grid(row=4, column=4, sticky='w')
 
-
 mainWindow.mainloop()
-
 print(rbValue.get())
-
-
