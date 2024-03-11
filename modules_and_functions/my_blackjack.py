@@ -80,12 +80,15 @@ def deal_card(n):
 def play_round(dealer_cards,player_cards):
     player_choice = input("Hit or stick: ").casefold()
     if player_choice=='quit':
-        return None,None
+        return None, None
+        
     dealer_value = get_hand_value(dealer_cards)
+    
     if dealer_value < 17:
         [dealer_cards.append(c) for c in deal_card(1)]
     if player_choice == 'hit':
         [player_cards.append(c) for c in deal_card(1)]
+        
     [print_hand_value(p,h) for p,h in zip(["Dealer","Player"], [dealer_cards,player_cards])]
     return dealer_cards,player_cards
 
