@@ -29,7 +29,6 @@ button1 = tkinter.Button(rightFrame, text='button1')
 button2 = tkinter.Button(rightFrame, text='button2')
 button3 = tkinter.Button(rightFrame, text='button3')
 
-
 # stacks the buttons on top of eavh other
 button1.pack(side='top', anchor='n')
 button2.pack(side='top', anchor='s')
