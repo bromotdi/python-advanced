@@ -11,7 +11,6 @@ for i in range(2,11):
     card_values[str(i)] = i
 print(card_values)
 
-
 # play blackjack
 def deal_card(n):
     '''Deal n number of cards'''
@@ -21,16 +20,16 @@ def deal_card(n):
         value += int(card_values[card])
     return cards, value
 
-
-
 while True:
     input("Press Enter to play Blackjack: ")
     dealer_cards, dealer_value = deal_card(1)
     player_cards, player_value = deal_card(1)
-    # print(f'Player Hand is {player_cards} ({player_value})')
-    # print(f'Dealer Hand is {dealer_cards} ({dealer_value})')
-    # play = input('Hit/Stick or quit: ').casefold()
-    play='hit'
+    
+    print(f'Player Hand is {player_cards} ({player_value})')
+    print(f'Dealer Hand is {dealer_cards} ({dealer_value})')
+    play = input('Hit/Stick or quit: ').casefold()
+    # play='hit'
+    
     while True:
         if play == 'quit':
             break
@@ -51,16 +50,20 @@ while True:
             break
         if play == 'stick' and dealer_value >= 17:
             break
+            
         print(f"Player hand is {player_cards} ({player_value})")
         print(f"Dealer hand is {dealer_cards} ({dealer_value})")
         play = input('Hit/Stick or quit: ').casefold()
+        
     if play =='quit':
         print('Exiting...')
         break
+        
     if player_value > dealer_value and player_value <= 21:
         print(f'PLAYER BEAT DEALER')
     elif player_value <= dealer_value and dealer_value <= 21:
         print(f'DEALER BEAT PLAYER')
+        
     print(f'PLAYER {player_cards} ({player_value}) vs DEALER {dealer_cards} ({dealer_value})')
 
 
