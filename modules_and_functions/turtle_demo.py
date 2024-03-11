@@ -22,14 +22,3 @@ turtle.left(90)
 forward(260)
 
 done()
-
-
-
-
-
-
-
-
-
-
-
