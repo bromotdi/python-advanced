@@ -11,13 +11,13 @@ def parabola(page, size):
 # modify the circle function so that it allows the coloure to change
 def circle(page, radius, g, h, colour = "red"):
     page.create_oval(g + radius, h + radius, g - radius, h - radius, outline=colour, width=2)
-    # for x in range(g * 100, (g + radius)*100):
-    #     x /= 100
-    #     y = h + (math.sqrt(radius ** 2 - ((x-g) ** 2)))
-    #     plot(page, x, y)
-    #     plot(page, x, 2 + h - y)
-    #     plot(page, 2 * g - x, y)
-    #     plot(page, 2 * g - x, 2 * h - y)
+    for x in range(g * 100, (g + radius)*100):
+        x /= 100
+        y = h + (math.sqrt(radius ** 2 - ((x-g) ** 2)))
+        plot(page, x, y)
+        plot(page, x, 2 + h - y)
+        plot(page, 2 * g - x, y)
+        plot(page, 2 * g - x, 2 * h - y)
 
 
 def draw_axes(page):
