@@ -1,10 +1,10 @@
 import random
 
 card_values = {
-    'K':10,
-    'Q':10,
-    'J':10,
-    'A':None
+    'K': 10,
+    'Q': 10,
+    'J': 10,
+    'A': None
 }
 
 for i in range(2,11):
