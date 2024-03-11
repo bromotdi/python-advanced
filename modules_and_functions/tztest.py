@@ -4,15 +4,14 @@ import datetime as dt
 country = "Europe/Moscow"
 
 tz_to_display = pytz.timezone(country)
-
 local_time = dt.datetime.now(tz=tz_to_display)
 
 print(f"The time in {country} is {local_time}")
 print(f"UTC is {dt.datetime.utcnow()}")
 
 
-# for x in pytz.all_timezones:
-#     print(x)
+for x in pytz.all_timezones:
+    print(x)
 
 for x in sorted(pytz.country_names):
     print(f"{x}: {pytz.country_names[x]}")
