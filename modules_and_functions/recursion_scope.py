@@ -6,10 +6,8 @@ def factorial(n):
             result *= f
         return result
 
-
-# for i in range(130):
-#     print(f"{i}: {factorial(i)}")
-
+for i in range(130):
+    print(f"{i}: {factorial(i)}")
 
 def recursive_factorial(n):
     """Calculate n! recursively"""
