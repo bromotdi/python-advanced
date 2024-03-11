@@ -21,7 +21,6 @@ print(recursive_factorial(1))
 print(recursive_factorial(2))
 print(recursive_factorial(3))
 
-
 # fibonacci recursive: consider the sequence as [1,1,2,3]
 def fib_recursion(n):
     if n <= 2:
@@ -54,5 +53,3 @@ def fibonacci(n):
 
 for i in range(36):
     print(i, fib(i),fibonacci(i) ,sep='\t')
-
-
