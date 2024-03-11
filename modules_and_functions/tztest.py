@@ -9,18 +9,15 @@ local_time = dt.datetime.now(tz=tz_to_display)
 print(f"The time in {country} is {local_time}")
 print(f"UTC is {dt.datetime.utcnow()}")
 
-
 for x in pytz.all_timezones:
     print(x)
 
 for x in sorted(pytz.country_names):
     print(f"{x}: {pytz.country_names[x]}")
 
-
 # BV causes an error here, has no timezone or something weird, not available as a key
-# for x in sorted(pytz.country_names):
-#     print(f"{x}: {pytz.country_names[x]} {pytz.country_timezones.get(x)}")
-
+for x in sorted(pytz.country_names):
+    print(f"{x}: {pytz.country_names[x]} {pytz.country_timezones.get(x)}")
 
 for x in sorted(pytz.country_names):
     print(f"{x}: {pytz.country_names[x]}:",end=':')
