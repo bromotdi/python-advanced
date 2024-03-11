@@ -1,14 +1,11 @@
 import tkinter
 
-# print(tkinter.TkVersion)
-# print(tkinter.TclVersion)
-#
-# # tkinter._test()
-#
+print(tkinter.TkVersion)
+print(tkinter.TclVersion)
+tkinter._test()
+
 # create the window which will act as the GUI
-
 # this is the pack geometry manager
-
 mainWindow = tkinter.Tk()
 mainWindow.title("Hello World")
 mainWindow.geometry('640x480+8+400')
