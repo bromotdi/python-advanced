@@ -45,15 +45,11 @@ def list_directories(s):
                 tabs -= 1
             else:
                 print("\t" * tabs + f)
-
-#     if os.path.exists(s):
-#         print("Directory listing of " + s)
-#         dir_lists(s, 0)
-#     else:
-#         print(s + " does not exist")
-
-
-
-
+                
+    if os.path.exists(s):
+        print("Directory listing of " + s)
+        dir_lists(s, 0)
+    else:
+        print(s + " does not exist")
 
 list_directories('.')
