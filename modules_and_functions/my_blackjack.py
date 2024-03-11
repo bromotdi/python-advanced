@@ -104,8 +104,10 @@ def get_hand_value(cards):
         choice = input("Choose value for Ace, 1 or 11: ")
         value += int(choice)
     return value
+    
 def print_hand_value(user,cards):
     print(f"{user} hand {cards} ({get_hand_value(cards)})")
+    
 def evaluate_winner(dealer,player):
     if (dealer <= 21) & (player <= 21):
         if dealer >= player:
@@ -121,6 +123,7 @@ def evaluate_winner(dealer,player):
     else:
         print('Player BUST')
         return "Dealer"
+        
 def play_blackjack():
     while True:
         input("Press Enter to play Blackjack>: ")
