@@ -5,5 +5,4 @@ for obj in dir(shelve.Shelf):
         print(obj)
 
 shelve.Shelf
-
 help(shelve)
