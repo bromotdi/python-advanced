@@ -66,13 +66,6 @@ while True:
         
     print(f'PLAYER {player_cards} ({player_value}) vs DEALER {dealer_cards} ({dealer_value})')
 
-
-
-
-
-
-
-
 # Parts of the game
 # Deal two cards (apply to player + dealer)
 # Choose hit or stick
@@ -80,7 +73,6 @@ while True:
 # Dealer sticks on 17
 # Whoever is higher wins
 
-# try again
 def deal_card(n):
     '''Deal n number of cards'''
     return random.choices(list(card_values), k=n)
