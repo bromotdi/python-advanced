@@ -10,7 +10,6 @@ mainWindow = tkinter.Tk()
 mainWindow.title("Hello World")
 mainWindow.geometry('640x480+8+400')
 
-
 label = tkinter.Label(mainWindow, text='Hello World')
 label.pack(side='top')
 
@@ -19,7 +18,7 @@ leftFrame.pack(side='left', anchor='n', fill = tkinter.Y, expand= False)
 
 # Makes the canvas be on the left
 canvas = tkinter.Canvas(leftFrame, relief ='raised', borderwidth=1)
-#canvas.pack(side='left',fill =tkinter.Y, expand=True)
+canvas.pack(side='left',fill =tkinter.Y, expand=True)
 canvas.pack(side='left',anchor ='n')
 
 rightFrame = tkinter.Frame(mainWindow)
