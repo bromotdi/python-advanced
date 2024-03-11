@@ -2,7 +2,6 @@ import os
 
 listing = os.walk(".")
 
-
 def list_directories(s):
     def dir_lists(d):
         nonlocal tab_stop
@@ -34,19 +33,19 @@ def list_directories(s):
 
 
 # Doing it without nonlocal keyword
-# def list_directories(s):
-#     def dir_lists(d, tabs):
-#         files = os.listdir(d)
-#         for f in files:
-#             current_dir = os.path.join(d, f)
-#             if os.path.isdir(current_dir):
-#                 print("\t" * tabs + "Directory " + f)
-#                 tabs += 1
-#                 dir_lists(current_dir,tabs)
-#                 tabs -= 1
-#             else:
-#                 print("\t" * tabs + f)
-#
+def list_directories(s):
+    def dir_lists(d, tabs):
+        files = os.listdir(d)
+        for f in files:
+            current_dir = os.path.join(d, f)
+            if os.path.isdir(current_dir):
+                print("\t" * tabs + "Directory " + f)
+                tabs += 1
+                dir_lists(current_dir,tabs)
+                tabs -= 1
+            else:
+                print("\t" * tabs + f)
+
 #     if os.path.exists(s):
 #         print("Directory listing of " + s)
 #         dir_lists(s, 0)
