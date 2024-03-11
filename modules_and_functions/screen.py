@@ -7,9 +7,9 @@ import tkinter
 mainWindow = tkinter.Tk()
 mainWindow.title("Grid Demo")
 mainWindow.geometry('640x480-8-200')
+
 # Pad the sides so everything isn't squashed against the edge
 mainWindow['padx'] = 8
-
 
 label = tkinter.Label(mainWindow, text = 'TKinter Grid Demo')
 label.grid(row=0, column=0, columnspan=3)
