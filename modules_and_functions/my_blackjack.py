@@ -167,6 +167,3 @@ print(get_hand_value(['6','5']))
 print(f"output value is {get_hand_value(['3','A'])}")
 print(get_hand_value(['A','10']))
 print(get_hand_value(['A','A']))
-
-
-# Fix this
