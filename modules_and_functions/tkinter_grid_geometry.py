@@ -25,7 +25,6 @@ button1 = tkinter.Button(rightFrame, text='button1')
 button2 = tkinter.Button(rightFrame, text='button2')
 button3 = tkinter.Button(rightFrame, text='button3')
 
-
 # stacks the buttons on top of eavh other
 button1.grid(row=0, column=0)
 button2.grid(row=1, column=0)
@@ -44,10 +43,4 @@ rightFrame.grid(sticky='nes')
 rightFrame.columnconfigure(0, weight=1)
 button2.grid(sticky='ew')
 
-
 mainWindow.mainloop()
-
-
-
-
-
