@@ -69,6 +69,7 @@ result.grid(row=2, column=2, sticky='sw')
 # SPINNERS refer to the boxes with the arrows, can think of them as spinning
 timeFrame =tkinter.LabelFrame(mainWindow, text="Time")
 timeFrame.grid(row=3, column=0, sticky='new')
+
 # Time spinners
 hourSpinner = tkinter.Spinbox(timeFrame, width=2, values=tuple(range(0,24)))
 minuteSpinner = tkinter.Spinbox(timeFrame, width=2, from_=0, to =59)
@@ -81,10 +82,10 @@ tkinter.Label(timeFrame,text=':').grid(row=0, column=3)
 secondSpinner.grid(row=0,column=4)
 timeFrame['padx'] = 36
 
-
 # Frame for the date spinners
 dateFrame = tkinter.Frame(mainWindow)
 dateFrame.grid(row=4, column=0, sticky='new')
+
 # Date labels
 dayLabel = tkinter.Label(dateFrame, text="Day")
 monthLabel = tkinter.Label(dateFrame, text="Month")
@@ -92,6 +93,7 @@ yearLabel = tkinter.Label(dateFrame, text="Year")
 dayLabel.grid(row=0, column=0, sticky='w')
 monthLabel.grid(row=0, column=1, sticky='w')
 yearLabel.grid(row=0, column=2, sticky='w')
+
 # Date spinners
 daySpin = tkinter.Spinbox(dateFrame, width=5, from_=1, to=31)
 monthSpin = tkinter.Spinbox(dateFrame, width=5, values=("Jan", "Feb", "Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"))
