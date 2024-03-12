@@ -1,11 +1,10 @@
 import datetime as dt
 import pytz
 
-
 class Account:
     """ Simple Bank account class with balance"""
-
     @staticmethod
+    
     def _current_time():
         utc_time = dt.datetime.utcnow()
         return pytz.utc.localize(utc_time)
@@ -14,8 +13,8 @@ class Account:
         self._name = name
         self.__balance = balance
         self._transaction_log = [(Account._current_time(), self.__balance)]
-        #self.transaction_log = []
-        #self.opening_balance = balance
+        self.transaction_log = []
+        self.opening_balance = balance
         print(f"Account created for {self._name}")
         self.show_balance()
 
