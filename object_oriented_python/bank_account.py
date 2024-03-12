@@ -46,7 +46,6 @@ class Account:
                 amount *= -1
             print(f"{amount:6} {tran_type} on {date} (local time was {date.astimezone()})")
 
-
 if __name__ == '__main__':
     eoin = Account("Eoin", 0)
     eoin.show_balance()
