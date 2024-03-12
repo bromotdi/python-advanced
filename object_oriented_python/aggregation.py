@@ -90,4 +90,3 @@ if __name__ == '__main__':
     # Give our document new content by switching it's body
     with open('test3.html','w') as test_doc:
         my_page.display(file=test_doc)
-
