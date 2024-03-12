@@ -5,7 +5,6 @@
 # A htmlDoc HAS a doctype, a head, a body
 
 class Tag:
-
     def __init__(self, name, contents):
         self.start_tag = f'<{name}>'
         self.end_tag = f'</{name}>'
@@ -17,9 +16,7 @@ class Tag:
     def display(self, file = None):
         print(self, file=file)
 
-
 class DocType(Tag):
-
     def __init__(self):
         # this is the header /footer that needs to go on every html file. It varies by file but theres a limited number
         # to choose from. It's just a requirement to specifcy file type or something.
