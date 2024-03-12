@@ -52,7 +52,6 @@ class Body(Tag):
         super().display(file=file)
 
 class htmlDoc:
-
     def __init__(self, doc_type, head, body):
         self._doc_type = doc_type
         self._head = head
@@ -64,6 +63,7 @@ class htmlDoc:
     def display(self, file=None):
         self._doc_type.display(file=file)
         print("<html>", file=file)
+        
         self._head.display(file=file)
         self._body.display(file=file)
         print("</html>", file=file)
