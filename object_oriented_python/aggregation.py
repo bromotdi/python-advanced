@@ -38,7 +38,6 @@ class Head(Tag):
 
 
 class Body(Tag):
-
     def __init__(self):
         super().__init__('body', '') # Body content built up separately
         self._body_contents = []
@@ -50,10 +49,7 @@ class Body(Tag):
     def display(self, file=None):
         for tag in self._body_contents:
             self.contents += str(tag)
-
         super().display(file=file)
-
-
 
 class htmlDoc:
 
