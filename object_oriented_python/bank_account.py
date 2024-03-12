@@ -15,6 +15,7 @@ class Account:
         self._transaction_log = [(Account._current_time(), self.__balance)]
         self.transaction_log = []
         self.opening_balance = balance
+        
         print(f"Account created for {self._name}")
         self.show_balance()
 
