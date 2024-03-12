@@ -72,16 +72,17 @@ if __name__ == '__main__':
     my_page.add_tag("h1","Main Heading")
     my_page.add_tag("h2", "sub-heading")
     my_page.add_tag("p", "This is a paragraph that will appear on the page")
-    the display function calls the print of each title, head & body
+    # the display function calls the print of each title, head & body
+    
     with open('test.html','w',encoding='utf-8') as write_file:
         my_page.display(file=write_file)
+        
     new_body = Body()
     new_body.add_tag("h1", "Aggregation")
     new_body.add_tag("p", "unlike <strong>composition>=</strong>, aggregation uses existing instances"
                           " of objects to build up another object.")
     new_body.add_tag("p", "The composed object doesnt actually own the objects that it's composed of"
                           " - if it's destroyed, those objects continue to exist")
-
     new_doctype = DocType()
     new_header = Head("Aggregation Document")
     my_page = htmlDoc(new_doctype, new_header, new_body)
