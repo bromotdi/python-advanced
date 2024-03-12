@@ -64,4 +64,3 @@ if __name__ == '__main__':
     anet.show_transactions()
     anet.show_balance()
     print(anet.__dict__)
-
