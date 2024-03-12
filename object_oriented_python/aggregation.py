@@ -33,8 +33,8 @@ class Head(Tag):
             self._title = Tag("title", title)
             self.contents = str(self._title)
         # If wanted a title of a title, it would again need to go in the init
-        # self._second_level_title = Tag('title2', self.contents)
-        # self.contents = str(self._second_level_title)
+        self._second_level_title = Tag('title2', self.contents)
+        self.contents = str(self._second_level_title)
 
 class Body(Tag):
     def __init__(self):
