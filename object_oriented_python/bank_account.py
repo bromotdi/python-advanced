@@ -2,9 +2,9 @@ import datetime as dt
 import pytz
 
 class Account:
-    """ Simple Bank account class with balance"""
-    @staticmethod
+    """ Simple Bank account class with balance """
     
+    @staticmethod
     def _current_time():
         utc_time = dt.datetime.utcnow()
         return pytz.utc.localize(utc_time)
@@ -37,14 +37,14 @@ class Account:
         print(f"Balance is {self.__balance}")
 
     def show_transactions(self):
-        #print(f"{self.opening_balance:6} Opening balance")
+        print(f"{self.opening_balance} Opening balance")
         for date, amount in self._transaction_log:
             if amount > 0:
                 tran_type = "deposited"
             else:
                 tran_type = "withdraw"
                 amount *= -1
-            print(f"{amount:6} {tran_type} on {date} (local time was {date.astimezone()})")
+            print(f"{amount}: {tran_type} on {date} (local time was {date.astimezone()})")
 
 if __name__ == '__main__':
     eoin = Account("Eoin", 0)
