@@ -19,8 +19,9 @@ class Tag:
 
 class DocType(Tag):
     def __init__(self):
-        # this is the header /footer that needs to go on every html file. It varies by file but theres a limited number
-        # to choose from. It's just a requirement to specifcy file type or something.
+        # this is the header /footer that needs to go on every html file. 
+        # It varies by file but theres a limited number to choose from. 
+        # It's just a requirement to specifcy file type or something.
         super().__init__('!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" http://www.w3.org/TR/html4/strict.dtd', '')
         self.end_tag = '' #doctype doesnt have an end tag
 
