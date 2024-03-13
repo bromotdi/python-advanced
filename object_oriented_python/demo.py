@@ -1,9 +1,8 @@
-# a_string = "this is \na string split\t\tand tabbed"
-# print(a_string)
-#
-# b_string = r"this is \na string split\t\tand tabbed"
-# print(b_string)
+a_string = "this is \na string split\t\tand tabbed"
+print(a_string)
 
+b_string = r"this is \na string split\t\tand tabbed"
+print(b_string)
 
 class boyfriend:
     def __init__(self, age, height, name):
