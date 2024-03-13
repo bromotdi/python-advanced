@@ -8,7 +8,6 @@ class Bird:
     def peck(self):
         print("Bird pecks you")
 
-
 class flightlessBirds(Bird):
     def __init__(self):
         super().__init__()
