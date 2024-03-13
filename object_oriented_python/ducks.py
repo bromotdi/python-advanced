@@ -1,5 +1,4 @@
 class Wing:
-
     def __init__(self, ratio):
         self.ratio = ratio
 
