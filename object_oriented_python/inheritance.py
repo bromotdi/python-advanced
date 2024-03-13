@@ -40,14 +40,10 @@ class MultipleInh(flightBirds, flightlessBirds):
     def __init__(self):
         super().__init__()
 
-
-
-
 thing = MultipleInh()
 
 thing.fly_away()
 thing.misery()
-
 
 peng = Penguin()
 eagle = Eagle()
@@ -60,4 +56,3 @@ print(flightBirds.__dict__)
 print('Penguin and eagle')
 print(Penguin.__dict__)
 print(Eagle.__dict__)
-
