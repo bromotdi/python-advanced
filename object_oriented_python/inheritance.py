@@ -16,7 +16,6 @@ class flightlessBirds(Bird):
     def misery(self):
         print('Im miserable' )
 
-
 class flightBirds(Bird):
     def __init__(self):
         super().__init__()
@@ -25,12 +24,9 @@ class flightBirds(Bird):
     def fly_away(self):
         print("I can fly")
 
-
-
 class Eagle(flightBirds):
     def __init__(self):
         super().__init__()
-
 
 class Penguin(flightlessBirds):
     def __init__(self):
