@@ -10,7 +10,6 @@ class boyfriend:
         self.height = height
         self.name = name
 
-
 class girlfriend:
     def __init__(self, age, name):
         self.age = age
