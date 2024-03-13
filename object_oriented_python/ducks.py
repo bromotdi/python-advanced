@@ -38,11 +38,10 @@ class Penguin:
         print("Are you 'avin a larf? I'm a penguin")
 
 
-
-# def test_duck(duck):
-#     duck.walk()
-#     duck.swim()
-#     duck.quack()
+def test_duck(duck):
+    duck.walk()
+    duck.swim()
+    duck.quack()
 
 
 if __name__ == '__main__':
