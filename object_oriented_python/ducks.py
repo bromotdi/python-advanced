@@ -26,7 +26,6 @@ class Duck:
     def fly(self):
         self._wing.fly()
 
-
 class Penguin:
     def walk(self):
         print('Waddle Waddle, I Waddle Too')
@@ -37,17 +36,14 @@ class Penguin:
     def quack(self):
         print("Are you 'avin a larf? I'm a penguin")
 
-
 def test_duck(duck):
     duck.walk()
     duck.swim()
     duck.quack()
 
-
 if __name__ == '__main__':
     donald = Duck()
     donald.fly()
-    #test_duck(donald)
-
-    # percy = Penguin()
-    # test_duck(percy)
+    test_duck(donald)
+    percy = Penguin()
+    test_duck(percy)
