@@ -3,6 +3,7 @@
 # Can be said that a Head, a body, a doctype IS a tag
 # Whereas the htmlDoc relies on composition
 # A htmlDoc HAS a doctype, a head, a body
+
 class Tag:
 
     def __init__(self, name, contents):
