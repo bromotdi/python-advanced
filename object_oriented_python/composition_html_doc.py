@@ -9,8 +9,10 @@ class Tag:
         self.start_tag = f'<{name}>'
         self.end_tag = f'</{name}>'
         self.contents = contents
+        
     def __str__(self):
         return f"{self.start_tag}{self.contents}{self.end_tag}"
+        
     def display(self, file = None):
         print(self, file=file)
 
@@ -20,7 +22,7 @@ class DocType(Tag):
         # It varies by file but theres a limited number to choose from. 
         # It's just a requirement to specifcy file type or something.
         super().__init__('!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" http://www.w3.org/TR/html4/strict.dtd', '')
-        self.end_tag = '' #doctype doesnt have an end tag
+        self.end_tag = '' # doctype doesnt have an end tag
 
 class Head(Tag):
     def __init__(self, title=None):
