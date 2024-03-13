@@ -28,7 +28,6 @@ class Duck:
 
 
 class Penguin:
-
     def walk(self):
         print('Waddle Waddle, I Waddle Too')
 
