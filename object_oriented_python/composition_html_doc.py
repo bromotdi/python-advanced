@@ -49,10 +49,7 @@ class Body(Tag):
     def display(self, file=None):
         for tag in self._body_contents:
             self.contents += str(tag)
-
         super().display(file=file)
-
-
 
 class htmlDoc:
 
