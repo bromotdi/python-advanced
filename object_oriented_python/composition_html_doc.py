@@ -37,9 +37,7 @@ class Head(Tag):
         self._second_level_title = Tag('title2', self.contents)
         self.contents = str(self._second_level_title)
 
-
 class Body(Tag):
-
     def __init__(self):
         super().__init__('body', '') # Body content built up separately
         self._body_contents = []
