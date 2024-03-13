@@ -18,7 +18,6 @@ class Tag:
 
 
 class DocType(Tag):
-
     def __init__(self):
         # this is the header /footer that needs to go on every html file. It varies by file but theres a limited number
         # to choose from. It's just a requirement to specifcy file type or something.
