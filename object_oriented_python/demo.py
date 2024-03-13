@@ -20,10 +20,9 @@ class girlfriend:
         bf = boyfriend(bfage, bfheight, self)
         return bf.name
 
-
 anet = girlfriend(27, "Annette")
 eoin = anet.make_bf(100, 200, 'Eoin')
-print(eoin)
-# print(eoin.age)
-# print(eoin.height)
 
+print(eoin)
+print(eoin.age)
+print(eoin.height)
