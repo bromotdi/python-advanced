@@ -5,7 +5,6 @@
 # A htmlDoc HAS a doctype, a head, a body
 
 class Tag:
-
     def __init__(self, name, contents):
         self.start_tag = f'<{name}>'
         self.end_tag = f'</{name}>'
