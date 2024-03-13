@@ -52,7 +52,6 @@ class Body(Tag):
         super().display(file=file)
 
 class htmlDoc:
-
     def __init__(self, title=None):
         self._doc_type = DocType()
         self._head = Head(title)
