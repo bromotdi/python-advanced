@@ -189,38 +189,37 @@ def load_data():
         return artist_list
 
 
-# my attempt
-# def load_data():
-#     artists = []
-#     artists_list = []
-#     artists_to_albums = {}
-#     with open('albums.txt',encoding='utf-8', newline='') as csv_file:
-#         reader = csv.reader(csv_file, delimiter='\t')
-#         for row in reader:
-#             artist, album, year, song = tuple(row)
-#             if not artist in artists_to_albums:
-#                 artists_to_albums[artist] = []
-#             # Its breaking here, because once we add our current artist to the list of artists, we never update our
-#             # current artist again. ie after round one, current artist will always be true
-#             # Need to update current artist or else not use it
-#             if not artist in artists_list:
-#                 current_artist = Artist(artist)
-#                 artists.append(current_artist)
-#                 artists_list.append(artist)
-#
-#             # current_artist will always be populated, whenever we have a new row we want to check if this album
-#             # is already recorded
-#             if not album in artists_to_albums[artist]:
-#                 # Add the current album to our list of albums
-#                 current_album = Album(album, int(year), current_artist)
-#                 current_artist.add_album(current_album)
-#                 artists_to_albums[artist].append(album)
-#
-#
-#             current_song = Song(song, current_artist)
-#             current_album.addSong(current_song)
-#
-#     return artists
+def load_data():
+    artists = []
+    artists_list = []
+    artists_to_albums = {}
+    with open('albums.txt',encoding='utf-8', newline='') as csv_file:
+        reader = csv.reader(csv_file, delimiter='\t')
+        for row in reader:
+            artist, album, year, song = tuple(row)
+            if not artist in artists_to_albums:
+                artists_to_albums[artist] = []
+            # Its breaking here, because once we add our current artist to the list of artists, we never update our
+            # current artist again. ie after round one, current artist will always be true
+            # Need to update current artist or else not use it
+            if not artist in artists_list:
+                current_artist = Artist(artist)
+                artists.append(current_artist)
+                artists_list.append(artist)
+
+            # current_artist will always be populated, whenever we have a new row we want to check if this album
+            # is already recorded
+            if not album in artists_to_albums[artist]:
+                # Add the current album to our list of albums
+                current_album = Album(album, int(year), current_artist)
+                current_artist.add_album(current_album)
+                artists_to_albums[artist].append(album)
+
+
+            current_song = Song(song, current_artist)
+            current_album.addSong(current_song)
+
+    return artists
 
 def create_checkfile(artist_list):
     """ Create a checkfile from the object data for comparison with original file """
