@@ -13,7 +13,6 @@ for row in reader:
 
 class Song():
     """ Class to represent a song
-
     Attributes:
         title (str): The title of the song
         artist: The name of songs creator.
@@ -74,7 +73,6 @@ class Album:
             else:
                 self.tracks.insert(position, song_found)
 
-
 class Artist:
     """ Basic class to store artist details
 
@@ -119,9 +117,7 @@ class Artist:
             self.add_album(album_found)
         else:
             print("Found album " + name)
-
         album_found.add_song(title)
-
 
 
 def find_object(field, object_list):
@@ -150,52 +146,49 @@ def load_data():
         return artist_list
 
 
-
-
-
 # Non OOP designed function
-# def load_data():
-#     new_artist = None
-#     new_album = None
-#     artist_list = []
-#
-#     with open("albums.txt","r") as albums:
-#         for line in albums:
-#             artist_field, album_field, year_field, song_field = tuple(line.strip('\n').split('\t'))
-#             year_filed = int(year_field)
-#             print("{}: {}: {}: {}".format(artist_field, album_field, year_field, song_field))
-#
-#             if new_artist is None:
-#                 new_artist = Artist(artist_field)
-#                 artist_list.append(new_artist)
-#
-#             elif new_artist.name != artist_field:
-#                 # this is us reading details for new artist
-#                 # retrieve artist object if there is one
-#                 # otherwise create new artist object
-#                 new_artist = find_object(artist_field, artist_list)
-#                 if new_artist is None:
-#                     new_artist = Artist(artist_field)
-#                     artist_list.append(new_artist)
-#                 new_album = None
-#
-#             if new_album is None:
-#                 new_album = Album(album_field, year_field, new_artist)
-#                 new_artist.add_album(new_album)
-#             elif new_album.name != album_field:
-#                 # We've just read a new album for the current artist
-#                 # retrieve the album object if there is one
-#                 # Otherwise create a new album object and store it in Artists collection
-#                 new_album = find_object(album_field, new_artist.albums)
-#                 if new_album is None:
-#                     new_album = Album(album_field, year_field, new_artist)
-#                     new_artist.add_album(new_album)
-#
-#             # create a new song object and add it to albums collection
-#             new_song = Song(song_field, new_artist)
-#             new_album.addSong(new_song)
-#
-#         return artist_list
+def load_data():
+    new_artist = None
+    new_album = None
+    artist_list = []
+
+    with open("albums.txt","r") as albums:
+        for line in albums:
+            artist_field, album_field, year_field, song_field = tuple(line.strip('\n').split('\t'))
+            year_filed = int(year_field)
+            print("{}: {}: {}: {}".format(artist_field, album_field, year_field, song_field))
+
+            if new_artist is None:
+                new_artist = Artist(artist_field)
+                artist_list.append(new_artist)
+
+            elif new_artist.name != artist_field:
+                # this is us reading details for new artist
+                # retrieve artist object if there is one
+                # otherwise create new artist object
+                new_artist = find_object(artist_field, artist_list)
+                if new_artist is None:
+                    new_artist = Artist(artist_field)
+                    artist_list.append(new_artist)
+                new_album = None
+
+            if new_album is None:
+                new_album = Album(album_field, year_field, new_artist)
+                new_artist.add_album(new_album)
+            elif new_album.name != album_field:
+                # We've just read a new album for the current artist
+                # retrieve the album object if there is one
+                # Otherwise create a new album object and store it in Artists collection
+                new_album = find_object(album_field, new_artist.albums)
+                if new_album is None:
+                    new_album = Album(album_field, year_field, new_artist)
+                    new_artist.add_album(new_album)
+
+            # create a new song object and add it to albums collection
+            new_song = Song(song_field, new_artist)
+            new_album.addSong(new_song)
+
+        return artist_list
 
 
 # my attempt
