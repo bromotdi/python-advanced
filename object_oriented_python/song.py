@@ -61,14 +61,16 @@ class Album:
         self.tracks = []
 
     def add_song(self, song, position = None):
-        """ Adds a song to the track list
-
+        """ 
+        Adds a song to the track list
+        
         Args:
             song (Song): the title of a song to add
             position (Optional[int]): If specified, the song will be added to that position
                 in the track list - inserting it between other songs if necessary.
                 Otherwise, the song will be added to the end of the list
         """
+        
         song_found = find_object(song, self.tracks)
         if song_found is None:
             song_found = Song(song, self.artist)
@@ -222,8 +224,11 @@ def load_data():
             current_album.addSong(current_song)
     return artists
 
+
 def create_checkfile(artist_list):
-    """ Create a checkfile from the object data for comparison with original file """
+    """ 
+    Create a checkfile from the object data for comparison with original file 
+    """
     with open('checkfile.txt', 'w') as checkfile:
         for new_artist in artist_list:
             for new_album in new_artist.albums:
