@@ -158,11 +158,9 @@ def load_data():
             artist_field, album_field, year_field, song_field = tuple(line.strip('\n').split('\t'))
             year_filed = int(year_field)
             print("{}: {}: {}: {}".format(artist_field, album_field, year_field, song_field))
-
             if new_artist is None:
                 new_artist = Artist(artist_field)
                 artist_list.append(new_artist)
-
             elif new_artist.name != artist_field:
                 # this is us reading details for new artist
                 # retrieve artist object if there is one
@@ -172,7 +170,6 @@ def load_data():
                     new_artist = Artist(artist_field)
                     artist_list.append(new_artist)
                 new_album = None
-
             if new_album is None:
                 new_album = Album(album_field, year_field, new_artist)
                 new_artist.add_album(new_album)
@@ -184,11 +181,9 @@ def load_data():
                 if new_album is None:
                     new_album = Album(album_field, year_field, new_artist)
                     new_artist.add_album(new_album)
-
             # create a new song object and add it to albums collection
             new_song = Song(song_field, new_artist)
             new_album.addSong(new_song)
-
         return artist_list
 
 
@@ -209,7 +204,6 @@ def load_data():
                 current_artist = Artist(artist)
                 artists.append(current_artist)
                 artists_list.append(artist)
-
             # current_artist will always be populated, whenever we have a new row we want to check if this album
             # is already recorded
             if not album in artists_to_albums[artist]:
@@ -217,11 +211,8 @@ def load_data():
                 current_album = Album(album, int(year), current_artist)
                 current_artist.add_album(current_album)
                 artists_to_albums[artist].append(album)
-
-
             current_song = Song(song, current_artist)
             current_album.addSong(current_song)
-
     return artists
 
 def create_checkfile(artist_list):
