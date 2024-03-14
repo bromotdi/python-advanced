@@ -72,11 +72,11 @@ class Enemy:
 
 class Troll(Enemy):
     def __init__(self, name, hp=20, lives=2,weapon="stick"):
-    #def __init__(self, name):
-        # Would work as well
-        #Enemy.__init__(self, name=name, lives= 1, hit_points)
+        #def __init__(self, name):
+            # Would work as well
+            # Enemy.__init__(self, name=name, lives= 1, hit_points)
+            # super().__init__()
         super().__init__(name=name, hit_points=hp, lives=lives)
-        #super().__init__()
         self.weapon = weapon
 
     def grunt(self):
@@ -102,16 +102,14 @@ class Vampire(Enemy):
 
 
 class VampireKing(Vampire):
-
     def __init__(self, name):
-        #super().__init__(name, hit_points=140)
         super().__init__(name)
         self._hit_points = 140
 
-    # def king_shit(self,damage):
-    #     print(f"{self._name} absorbs damage")
-    #     return damage // 4
+    def king_shit(self,damage):
+        print(f"{self._name} absorbs damage")
+        return damage // 4
 
     def take_damage(self, damage):
-        #damage = self.king_shit(damage)
+        damage = self.king_shit(damage)
         super().take_damage(damage // 4)
