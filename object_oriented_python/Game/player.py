@@ -47,6 +47,7 @@ class Player(object):
     def __str__(self):
         return f"Name: {self.name}, Lives: {self.lives}, Level: {self._level}, Score: {self._score}"
 
+
 # class Player(object):
 #     def __init__(self, name):
 #         self.name = name
