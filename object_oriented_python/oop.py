@@ -32,9 +32,9 @@ print(kenwood.on)
 kenwood.power = 1.5
 print(kenwood.power)
 
-print("*"*80)
 Kettle.power_source = "atomic"
 hamilton.power_source = "Solar"
+
 print(kenwood.power_source)
 print(hamilton.power_source)
 print(Kettle.__dict__)
