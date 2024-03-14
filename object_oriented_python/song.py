@@ -112,13 +112,12 @@ class Artist:
         album_found = find_object(name, self.albums)
         if album_found is None:
             print(name + " not found")
-            #print(f"SELF IS {self}")
+            print(f"SELF IS {self}")
             album_found = Album(name, year, self.name)
             self.add_album(album_found)
         else:
             print("Found album " + name)
         album_found.add_song(title)
-
 
 def find_object(field, object_list):
     """Check `object_list` to see if an object with a `name` attribute equal to `field` exists, returns it if found"""
@@ -126,7 +125,6 @@ def find_object(field, object_list):
         if item.name == field:
             return item
     return None
-
 
 def load_data():
     artist_list = []
