@@ -33,8 +33,8 @@ class Enemy:
                f"Hit points: {self.hit_points}, " \
                f"Status: {['Alive' if self.alive ==True else 'Dead'][0]}"
 
-class Enemy:
 
+class Enemy:
     def __init__(self, name="Enemy", hit_points=10, lives=1):
         self._name = name
         self._hit_points = hit_points
@@ -51,7 +51,6 @@ class Enemy:
     def lives(self, lives):
         print("using Setter")
         self._lives = lives
-
 
     def take_damage(self, damage):
         remaining_points = self._hit_points - damage
@@ -70,8 +69,8 @@ class Enemy:
     def __str__(self):
         return f"Name: {self._name}, lives: {self._lives}, Hit points: {self._hit_points}"
 
-class Troll(Enemy):
 
+class Troll(Enemy):
     def __init__(self, name, hp=20, lives=2,weapon="stick"):
     #def __init__(self, name):
         # Would work as well
