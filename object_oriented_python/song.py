@@ -29,12 +29,10 @@ class Song():
 
     name = property(get_title)
 
-
-#help(Song)
-# print(Song.__doc__)
-# print(Song.__init__.__doc__)
-# Song.__init__.__doc__ = """ xyz """
-
+help(Song)
+print(Song.__doc__)
+print(Song.__init__.__doc__)
+Song.__init__.__doc__ = """ xyz """
 
 class Album:
     """Class to represent an album, using it's track list
@@ -58,7 +56,6 @@ class Album:
         else:
             self.artist = artist
         self.tracks = []
-
 
     def add_song(self, song, position = None):
         """ Adds a song to the track list
