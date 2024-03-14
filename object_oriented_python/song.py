@@ -11,6 +11,7 @@ reader = csv.reader(csv_file, delimiter='\t')
 for row in reader:
     print(*tuple(row))
 
+
 class Song():
     """ Class to represent a song
     Attributes:
@@ -28,10 +29,12 @@ class Song():
 
     name = property(get_title)
 
+
 help(Song)
 print(Song.__doc__)
 print(Song.__init__.__doc__)
 Song.__init__.__doc__ = """ xyz """
+
 
 class Album:
     """Class to represent an album, using it's track list
@@ -72,6 +75,7 @@ class Album:
                 self.tracks.append(song_found)
             else:
                 self.tracks.insert(position, song_found)
+
 
 class Artist:
     """ Basic class to store artist details
