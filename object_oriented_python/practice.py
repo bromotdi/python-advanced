@@ -10,6 +10,7 @@ q = [[1,2], [3,4]]
 
 r1= np.cross(p, q)
 r2 = np.cross(q,p)
+
 print(r1)
 print(r2)
 print(r1==r2)
