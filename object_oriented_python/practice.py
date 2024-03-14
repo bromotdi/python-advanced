@@ -5,7 +5,6 @@ s = pd.Series(np.random.randn(2))
 print(s)
 print(s.size)
 
-print(80*'*')
 p = [[1,0], [0,1]]
 q = [[1,2], [3,4]]
 
