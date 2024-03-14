@@ -19,6 +19,7 @@ class Song():
         artist: The name of songs creator.
         duration (int): The duration of the song in seconds. may be zero
     """
+    
     def __init__(self, title, artist, duration=0):
         self.title = title
         self.artist = artist
@@ -88,6 +89,7 @@ class Artist:
     Methods:
         add_album: use to add a new album to the artist's album list
     """
+    
     def __init__(self, name):
         self.name = name
         self.albums = []
@@ -99,6 +101,7 @@ class Artist:
             album (Album): Album object to add to the list.
                 If the album is already present, it will not be added again (although this is yet to be implemented)
         """
+        
         self.albums.append(album)
 
     def add_song(self, name, year, title):
@@ -113,6 +116,7 @@ class Artist:
             year (int): The year the album was produced
             title (str): The title of the song
         """
+        
         album_found = find_object(name, self.albums)
         if album_found is None:
             print(name + " not found")
@@ -125,7 +129,10 @@ class Artist:
 
 
 def find_object(field, object_list):
-    """Check `object_list` to see if an object with a `name` attribute equal to `field` exists, returns it if found"""
+    """
+    Check `object_list` to see if an object with a `name` attribute equal to `field` exists, returns it if found
+    """
+    
     for item in object_list:
         if item.name == field:
             return item
