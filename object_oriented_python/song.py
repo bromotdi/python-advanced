@@ -1,15 +1,15 @@
 import csv
 
-# with open('albums.txt', encoding='utf-8', newline='') as csv_file:
-#     # sample = ""
-#     # for line in range(3):
-#     #     sample += csv_file.read()
-#     # print(sample)
-#     #headings = ['artist','album','year','song']
-#     reader = csv.reader(csv_file, delimiter='\t')
-#     for row in reader:
-#         print(*tuple(row))
-
+with open('albums.txt', encoding='utf-8', newline='') as csv_file:
+    sample = ""
+    for line in range(3):
+        sample += csv_file.read()
+    print(sample)
+    
+headings = ['artist','album','year','song']
+reader = csv.reader(csv_file, delimiter='\t')
+for row in reader:
+    print(*tuple(row))
 
 class Song():
     """ Class to represent a song
