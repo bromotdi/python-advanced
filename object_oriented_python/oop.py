@@ -5,6 +5,7 @@ print(a.__add__(b))
 
 class Kettle(object):
     power_source = "electricity"
+    
     def __init__(self, make, price):
         self.make = make
         self.price = price
