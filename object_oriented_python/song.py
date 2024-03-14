@@ -88,14 +88,13 @@ class Artist:
     Methods:
         add_album: use to add a new album to the artist's album list
     """
-
     def __init__(self, name):
         self.name = name
         self.albums = []
 
     def add_album(self, album):
-        """Add a new album to the list.
-
+        """
+        Add a new album to the list.
         Args:
             album (Album): Album object to add to the list.
                 If the album is already present, it will not be added again (although this is yet to be implemented)
@@ -103,7 +102,8 @@ class Artist:
         self.albums.append(album)
 
     def add_song(self, name, year, title):
-        """ Add a new song to the collection of albums
+        """
+        Add a new song to the collection of albums
 
         This method will add the song to an album in the collection
         A new album will be created in the collection if it doesnt already exist.
@@ -139,14 +139,11 @@ def load_data():
             artist_field, album_field, year_field, song_field = tuple(line.strip('\n').split('\t'))
             year_filed = int(year_field)
             print("{}: {}: {}: {}".format(artist_field, album_field, year_field, song_field))
-
             new_artist = find_object(artist_field, artist_list)
             if new_artist is None:
                 new_artist = Artist(artist_field)
                 artist_list.append(new_artist)
-
             new_artist.add_song(album_field, year_field, song_field)
-
         return artist_list
 
 
