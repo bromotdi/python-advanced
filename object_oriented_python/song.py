@@ -123,12 +123,14 @@ class Artist:
             print("Found album " + name)
         album_found.add_song(title)
 
+
 def find_object(field, object_list):
     """Check `object_list` to see if an object with a `name` attribute equal to `field` exists, returns it if found"""
     for item in object_list:
         if item.name == field:
             return item
     return None
+
 
 def load_data():
     artist_list = []
