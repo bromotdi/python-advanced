@@ -1,8 +1,8 @@
 # turtle is pretty unique code so can import this way, dont do it usually
-#from turtle import *
+from turtle import *
 import turtle
 import math
-#from math import radians, cos
+from math import radians, cos
 
 
 
