@@ -91,8 +91,3 @@ with open(source_file, 'rb') as bat:
                 
     else:
         print(f'{source_file} does not appear to be a bitmap (.bmp) file.')
-
-
-
-
-
