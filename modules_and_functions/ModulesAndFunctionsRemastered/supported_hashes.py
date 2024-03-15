@@ -19,7 +19,8 @@ supported_hashes = {
 
 
 def generate_hash(filename: str, algorithm: str) -> str:
-    """Generate the hash for `filename`
+    """
+    Generate the hash for `filename`
 
     :param filename: The file to generate a hash for.
     :param algorithm: The hashlib algorithm to use.
@@ -29,6 +30,7 @@ def generate_hash(filename: str, algorithm: str) -> str:
     """
     hash_algorithm = supported_hashes.get(algorithm, None)
     print(hash_algorithm, type(hash_algorithm))  # TODO: delete after testing
+   
     if not hash_algorithm:
         print(f'The requested hashing algorithm {hash_algorithm} is not supported.')
     else:
