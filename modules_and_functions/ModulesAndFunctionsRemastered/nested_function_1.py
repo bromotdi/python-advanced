@@ -6,8 +6,10 @@ def greet_pythons(items: list) -> None:
     def make_greeting(item:str) -> str:
         print(f"The local namespace in `make_greeting`(1): {locals()}")
         greeting ='hi'
+        
         print(f"The local namespace in `make_greeting`(2): {locals()}")
         print(f"The ID of `greeting` in `make_greeting` is {id(greeting)}")
+        
         return f'{greeting} {item}'
         
     for item in items:
