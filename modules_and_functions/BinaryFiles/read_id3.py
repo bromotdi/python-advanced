@@ -91,7 +91,6 @@ with open(filename, 'rb') as mp3_file:
             mp3_file.seek(ext_size, SEEK_CUR)
 
         while True:
-            print('*' * 80)
             print(f'Current file position: {mp3_file.tell()}')
             # read 10 byte frame header
             frame_header = mp3_file.read(10)
@@ -133,7 +132,6 @@ with open(filename, 'rb') as mp3_file:
                     print(f'{frame_types[frame_id]}:')
                     print(f'\tDescription: {description}')
                     print(f'\tURL: {url}')
-
 
                 elif frame_id == b'APIC':
                     frame_data_start = mp3_file.tell()
