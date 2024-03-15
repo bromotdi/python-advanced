@@ -1,4 +1,6 @@
-"""Module for investigating importing and namespace"""
+"""
+    Module for investigating importing and namespace
+"""
 
 from better_code import area_of_square
 import better_code
