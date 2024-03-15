@@ -2,7 +2,7 @@ import os
 
 source_file = 'bm_test.txt'
 source_file = 'vintage-halloween-bat.bmp'
-inverted_file = f'inverted-{source_file}'
+inverted_file = f"inverted-{source_file}"
 
 with open(source_file, 'rb') as bat:  
     # No encoding - its binary file so no need to decode any encoding
@@ -12,9 +12,11 @@ with open(source_file, 'rb') as bat:
 
     bmp_id = file_header[0:2]
     print(f'BMPID LOOKS LIKE {bmp_id}')
+    
     if bmp_id == b'BM':  # we have a Windows bitmap file
         file_size = int.from_bytes(file_header[2:6], 'little')
         print(f'File size in header: {file_size}')
+        
         os_size = os.path.getsize(source_file)
         print(f'File size reported by the operating system: {os_size}')
 
