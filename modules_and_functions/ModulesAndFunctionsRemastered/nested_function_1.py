@@ -12,11 +12,10 @@ def greet_pythons(items: list) -> None:
         
     for item in items:
         print(make_greeting(item))
+        
     print(f'Inside job `greeting` is {greeting}')
     print(f"The ID of `greeting` in `greet_pythons` is {id(greeting)}")
     print(f"The local namespace in `greet_pythons`(2): {locals()}")
 
-
-
-names= ['John']#,'Eric','Graham', 'Terry', 'Terry','Michael']
+names = ['John']
 greet_pythons(names)
