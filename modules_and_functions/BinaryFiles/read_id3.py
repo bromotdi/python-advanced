@@ -4,7 +4,6 @@ from typing import BinaryIO
 
 filename = 'Someday.mp3'
 
-
 def decode_size(encoded_size: bytes) -> int:
     """Decode and return an ID3 encoded size as a positive integer.
 
@@ -14,13 +13,9 @@ def decode_size(encoded_size: bytes) -> int:
     Each byte after the least significant is shifted left 7 places.
     Thus:
         byte 3 is shifted left 21 places.
-
         byte 2 is shifted left 14 places
-
         byte 1 is shifted left 7 places
-
         byte 0 is unchanged,
-
         Or-ing the 4 bytes gives the decoded size.
 
     For example, a size of 257 bytes is represented as $00 00 02 01.
