@@ -144,12 +144,14 @@ with open(filename, 'rb') as mp3_file:
 
                     # Next we have a null-terminated string.
                     mime_type = read_c_string(mp3_file, 'iso-8859-1')
+                    
                     if mime_type =='':
                         mime_type = 'image/'
                     print(f'Mime type: {mime_type}')
 
                     # read 1 byte picture type
                     picture_type = int.from_bytes(mp3_file.read(1), 'big')
+                    
                     # and get its human name
                     apic_picture_name = apic_picture_types[picture_type]
                     print(f'Found {apic_picture_name} image')
@@ -162,8 +164,10 @@ with open(filename, 'rb') as mp3_file:
                     if mime_type.startswith('image/'):
                         image_data_start = mp3_file.tell()
                         print(f'Image data starts at {image_data_start}')
+                        
                         image_size = frame_size - (image_data_start - frame_data_start)
                         print(f'image size = {image_size}')
+                        
                         image_data = mp3_file.read(image_size)
 
                         # Create a file name from the picture name
@@ -185,16 +189,20 @@ with open(filename, 'rb') as mp3_file:
                     # Found a frame that we're not going to process.
                     # Skip it by seeking forward `frame_size` bytes
                     mp3_file.seek(frame_size, SEEK_CUR)
+                    
                     # Now skip any zero bytes
                     next_byte = mp3_file.read(1)
+                    
                     # Check for an empty bytearray, to avoid attempting to read past EOF (end of file).
                     while next_byte and next_byte == b'\0':
                         next_byte = mp3_file.read(1)
+                    
                     # If we've just read a non-zero byte, it will be part of the next frame.
                     # Move the file pointer back 1 byte, to read it again next time round.
                     if next_byte != b'':
                         mp3_file.seek(-1, SEEK_CUR)
                 print(f'seek position after frame: {mp3_file.tell()}')
+                
             else:
                 # Found an unrecognised frame (or we've exhausted all frames)
                 break
