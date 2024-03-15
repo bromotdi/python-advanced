@@ -4,16 +4,17 @@ import turtle
 import math
 from math import radians, cos
 
+turtle.pendown()
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.done()
 
-
-# turtle.pendown()
-# turtle.forward(100)
-# turtle.right(90)
-# turtle.forward(100)
-# turtle.right(90)
-# turtle.done()
 def encircled_square(length: int) -> None:
-    """Draws a square then encloses it in a circle"""
+    """
+        Draws a square then encloses it in a circle
+    """
     square(length)
     angle = math.radians(45)
     radius = length * math.cos(angle)
