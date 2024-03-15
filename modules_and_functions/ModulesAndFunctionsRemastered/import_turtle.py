@@ -23,13 +23,16 @@ def encircled_square(length: int) -> None:
     print(f'Inside function, the scope is {dir()}')
 
 def square(length: int) -> None:
-    """Draws a square of length `length"""
+    """
+        Draws a square of length `length
+    """
     for side in range(4):
         turtle.forward(length)
         turtle.right(90)
 
 turtle.speed("fast")
 encircled_square(300)
+
 for s in range(72):
     encircled_square(120)
     turtle.circle(100)
@@ -42,5 +45,3 @@ print(f"Outside the function the scope is {dir(encircled_square)}")
 g = globals()
 print(g['square'])
 print(dir(__builtins__))
-
-print(80*'*')
