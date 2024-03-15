@@ -15,7 +15,6 @@ print(__name__)
 print(globals())
 
 namespace = globals().copy()
+
 for name,obj in namespace.items():
     print(name, obj)
-
-
