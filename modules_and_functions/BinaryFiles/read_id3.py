@@ -5,7 +5,8 @@ from typing import BinaryIO
 filename = 'Someday.mp3'
 
 def decode_size(encoded_size: bytes) -> int:
-    """Decode and return an ID3 encoded size as a positive integer.
+    """
+    Decode and return an ID3 encoded size as a positive integer.
 
     The ID3v2 tag size is encoded with four bytes, where the
     most significant bit (bit 7) is set to zero in every byte.
@@ -31,6 +32,7 @@ def decode_size(encoded_size: bytes) -> int:
     :param encoded_size: The 4 bytes making up the encoded size.
     :return: The decoded size, as an integer.
     """
+    
     return encoded_size[0] << 21 \
            | encoded_size[1] << 14 \
            | encoded_size[2] << 7 \
