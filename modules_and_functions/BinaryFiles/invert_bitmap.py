@@ -1,10 +1,11 @@
 import os
 
-#source_file = 'bm_test.txt'
+source_file = 'bm_test.txt'
 source_file = 'vintage-halloween-bat.bmp'
 inverted_file = f'inverted-{source_file}'
 
-with open(source_file, 'rb') as bat:  # No encoding - its binary file so no need to decode any encoding
+with open(source_file, 'rb') as bat:  
+    # No encoding - its binary file so no need to decode any encoding
     # Read the 14 byte header - bmp files all have a 14 length header
     file_header = bat.read(14)
     print(f'FILEHEADER LOOKS LIKE {file_header}')
@@ -53,8 +54,9 @@ with open(source_file, 'rb') as bat:  # No encoding - its binary file so no need
                 if current_position != offset:
                     print(f"Something's gone wrong. We're at {current_position}, should be at {offset}")
 
-                bat.seek(offset)  # Strictly speaking, this is redundant.
-
+                # Strictly speaking, this is redundant.
+                bat.seek(offset)
+                
                 # Read `pixel_array_size` bytes to get the image pixel data
                 image = bytearray(bat.read(pixel_array_size))
 
