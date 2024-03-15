@@ -17,7 +17,6 @@ supported_hashes = {
     'shake_256': hashlib.sha256,
 }
 
-
 def generate_hash(filename: str, algorithm: str) -> str:
     """
     Generate the hash for `filename`
@@ -30,16 +29,13 @@ def generate_hash(filename: str, algorithm: str) -> str:
     """
     hash_algorithm = supported_hashes.get(algorithm, None)
     print(hash_algorithm, type(hash_algorithm))  # TODO: delete after testing
-   
     if not hash_algorithm:
         print(f'The requested hashing algorithm {hash_algorithm} is not supported.')
     else:
         with open(filename, 'rb') as input_file:
             contents = input_file.read()
-
         file_hash = hash_algorithm(contents).hexdigest()
         return file_hash
-
 
 if __name__ == '__main__':
     for h in sorted(hashlib.algorithms_guaranteed):
