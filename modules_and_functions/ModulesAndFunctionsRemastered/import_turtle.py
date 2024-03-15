@@ -28,17 +28,17 @@ def square(length: int) -> None:
         turtle.forward(length)
         turtle.right(90)
 
-
-#turtle.speed("fast")
-#encircled_square(300)
-# for s in range(72):
-#     encircled_square(120)
-#     turtle.circle(100)
-#     turtle.left(5)
-#turtle.done()
+turtle.speed("fast")
+encircled_square(300)
+for s in range(72):
+    encircled_square(120)
+    turtle.circle(100)
+    turtle.left(5)
+turtle.done()
 
 print(f"Default scope is {f'{dir()}':>190}")
-# print(f"Outside the function the scope is {dir(encircled_square)}")
+print(f"Outside the function the scope is {dir(encircled_square)}")
+
 g = globals()
 print(g['square'])
 print(dir(__builtins__))
