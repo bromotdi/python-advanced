@@ -5,9 +5,5 @@ def area_of_square(length: float):
     global area
     area = length*length
 
-
 area = area_of_square(30)
 print(f"the area is {area}")
-
-
-
