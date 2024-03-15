@@ -53,6 +53,7 @@ with open(source_file, 'rb') as bat:
                 # Check: we should now be at 'offset' in the file.
                 current_position = bat.tell()
                 print(f'File pointer is at position {current_position}')
+                
                 if current_position != offset:
                     print(f"Something's gone wrong. We're at {current_position}, should be at {offset}")
 
@@ -72,17 +73,22 @@ with open(source_file, 'rb') as bat:
                 with open(inverted_file, 'wb') as inverted_bat:
                     print(f'\tWriting header')
                     inverted_bat.write(file_header)
+                    
                     print(f'\tWriting DIB header and other blocks')
                     inverted_bat.write(dib_header_etc)
+                    
                     print(f'\tWriting image data')
                     inverted_bat.write(image)
+                    
                     if remainder:
                         print(f'\tWriting remaining bytes')
                         inverted_bat.write(remainder)
 
                 print(f'Image file {inverted_file} created.')
+                
             else:
                 print(f'{source_file} is not a supported bitmap format.')
+                
     else:
         print(f'{source_file} does not appear to be a bitmap (.bmp) file.')
 
