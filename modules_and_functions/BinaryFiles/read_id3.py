@@ -32,7 +32,6 @@ def decode_size(encoded_size: bytes) -> int:
     :param encoded_size: The 4 bytes making up the encoded size.
     :return: The decoded size, as an integer.
     """
-    
     return encoded_size[0] << 21 \
            | encoded_size[1] << 14 \
            | encoded_size[2] << 7 \
@@ -64,12 +63,10 @@ def read_c_string(binary_file: BinaryIO, c_str_encoding: str) -> str:
     while byte_read and byte_read != b'\x00':
         byte_array += byte_read
         byte_read = binary_file.read(1)
-
     if byte_array != b'\x00':
         return byte_array.decode(c_str_encoding)
     else:
         return ''
-
 
 with open(filename, 'rb') as mp3_file:
     header = mp3_file.read(10)
