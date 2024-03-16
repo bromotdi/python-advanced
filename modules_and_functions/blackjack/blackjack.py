@@ -116,19 +116,15 @@ def new_game():
 def shuffle():
     random.shuffle(deck)
 
-
 def play_blackjack():
     initial_deal()
     mainWindow.mainloop()
 
 
-
 mainWindow = tk.Tk()
-
 mainWindow.title("Black Jack")
 mainWindow.geometry("640x480")
 mainWindow.configure(background='green')
-
 
 result_text = tk.StringVar()
 result = tk.Label(mainWindow, textvariable= result_text)
