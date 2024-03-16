@@ -77,7 +77,6 @@ def score_hand(hand):
             ace = False
     return score
 
-
 def deal_player():
     player_hand.append(_deal_card(player_card_frame))
     player_score = score_hand(player_hand)
