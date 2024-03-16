@@ -6,8 +6,9 @@
 import tkinter as tk
 import random
 # Loading the card images
-# We've labbeled the individual images as <number>_<suit>.<extension> to make accessing them much easier from within
-# functions
+# We've labbeled the individual images as <number>_<suit>.
+# <extension> to make accessing them much easier from within
+
 def load_images(card_images):
     suits = ['heart','club','diamond','spade']
     face_cards = ['jack','queen','king']
@@ -28,7 +29,6 @@ def load_images(card_images):
             name = f"cards_{extension}/{str(card)}_{suit}.{extension}"
             image = tk.PhotoImage(file=name)
             card_images.append((10, image))
-
 
 def _deal_card(frame):
     # pop the next card off the top of the deck - 0 gives first
