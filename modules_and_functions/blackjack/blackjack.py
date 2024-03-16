@@ -5,6 +5,7 @@
 # result
 # my way on my_blackjack was very overcomplicated, no need to bind players together
 # plus that made it impossible to add more poeple into the game
+
 import tkinter as tk
 import random
 # Loading the card images
