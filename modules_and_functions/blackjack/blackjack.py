@@ -85,24 +85,6 @@ def deal_player():
     if player_score > 21:
         result_text.set("Dealer wins!")
 
-# Using globals, don't do it this way!!
-# def deal_player():
-#     global player_score
-#     global player_ace
-#     card_value = deal_card(player_card_frame)[0]
-#     if card_value == 1 and not player_ace:
-#         player_ace = True
-#         card_value = 11
-#     player_score += card_value
-#     # If we would bust, check if theres an ace and subtract 10
-#     if player_score > 21 and player_ace:
-#         player_score -= 10
-#         player_ace = False
-#     player_score_label.set(player_score)
-#     if player_score > 21:
-#         result_text.set("Dealer wins!")
-
-
 # Dont need to set up a whole new GUI everytime, just reset the Frames
 # Probably dont need global keyword here, think this makes it work with python2
 def initial_deal():
