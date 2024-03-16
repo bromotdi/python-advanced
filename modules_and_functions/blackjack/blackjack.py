@@ -133,11 +133,9 @@ result.grid(row=0, column=0, columnspan=3)
 card_frame = tk.Frame(mainWindow, relief="sunken", borderwidth=1, background="green")
 card_frame.grid(row=1, column=0, sticky='ew', columnspan=3, rowspan=2)
 
-
 dealer_score_label = tk.IntVar()
 tk.Label(card_frame, text="Dealer", background="green", fg="white").grid(row=0, column=0)
 tk.Label(card_frame, textvariable=dealer_score_label, background="green", fg='white').grid(row=1, column=0)
-
 
 # Embedded frame to hold the card images
 dealer_card_frame = tk.Frame(card_frame, background='green')
