@@ -149,14 +149,12 @@ tk.Label(card_frame, textvariable=player_score_label, background="green", fg="wh
 player_card_frame = tk.Frame(card_frame, background="green")
 player_card_frame.grid(row=2, column=1, sticky="ew", rowspan=2)
 
-
 button_frame = tk.Frame(mainWindow)
 button_frame.grid(row=3, column=0, columnspan=3, sticky='w')
 
 ## link the dealing functions within this button we've created
 dealer_button = tk.Button(button_frame, text='Dealer', command=deal_dealer)
 dealer_button.grid(row=0, column=0)
-
 
 player_button = tk.Button(button_frame, text="Player", command=deal_player)
 player_button.grid(row=0, column=1)
