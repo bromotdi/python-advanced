@@ -80,11 +80,10 @@ def score_hand(hand):
 def deal_player():
     player_hand.append(_deal_card(player_card_frame))
     player_score = score_hand(player_hand)
-
     player_score_label.set(player_score)
+    
     if player_score > 21:
         result_text.set("Dealer wins!")
-
 
 # Using globals, don't do it this way!!
 # def deal_player():
