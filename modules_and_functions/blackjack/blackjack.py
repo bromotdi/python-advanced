@@ -2,9 +2,6 @@
 # Deal 2 cards to everyone
 # player takes all their goes
 # Dealer takes his goes
-# result
-# my way on my_blackjack was very overcomplicated, no need to bind players together
-# plus that made it impossible to add more poeple into the game
 
 import tkinter as tk
 import random
