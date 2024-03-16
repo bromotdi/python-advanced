@@ -61,7 +61,6 @@ def deal_dealer():
     else:
         result_text.set("Draw")
 
-
 def score_hand(hand):
     '''Calculate the total score of all cards in the list'''
     # only one ace can have value 11, this is reduced to 1 if hand would bust
