@@ -120,7 +120,6 @@ def play_blackjack():
     initial_deal()
     mainWindow.mainloop()
 
-
 mainWindow = tk.Tk()
 mainWindow.title("Black Jack")
 mainWindow.geometry("640x480")
@@ -173,14 +172,14 @@ print(cards)
 
 # create a new deck of cards and shuffle them
 deck = list(cards)
+
 # If you wanted to play with 3 decks
-#deck = list(cards) + list(cards) + list(cards)
+deck = list(cards) + list(cards) + list(cards)
 shuffle()
 
 # Create the list to store dealers and players hands
 dealer_hand = []
 player_hand = []
-
 
 if __name__ == '__main__':
     play_blackjack()
