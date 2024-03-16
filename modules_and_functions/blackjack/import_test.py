@@ -8,9 +8,8 @@ g = sorted(globals())  #.copy()
 for x in g:
     print(x)
 
-
-# print(__name__)
-# blackjack._deal_card(blackjack.dealer_card_frame)
-# blackjack.play_blackjack()
+print(__name__)
+blackjack._deal_card(blackjack.dealer_card_frame)
+blackjack.play_blackjack()
 # from a command line
-#python -m blackjack
+# python -m blackjack
