@@ -1,9 +1,7 @@
-import blackjack
-from blackjack import *
 # If do the below, things starting with _ wont be imported, 
 # python knows the convention of using _ to make them private
-
-
+import blackjack
+from blackjack import *
 
 # Dont need to do .copy() when we do sorted, cos that also takes a copy
 g = sorted(globals())  #.copy()
