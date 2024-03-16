@@ -85,7 +85,7 @@ def deal_player():
     if player_score > 21:
         result_text.set("Dealer wins!")
 
-# Dont need to set up a whole new GUI everytime, just reset the Frames
+# Don't need to set up a whole new GUI everytime, just reset the Frames
 # Probably dont need global keyword here, think this makes it work with python2
 def initial_deal():
     deal_player()
@@ -93,16 +93,17 @@ def initial_deal():
     dealer_score_label.set(score_hand(dealer_hand))
     deal_player()
 
-
 def new_game():
     global dealer_card_frame
     global player_card_frame
     global dealer_hand
     global player_hand
+    
     # embedded frame to hold the card images
     dealer_card_frame.destroy()
     dealer_card_frame = tk.Frame(card_frame, background='green')
     dealer_card_frame.grid(row=0, column=1, sticky='ew', rowspan=2)
+    
     # embedded frame to hold card images
     player_card_frame = tk.Frame(card_frame, background="green")
     player_card_frame.grid(row=2, column=1, sticky='ew', rowspan=2)
@@ -111,7 +112,6 @@ def new_game():
     dealer_hand = []
     player_hand = []
     initial_deal()
-
 
 def shuffle():
     random.shuffle(deck)
