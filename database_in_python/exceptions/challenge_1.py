@@ -47,5 +47,4 @@ except ZeroDivisionError:
     print('Cannot divide by 0')
     sys.exit(2)
 else:
-    print("Division performed successfully"
-          "+")
+    print("Division performed successfully""+")
