@@ -20,7 +20,6 @@ class DataListBox(Scrollbox):
         self.linked_box = None
         self.link_field = None
         self.link_value = None
-
         self.cursor = connection.cursor()
         self.table = table
         self.field = field
@@ -30,7 +29,6 @@ class DataListBox(Scrollbox):
 
         self.sql_select = "SELECT " + self.field + ", _id " + "FROM " + self.table
         if sort_order:
-            #self.sql_sort = f"ORDER BY  {','.join(sort_order)}"
             self.sql_sort = " ORDER BY " + ",".join(sort_order)
         else:
             self.sql_sort = " ORDER BY " + self.field
