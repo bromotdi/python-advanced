@@ -22,7 +22,6 @@ db.execute("CREATE VIEW IF NOT EXISTS localhistory as "
 class Account(object):
     @staticmethod
     def _current_time():
-        # origin - return pytz.utc.localize(dt.datetime.utcnow())
         # local_time = pytz.utc.localize(dt.datetime.utcnow())
         # return local_time.astimezone()
         utc_time = pytz.utc.localize(dt.datetime.utcnow())
