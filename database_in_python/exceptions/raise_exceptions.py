@@ -10,7 +10,6 @@ duck6 = ducks.Duck()
 duck7 = ducks.Duck()
 percy = ducks.Penguin()
 
-
 flock.add_duck(donald)
 flock.add_duck(daisy)
 flock.add_duck(duck3)
@@ -21,6 +20,3 @@ flock.add_duck(duck6)
 flock.add_duck(duck7)
 
 flock.migrate()
-
-
-
