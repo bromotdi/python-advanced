@@ -41,7 +41,9 @@ class DataListBox(Scrollbox):
         widget.link_field = link_field
 
     def requery(self, link_value=None):
-        self.link_value = link_value # store the id, so we know the "master" record we're populated from
+        # store the id, so we know the "master" record we're populated from
+        self.link_value = link_value 
+        
         # only execute if there is a link established between listboxes
         if link_value and self.link_field:
             sql = f"{self.sql_select} WHERE {self.link_field}=? {self.sql_sort}"
