@@ -4,10 +4,10 @@ def factorial(n):
     else:
         return n*factorial(n-1)
 
-# try:
-#     print(factorial(1000))
-# except (RecursionError, ZeroDivisionError):
-#     print("Number is too large")
+try:
+    print(factorial(1000))
+except (RecursionError, ZeroDivisionError):
+    print("Number is too large")
 
 
 try:
