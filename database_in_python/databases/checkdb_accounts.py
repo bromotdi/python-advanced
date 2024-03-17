@@ -11,8 +11,8 @@ for row in db.execute("SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'local
     print(row)
 
     # show we're using strings for times here
-    #local_time= row[0]
-    #print(f"{local_time}\t{type(local_time)}")
+    local_time = row[0]
+    print(f"{local_time}\t{type(local_time)}")
 
     # utc_time= row[0]
     # local_time= pytz.utc.localize(utc_time).astimezone()
