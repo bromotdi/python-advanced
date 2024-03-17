@@ -23,8 +23,6 @@ class Account(object):
     def __init__(self, name: str, opening_balance: float = 0.0):
         cursor = db.execute("SELECT name,balance FROM accounts WHERE (name=?)", (name,))
         row = cursor.fetchone()
-
-        #if row is not None
         if row:
             self.name, self._balance = row
             print(f"Retrieved record for {self.name}", end='')
@@ -39,7 +37,6 @@ class Account(object):
     def _save_update(self,amount):
         new_balance = self._balance + amount
         deposit_time = pytz.utc.localize(dt.datetime.utcnow())
-
         try:
             db.execute("UPDATE accounts SET balance = ? WHERE (name=?)",(new_balance, self.name))
             db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))
