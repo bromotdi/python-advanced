@@ -141,7 +141,7 @@ if __name__ == '__main__':
     albumLV = tk.Variable(mainWindow)
     albumLV.set(("Choose an Artist",))
     albumList = DataListBox(mainWindow, conn, "albums", "name", sort_order=("name",), background="violet")
-    #albumList.requery()
+    albumList.requery()
     albumList.grid(row=1, column=1, sticky='nsew', padx=(30,))
     albumList.config(border=2, relief="sunken")
 
@@ -153,7 +153,6 @@ if __name__ == '__main__':
     albumScroll = tk.Scrollbar(mainWindow, orient=tk.VERTICAL, command=albumList.yview)
     albumScroll.grid(row=1, column=1, sticky="nse", rowspan=2)
     albumList['yscrollcommand'] = albumScroll.set
-
 
     # Songs listbox
     songsLV = tk.Variable(mainWindow)
