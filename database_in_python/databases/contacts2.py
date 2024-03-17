@@ -1,11 +1,9 @@
 import sqlite3
+
 db = sqlite3.connect('contacts.sqlite')
-
-
 new_email = "new_email@update.com"
 phone = input("Enter new phone number: ")
-
-#update_sql = f"UPDATE contacts SET email = '{new_email}' WHERE contacts.phone={phone}"
+update_sql = f"UPDATE contacts SET email = '{new_email}' WHERE contacts.phone={phone}"
 
 # Using placeholder value
 update_sql = f"UPDATE contacts SET email = ? WHERE contacts.phone=?"
