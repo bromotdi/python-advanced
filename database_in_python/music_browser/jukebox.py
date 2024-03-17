@@ -156,10 +156,9 @@ if __name__ == '__main__':
     songsLV = tk.Variable(mainWindow)
     songsLV.set(("Choose an Album",))
     songsList = DataListBox(mainWindow, conn, "songs", "title", ("track","title"), background="orange")
-    #songsList.requery()
+    songsList.requery()
     songsList.grid(row=1, column=2, sticky="nsew", padx=(30,0))
     songsList.config(border=2, relief="sunken")
-
     # Once we have class, link these as well. link song list to album list
     albumList.link(songsList, "album")
 
