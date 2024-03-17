@@ -8,8 +8,8 @@ db.execute("INSERT INTO contacts VALUES('Brian', 1234, 'brian@gmail.com')")
 
 cursor = db.cursor()
 
-#print(cursor.fetchall())
-#print(cursor.fetchone())
+print(cursor.fetchall())
+print(cursor.fetchone())
 
 
 for name, phone, email in cursor:
