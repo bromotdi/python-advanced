@@ -12,7 +12,6 @@ db.execute("CREATE VIEW IF NOT EXISTS localhistory as "
            "SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') "
            "AS localtime, history.account, history.amount FROM history ORDER BY history.time")
 
-
 class Account(object):
 
     @staticmethod
@@ -49,8 +48,6 @@ class Account(object):
         else:
             db.commit()
             self._balance = new_balance
-
-
 
     def deposit(self, amount: float) -> float:
         if amount > 0.0:
