@@ -51,12 +51,12 @@ class Account(object):
 
     def deposit(self, amount: float) -> float:
         if amount > 0.0:
-            # new_balance = self._balance + amount
-            # deposit_time = pytz.utc.localize(dt.datetime.utcnow())
-            # db.execute("UPDATE accounts SET balance = ? WHERE (name=?)",(new_balance, self.name))
-            # db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))
-            # db.commit()
-            # self._balance = new_balance
+            new_balance = self._balance + amount
+            deposit_time = pytz.utc.localize(dt.datetime.utcnow())
+            db.execute("UPDATE accounts SET balance = ? WHERE (name=?)",(new_balance, self.name))
+            db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))
+            db.commit()
+            self._balance = new_balance
             self._save_update(amount)
             print(f"{amount} deposited")
         return self._balance
@@ -80,9 +80,6 @@ class Account(object):
         print(f"Balance on the account {self.name} is {self._balance}")
 
 
-
-
-# Write test
 # Can see we get floating point error, would ideally use decimal class as done in rollback2
 if __name__ == '__main__':
     john = Account("John")
@@ -98,4 +95,5 @@ if __name__ == '__main__':
     eric = Account("Eric", 70)
     michael = Account("Michael")
     terryG = Account("TerryG")
+           
     db.close()
