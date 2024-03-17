@@ -9,7 +9,6 @@ try:
 except (RecursionError, ZeroDivisionError):
     print("Number is too large")
 
-
 try:
     print(factorial(1000/0))
 except RecursionError:
