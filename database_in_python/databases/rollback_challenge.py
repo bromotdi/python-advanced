@@ -89,9 +89,6 @@ class Account(object):
         print(f"Balance on the account {self.name} is {self._balance}")
 
 
-
-
-# Write test
 # Can see we get floating point error, would ideally use decimal class as done in rollback2
 if __name__ == '__main__':
     john = Account("John")
@@ -107,4 +104,5 @@ if __name__ == '__main__':
     eric = Account("Eric", 70)
     michael = Account("Michael")
     terryG = Account("TerryG")
+           
     db.close()
