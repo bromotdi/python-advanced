@@ -146,8 +146,9 @@ if __name__ == '__main__':
     albumList.config(border=2, relief="sunken")
 
     # Once clas sis made, this gets replaced
-    #albumList.bind('<<ListboxSelect>>', get_songs)
+    albumList.bind('<<ListboxSelect>>', get_songs)
     artistsList.link(albumList, "artist")
+    
     # Again this is covered in class now
     # albumScroll = tk.Scrollbar(mainWindow, orient=tk.VERTICAL, command=albumList.yview)
     # albumScroll.grid(row=1, column=1, sticky="nse", rowspan=2)
