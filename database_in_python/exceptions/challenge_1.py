@@ -26,16 +26,10 @@ def game_v2():
     two = game_helper()
     print(f'Sum is {one + two}')
 
-game_v2()
-
 def getint(prompt):
     while True:
         try:
             number = int(input(prompt))
-            # He doesnt wait for loop to iterate and close via the clause
-            # When has condition he wants, he ends the loop.
-            # Don't surrender to the loop! dont let it push you around
-            # break out when I have what I want
             return number
         except ValueError:
             print("Invalid number, try again")
