@@ -14,12 +14,9 @@ class Scrollbox(tk.Listbox):
         self.scrollbar.grid(row=row, column=column, sticky='nse', rowspan=rowspan)
         self['yscrollcommand'] = self.scrollbar.set
 
-
 class DataListBox(Scrollbox):
-
     def __init__(self, window, connection, table, field, sort_order=(), **kwargs):
         super().__init__(window, **kwargs)
-
         self.linked_box = None
         self.link_field = None
         self.link_value = None
