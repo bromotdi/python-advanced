@@ -68,8 +68,7 @@ class Flock(object):
                 my_error = error
         if my_error:
             raise my_error
-
-
+            
 
 if __name__ == '__main__':
     donald = Duck()
