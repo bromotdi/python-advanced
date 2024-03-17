@@ -13,7 +13,6 @@ db.execute("CREATE VIEW IF NOT EXISTS localhistory as "
            "AS localtime, history.account, history.amount FROM history ORDER BY history.time")
 
 class Account(object):
-
     @staticmethod
     def _current_time():
         #origin - return pytz.utc.localize(dt.datetime.utcnow())
