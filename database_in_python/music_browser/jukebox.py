@@ -42,7 +42,7 @@ class DataListBox(Scrollbox):
 
     def requery(self, link_value=None):
         # store the id, so we know the "master" record we're populated from
-        self.link_value = link_value 
+        self.link_value = link_value
         
         # only execute if there is a link established between listboxes
         if link_value and self.link_field:
@@ -52,8 +52,10 @@ class DataListBox(Scrollbox):
         else:
             print(self.sql_select + self.sql_sort) #TODO delete this line
             self.cursor.execute(self.sql_select + self.sql_sort)
+            
         # clear the listbox contents before re-loading
         self.clear()
+        
         # execute query and loop over cursor
         for value in self.cursor:
             # value 0 is because we're adding first item of tuple to the list
