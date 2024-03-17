@@ -1,6 +1,5 @@
 from decimal import *
  
- 
 class Account(object):
     _qb = Decimal('0.00')  # class constant, accessible without creating an instance.
  
@@ -29,8 +28,8 @@ class Account(object):
  
     def show_balance(self):
         print("Balance on account {} is {}".format(self.name, self._balance))
- 
- 
+
+
 if __name__ == '__main__':
     tim = Account("Tim")
     tim.deposit(10.1)
@@ -40,6 +39,5 @@ if __name__ == '__main__':
     tim.withdraw(0)
     tim.show_balance()
  
-    print("=" * 80)
     x = tim.withdraw(900)
     print(x)
