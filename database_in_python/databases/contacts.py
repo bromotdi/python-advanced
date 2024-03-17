@@ -11,7 +11,6 @@ cursor = db.cursor()
 print(cursor.fetchall())
 print(cursor.fetchone())
 
-
 for name, phone, email in cursor:
     print(name)
     print(phone)
