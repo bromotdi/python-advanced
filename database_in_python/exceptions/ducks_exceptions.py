@@ -46,7 +46,6 @@ class Penguin:
 class Mallard(Duck):
     pass
 
-
 class Flock(object):
     def __init__(self):
         self.flock = []
