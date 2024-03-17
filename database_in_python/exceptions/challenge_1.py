@@ -1,6 +1,5 @@
 import sys
 
-
 def game_v1():
     print('Enter two numbers to sum them')
     one = input('First number>: ')
