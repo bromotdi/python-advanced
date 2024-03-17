@@ -26,9 +26,8 @@ def game_v2():
     two = game_helper()
     print(f'Sum is {one + two}')
 
-#game_v2()
+game_v2()
 
-# His solution
 def getint(prompt):
     while True:
         try:
