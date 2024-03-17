@@ -8,7 +8,7 @@ import pickle
 
 db = sqlite3.connect("accounts_challenge.sqlite", detect_types=sqlite3.PARSE_DECLTYPES)
 db.execute("CREATE TABLE IF NOT EXISTS accounts (name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)")
-# Add new column zone here
+
 # want to store tzinfo object for local tz. Get it by converting utc to local time
 # get by current_time method modified
 db.execute("CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL, account TEXT NOT NULL, "
@@ -18,7 +18,6 @@ db.execute("CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL, account
 db.execute("CREATE VIEW IF NOT EXISTS localhistory as "
            "SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') "
            "AS localtime, history.account, history.amount FROM history ORDER BY history.time")
-
 
 class Account(object):
 
