@@ -90,14 +90,13 @@ if __name__ == '__main__':
     mainWindow.title("Music DB browser")
     mainWindow.geometry("1024x768")
 
-
     mainWindow.columnconfigure(0, weight=2)
     mainWindow.columnconfigure(1, weight=2)
     mainWindow.columnconfigure(2, weight=2)
-    mainWindow.columnconfigure(3, weight=2) # spacer col on right
+    mainWindow.columnconfigure(3, weight=2)
 
     mainWindow.rowconfigure(0, weight=1)
-    mainWindow.rowconfigure(1, weight=5) # more weight to middle rows cos they have the listboxes
+    mainWindow.rowconfigure(1, weight=5)
     mainWindow.rowconfigure(2, weight=5)
     mainWindow.rowconfigure(3, weight=1)
 
