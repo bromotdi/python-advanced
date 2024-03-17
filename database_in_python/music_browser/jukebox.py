@@ -128,11 +128,11 @@ if __name__ == '__main__':
     #artistsList.bind('<<ListboxSelect>>', get_albums)
 
     # Setting the scrollbar - class covers this now
-    # artistScroll = tk.Scrollbar(mainWindow, orient=tk.VERTICAL, command=artistsList.yview) #yview is scroll on
-    #                                                                                         # y axis
-    # artistScroll.grid(row=1, column=0, sticky="nse", rowspan=2)
-    # artistsList['yscrollcommand'] = artistScroll.set # set the scrolling on the widget to track correctly,
-    #                                                 # y scrollcommand is an attribute of the listbox
+    artistScroll = tk.Scrollbar(mainWindow, orient=tk.VERTICAL, command=artistsList.yview) #yview is scroll on
+                                                                                            # y axis
+    artistScroll.grid(row=1, column=0, sticky="nse", rowspan=2)
+    artistsList['yscrollcommand'] = artistScroll.set # set the scrolling on the widget to track correctly,
+                                                    # y scrollcommand is an attribute of the listbox
 
     # album listbox
     # Variables are tracked variables, when they change, anything using them is notified of the change
