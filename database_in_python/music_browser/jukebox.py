@@ -100,18 +100,16 @@ if __name__ == '__main__':
     mainWindow.rowconfigure(2, weight=5)
     mainWindow.rowconfigure(3, weight=1)
 
-
-    # labels
     tk.Label(mainWindow, text="Artists").grid(row=0, column=0)
     tk.Label(mainWindow, text="Albums").grid(row=0, column=1)
     tk.Label(mainWindow, text="Songs").grid(row=0, column=2)
 
     # Artists listbox
-    #artistsList = Scrollbox(mainWindow, background="cyan")
+    artistsList = Scrollbox(mainWindow, background="cyan")
+    
     # initially use Scrollbox but then change to our custom class
     artistsList = DataListBox(mainWindow, conn, "artists", "name", background="cyan")
-    #def __int__(self, window, connection, table, field, sort_order=(), **kwargs):
-
+    
     artistsList.grid(row=1, column=0, sticky="nsew", rowspan=2, padx=(30, 0))
     artistsList.config(border=2, relief="sunken")
 
@@ -125,16 +123,14 @@ if __name__ == '__main__':
     # create an event bound to artists - something to happen when we click on an artist in the box. in this case
     # event is a function to get albums names
     # when a bound function is called it gets passed a single arg, the event.
-    #artistsList.bind('<<ListboxSelect>>', get_albums)
+    artistsList.bind('<<ListboxSelect>>', get_albums)
 
     # Setting the scrollbar - class covers this now
     artistScroll = tk.Scrollbar(mainWindow, orient=tk.VERTICAL, command=artistsList.yview) #yview is scroll on
                                                                                             # y axis
     artistScroll.grid(row=1, column=0, sticky="nse", rowspan=2)
-    artistsList['yscrollcommand'] = artistScroll.set # set the scrolling on the widget to track correctly,
-                                                    # y scrollcommand is an attribute of the listbox
+    artistsList['yscrollcommand'] = artistScroll.set # set the scrolling on the widget to track correctly
 
-    # album listbox
     # Variables are tracked variables, when they change, anything using them is notified of the change
     # So the listbox updates when this variable is updated
     albumLV = tk.Variable(mainWindow)
