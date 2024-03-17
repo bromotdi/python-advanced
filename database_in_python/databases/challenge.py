@@ -6,8 +6,7 @@ user = input('Enter a name: ')
 
 show_sql = "SELECT * FROM contacts WHERE contacts.name=?"
 
-#conn.execute(show_sql, (user,))
-
+conn.execute(show_sql, (user,))
 for row in conn.execute(show_sql, (user,)):
     print(row)
 
