@@ -54,15 +54,14 @@ class Account(object):
         db.commit()
         self._balance = new_balance
 
-
     def deposit(self, amount: float) -> float:
         if amount > 0.0:
-            # new_balance = self._balance + amount
-            # deposit_time = pytz.utc.localize(dt.datetime.utcnow())
-            # db.execute("UPDATE accounts SET balance = ? WHERE (name=?)",(new_balance, self.name))
-            # db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))
-            # db.commit()
-            # self._balance = new_balance
+            new_balance = self._balance + amount
+            deposit_time = pytz.utc.localize(dt.datetime.utcnow())
+            db.execute("UPDATE accounts SET balance = ? WHERE (name=?)",(new_balance, self.name))
+            db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))
+            db.commit()
+            self._balance = new_balance
             self._save_update(amount)
             print(f"{amount} deposited")
         return self._balance
