@@ -1,5 +1,4 @@
 class Wing:
-
     def __init__(self, ratio):
         self.ratio = ratio
 
@@ -11,12 +10,9 @@ class Wing:
         else:
             print("I think I'll just walk")
 
-
 class Duck:
-
     def __init__(self):
         self._wing = Wing(1.8)
-
 
     def walk(self):
         print('Waddle Waddle Waddle')
