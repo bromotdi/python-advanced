@@ -20,18 +20,15 @@ db.execute("CREATE VIEW IF NOT EXISTS localhistory as "
            "AS localtime, history.account, history.amount FROM history ORDER BY history.time")
 
 class Account(object):
-
     @staticmethod
     def _current_time():
-        #origin - return pytz.utc.localize(dt.datetime.utcnow())
+        # origin - return pytz.utc.localize(dt.datetime.utcnow())
         # local_time = pytz.utc.localize(dt.datetime.utcnow())
         # return local_time.astimezone()
         utc_time = pytz.utc.localize(dt.datetime.utcnow())
         local_time = utc_time.astimezone()
         zone = local_time.tzinfo
         return utc_time, zone
-        # if wanted to force an error
-        #return 1
 
 
     def __init__(self, name: str, opening_balance: float = 0.0):
