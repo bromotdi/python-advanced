@@ -30,12 +30,9 @@ class Account(object):
         zone = local_time.tzinfo
         return utc_time, zone
 
-
     def __init__(self, name: str, opening_balance: float = 0.0):
         cursor = db.execute("SELECT name,balance FROM accounts WHERE (name=?)", (name,))
         row = cursor.fetchone()
-
-        #if row is not None
         if row:
             self.name, self._balance = row
             print(f"Retrieved record for {self.name}", end='')
