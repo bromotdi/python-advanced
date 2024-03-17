@@ -3,10 +3,8 @@ import sqlite3
 import tkinter as tk
 
 class Scrollbox(tk.Listbox):
-
     def __init__(self, window, **kwargs):
         super().__init__(window, **kwargs)
-
         self.scrollbar = tk.Scrollbar(window, orient=tk.VERTICAL, command=self.yview)
 
     # override the default grid method of tkinter
