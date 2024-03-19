@@ -13,7 +13,7 @@ people = [
 ]
 
 plant = namedtuple('Plant', ['name', 'scientific_name', 'lifecycle', 'plant_type'])
-plantDetails = namedtuple('PlantDetails', ['scientific_name', 'lifecycle', 'plant_type'])
+plantdetails = namedtuple('PlantDetails', ['scientific_name', 'lifecycle', 'plant_type'])
 
 basic_plants_list = [
     ("Andromeda", "Pieris japonica", "Evergreen", "Shrub"),
@@ -72,11 +72,11 @@ plants_dict = {
     "Hydrangea": plantdetails("Hydrangea", "Deciduous, evergreen", "Shrub"),
     "Iris": plantdetails("Iris", "Perennial", "Flower"),
     "Japanese Camellia": plantdetails("Camellia japonica", "Evergreen", "Shrub"),
-    "Lavender": PlantDetails("Lavendula", "Perennial", "Shrub"),
-    "Lilac": PlantDetails("Syringa vulgaris", "Deciduous", "Shrub"),
-    "Magnolia": PlantDetails("Magnolia", "Deciduous, evergreen", "Shrub"),
-    "Peony": PlantDetails("Paeonia", "Perennial", "Shrub"),
-    "Queen Anne's Lace": PlantDetails("Daucus carota", "Biennial", "Flower"),
+    "Lavender": plantdetails("Lavendula", "Perennial", "Shrub"),
+    "Lilac": plantdetails("Syringa vulgaris", "Deciduous", "Shrub"),
+    "Magnolia": plantdetails("Magnolia", "Deciduous, evergreen", "Shrub"),
+    "Peony": plantdetails("Paeonia", "Perennial", "Shrub"),
+    "Queen Anne's Lace": plantdetails("Daucus carota", "Biennial", "Flower"),
     "Red Hot Poker": PlantDetails("Kniphofia", "Perennial", "Flower"),
     "Snapdragon": PlantDetails("Antirrhinum majus", "Annual", "Flower"),
     "Sunflower": PlantDetails("Helianthus", "Annual", "Flower"),
