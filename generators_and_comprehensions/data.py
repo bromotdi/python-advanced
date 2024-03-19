@@ -1,3 +1,6 @@
+# Named Tuples are described in the documentation
+# https://docs.python.org/3/library/collections.html#collections.namedtuple
+
 from collections import namedtuple
 
 people = [
@@ -9,8 +12,6 @@ people = [
     ("Michael Palin", "")
 ]
 
-# Named Tuples are described in the documentation
-# https://docs.python.org/3/library/collections.html#collections.namedtuple
 
 Plant = namedtuple('Plant', ['name', 'scientific_name', 'lifecycle', 'plant_type'])
 PlantDetails = namedtuple('PlantDetails', ['scientific_name', 'lifecycle', 'plant_type'])
