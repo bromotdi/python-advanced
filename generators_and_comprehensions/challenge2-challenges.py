@@ -42,15 +42,7 @@ for loc in sorted(locations):
     print(f"Locations leading to {loc}", end='\t')
     print(forest)
 
-# Use a nested comp for this
-print('\n\n')
-print('*'*80)
-print('*'*80)
-print('\n\n')
-
-
 # integgrate timeout module
-
 nested_loop = """\
 for loc in sorted(locations):
     exits_to_destination = []
