@@ -61,7 +61,6 @@ while True:
         print('The machine guessed it, it took {} attempts'.format(guess_number))
         break
 
-
 low = 1
 high = 1000
 print('Please think of a number between {} and {}'.format(low,high))
@@ -86,7 +85,6 @@ while True:
     else:
         print('Choices are only higher,lower or correct')
 
-
 # Augmented assignment - literally just using +=. 
 # It's binary operation combined with assignment
 # So +,-,*,/ all binary: (x+y)
@@ -110,8 +108,6 @@ print("*"*80)
 # v contrived example
 
 numbers= [1,45,32,12,60]
-# Here the else only fires on a successful loop through all elements, if break happens at all we wont see the else
-#  clause
 for num in numbers:
     if number % 8 == 0:
         #reject the list
@@ -121,10 +117,8 @@ else:
     print('These numbers are ok')
 
 
-
 # Using this version of else in high low game.
 # Will only work with some numbers where convergence is possible
-
 low = 1
 high = 1000
 print('Please think of a number between {} and {}'.format(low,high))
@@ -136,10 +130,6 @@ while low != high:
     high_low = input('My guess is {}. '
                      'Should I go higher or lower or am I correct '.format(guess)).casefold()
     guesses += 1
-    # This is how pass would be used if we wrote the actual logic later on
-    # if high_low == 'higher':
-    #     # Guess higher - the low end of range becomes 1 greater than guess
-    #     pass
     if high_low == 'higher':
         # Guess higher - the low end of range becomes 1 greater than guess
         low = guess + 1
