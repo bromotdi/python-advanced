@@ -21,25 +21,23 @@ print(meals)
 meals = [meal for meal in menu if "spam" not in meal]
 print(meals)
 
-#
-# x = 12
-# expression = "twelve" if x== 12 else "unknown"
-# print(expression)
-# meals = [meal if "spam" not in meal else "Meal skipped" for meal in menu]
-# print(meals)
 
-# conditional expression syntax for multiple checks
-# for meal in menu:
-#     print(meal, "contains chicken" if "chicken" in meal else "contains bacon" if "bacon" in meal else "contains egg")
+x = 12
+expression = "twelve" if x== 12 else "unknown"
+print(expression)
 
+meals = [meal if "spam" not in meal else "Meal skipped" for meal in menu]
+print(meals)
+
+conditional expression syntax for multiple checks
+for meal in menu:
+    print(meal, "contains chicken" if "chicken" in meal else "contains bacon" if "bacon" in meal else "contains egg")
 
 items = set()
 for meal in menu:
     for item in meal:
         items.add(item)
-
 print(items)
-
 
 for meal in menu:
     for item in items:
