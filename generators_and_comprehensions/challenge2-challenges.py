@@ -33,8 +33,6 @@ exits = {0: {"Q": 0},
 
 loc = 5
 forest = [locations[ex] for ex in exits if loc in exits[ex].values()]
-#forest = [locations[key] for key,ex in exits.items() if 5 in ex.values()]
-#forest = [(key, locations[key]) for key,ex in exits.items() if 5 in ex.values()]
 
 forest = [(ex, locations[ex]) for ex in exits if loc in exits[ex].values()]
 print(forest)
