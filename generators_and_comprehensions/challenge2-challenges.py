@@ -53,10 +53,6 @@ for loc in sorted(locations):
     print(exits_to_destination)
 """
 
-print()
-print("use List comprehension")
-print("-"*80)
-
 loop_comp = """\
 for loc in sorted(locations):
     exits_to_destination = [(ex, locations[ex]) for ex in exits if loc in exits[ex].values()]
