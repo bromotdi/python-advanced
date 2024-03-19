@@ -10,10 +10,11 @@
 
 # Once it's working, modify the program so that the comprehension returns a list of tuples.
 # Each tuple consists of the location number and the description.
-#
-# Finally, wrap your comprehension in a for loop, and print the lists of all the locations that lead to each of the
-# other locations in turn.
+
+# Finally, wrap your comprehension in a for loop, and print the lists of all 
+# the locations that lead to each of the other locations in turn.
 # In other words, use a for loop to run the comprehension for each of the keys in the locations dictionary.
+
 import timeit
  
 setup = '''\
@@ -23,6 +24,7 @@ locations = {0: "You are sitting in front of a computer learning Python",
              3: "You are inside a building, a well house for a small stream",
              4: "You are in a valley beside a stream",
              5: "You are in the forest"}
+             
 exits = {0: {"Q": 0},
          1: {"W": 2, "E": 3, "N": 5, "S": 4, "Q": 0},
          2: {"N": 5, "Q": 0},
