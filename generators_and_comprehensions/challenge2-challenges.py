@@ -1,15 +1,13 @@
 # Create a comprehension that returns a list of all the locations that have an exit to the forest.
 # The list should contain the description of each location, if it's possible to get to the forest from there.
-#
+
 # The forest is location 5 in the locations dictionary
 # The exits for each location are represented by the exits dictionary.
-#
+
 # Remember that a dictionary has a .values() method, to return a list of the values.
-#
 # The forest can be reached from the road, and the hill; so those should be the descriptions that appear in your list.
-#
 # Test your program with different destinations (such as 1 for the road) to make sure it works.
-#
+
 # Once it's working, modify the program so that the comprehension returns a list of tuples.
 # Each tuple consists of the location number and the description.
 #
