@@ -44,11 +44,8 @@ for meal in menu:
         if item in meal:
             print(f"{meal} contains {item}")
 
-# conditional expression for fizz buzz
 for n in range(36):
     "fizz buzz" if (n%3==0 and n%5==0) else "buzz" if n%5 == 0 else "fizz" if n%3 == 0 else str(n)
-
-
 
 challenge = ["fizz buzz" if (n%3==0 and n%5==0) else "buzz" if n%5 == 0 else "fizz" if n%3 == 0 else str(n) for n in range(1,36)]
 print(challenge)
