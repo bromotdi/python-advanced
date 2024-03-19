@@ -14,10 +14,8 @@ if any([plant.plant_type == "Grass" for plant in plants_list]):
 else:
     print("No grasses in this pack")
 
-# Challenge - use any & comprehension to check plant in plants dict to see if theres grasses there
-print("-"*80)
+# use any & comprehension to check plant in plants dict to see if theres grasses there
 print(plants_dict)
-#any(["Grass" == val.plant_type for name,val in plants_dict.items()])
 
 # Remember you dont have to loop over dict or dict items, can directly loop over the values!!
 # Using a generator expression here instead of a comprehension to save memory
