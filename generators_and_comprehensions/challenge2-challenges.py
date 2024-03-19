@@ -60,10 +60,6 @@ for loc in sorted(locations):
     print(exits_to_destination)
 """
 
-print()
-
-print("Nested comprehension")
-print("-"*80)
 nested_comp = """\
 exits_to_destination = [[(ex, locations[ex]) for ex in exits if loc in exits[ex].values()]
                         for loc in sorted(locations)]
