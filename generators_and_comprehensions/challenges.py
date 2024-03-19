@@ -92,13 +92,10 @@ while True:
 # So +,-,*,/ all binary: (x+y)
 x = 'Good '
 x+= 'Morning'
-print(x)
-
 number = 7
 multiplier = 3
 answer = 0
 
-# add your loop after this comment
 for n in range(multiplier):
     answer += number
 print(answer)
