@@ -1,11 +1,8 @@
-# Rewrite the following code to use a list comprehension, instead of a for loop.
-#
-# Add your solution below the loop, so that the resulting list is printed out
+# the following code to use a list comprehension, instead of a for loop.
 # below output - that makes it easier to check that it's producing exactly
 # the same list (and avoids entering the input text twice).
  
 text = input("Please enter your text: ")
- 
 output = []
 
 for x in text.split():
