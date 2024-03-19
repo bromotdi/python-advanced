@@ -122,39 +122,39 @@ else:
 
 
 
-# Using this version of else in high low game. Will only work with some numbers where convergence is possible, ie 72
-# but not 73
+# Using this version of else in high low game.
+# Will only work with some numbers where convergence is possible
 
-# low = 1
-# high = 1000
-# print('Please think of a number between {} and {}'.format(low,high))
-# input('Press enter to start: ')
-# guesses = 0
-# while low != high:
-#     #print('\tGuessing in the range of {} to {}'.format(low,high))
-#     guess = low +(high-low) //2
-#     high_low = input('My guess is {}. '
-#                      'Should I go higher or lower or am I correct '.format(guess)).casefold()
-#     guesses += 1
-#     # This is how pass would be used if we wrote the actual logic later on
-#     # if high_low == 'higher':
-#     #     # Guess higher - the low end of range becomes 1 greater than guess
-#     #     pass
-#     if high_low == 'higher':
-#         # Guess higher - the low end of range becomes 1 greater than guess
-#         low = guess + 1
-#     elif high_low =='lower':
-#         # Guess lower - the high end of the range becomes 1 less than guess
-#         high = guess - 1
-#     elif high_low == 'correct':
-#         print('You got it! ')
-#         print('I got it in {} guesses'.format(guesses))
-#         break
-#     else:
-#         print('Choices are only higher,lower or correct')
-# else:
-#     print('You thought of the number {}'.format(low))
-#     print('I got it in {} guesses'.format(guesses))
+low = 1
+high = 1000
+print('Please think of a number between {} and {}'.format(low,high))
+input('Press enter to start: ')
+guesses = 0
+while low != high:
+    #print('\tGuessing in the range of {} to {}'.format(low,high))
+    guess = low +(high-low) //2
+    high_low = input('My guess is {}. '
+                     'Should I go higher or lower or am I correct '.format(guess)).casefold()
+    guesses += 1
+    # This is how pass would be used if we wrote the actual logic later on
+    # if high_low == 'higher':
+    #     # Guess higher - the low end of range becomes 1 greater than guess
+    #     pass
+    if high_low == 'higher':
+        # Guess higher - the low end of range becomes 1 greater than guess
+        low = guess + 1
+    elif high_low =='lower':
+        # Guess lower - the high end of the range becomes 1 less than guess
+        high = guess - 1
+    elif high_low == 'correct':
+        print('You got it! ')
+        print('I got it in {} guesses'.format(guesses))
+        break
+    else:
+        print('Choices are only higher,lower or correct')
+else:
+    print('You thought of the number {}'.format(low))
+    print('I got it in {} guesses'.format(guesses))
 
 # Use else with the loop the same way you do with for loops
 # available_exits = ['west','east','south','north']
