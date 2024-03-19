@@ -13,9 +13,7 @@ print(output)
 answer = [len(x) for x in text.split()]
  
 # It could be useful to store the original words in the list, as well.
-# The for loop would look like this (note the extra parentheses, so
-# that we get tuples in the list):
- 
+# The for loop would look like this (note the extra parentheses, so that we get tuples in the list):
 output = []
 for x in text.split():
     output.append((x, len(x)))
