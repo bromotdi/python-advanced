@@ -2,44 +2,41 @@
 # guess until we get right -> so no repeated ifs
 import random
 
+guess = int(input("Please guess a number: "))
+correct = random.randint(1,10)
+print('Correct answer is {}'.format(correct))
 
-# # my way
-# guess = int(input("Please guess a number: "))
-# correct = random.randint(1,10)
-# print('Correct answer is {}'.format(correct)) # TODO: Remove after tests
-# guess_number = 0
-# while guess != correct:
-#     guess_number += 1
-#     if guess == 0:
-#         print('Exiting game...')
-#         break
-#     elif guess > correct:
-#         print('Too high, guess lower')
-#     else:
-#         print('Too low, guess lower')
-#     guess = int(input("Please guess again "))
-#
-# if guess==correct:
-#     print('You guessed correctly! It took you {} tries'.format(guess_number))
+guess_number = 0
+while guess != correct:
+    guess_number += 1
+    if guess == 0:
+        print('Exiting game...')
+        break
+    elif guess > correct:
+        print('Too high, guess lower')
+    else:
+        print('Too low, guess lower')
+    guess = int(input("Please guess again "))
 
+if guess==correct:
+    print('You guessed correctly! It took you {} tries'.format(guess_number))
 
-# His code
 answer = random.randint(1,1000)
-#print(answer)
+print(answer)
 guess = 0
 guess_number = 0
-# while guess != answer:
-#     guess = int(input('Pick a number '))
-#     guess_number += 1
-#     if guess == 0:
-#         print('Exiting....')
-#         break
-#     if guess == answer:
-#         print('You guessed correctly, it took you {} tries'.format(guess_number))
-#     elif guess > answer:
-#         print('Too high, guess lower')
-#     else:
-#         print('Too low, guess higher')
+while guess != answer:
+    guess = int(input('Pick a number '))
+    guess_number += 1
+    if guess == 0:
+        print('Exiting....')
+        break
+    if guess == answer:
+        print('You guessed correctly, it took you {} tries'.format(guess_number))
+    elif guess > answer:
+        print('Too high, guess lower')
+    else:
+        print('Too low, guess higher')
 
 
 # Binary chop - let computer guess a number
