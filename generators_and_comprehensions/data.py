@@ -12,8 +12,8 @@ people = [
     ("Michael Palin", "")
 ]
 
-Plant = namedtuple('Plant', ['name', 'scientific_name', 'lifecycle', 'plant_type'])
-PlantDetails = namedtuple('PlantDetails', ['scientific_name', 'lifecycle', 'plant_type'])
+plant = namedtuple('Plant', ['name', 'scientific_name', 'lifecycle', 'plant_type'])
+plantDetails = namedtuple('PlantDetails', ['scientific_name', 'lifecycle', 'plant_type'])
 
 basic_plants_list = [
     ("Andromeda", "Pieris japonica", "Evergreen", "Shrub"),
