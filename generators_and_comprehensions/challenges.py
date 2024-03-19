@@ -28,6 +28,7 @@ answer = random.randint(1,1000)
 print(answer)
 guess = 0
 guess_number = 0
+
 while guess != answer:
     guess = int(input('Pick a number '))
     guess_number += 1
@@ -85,10 +86,10 @@ while True:
     else:
         print('Choices are only higher,lower or correct')
 
+
 # Augmented assignment - literally just using +=. 
 # It's binary operation combined with assignment
 # So +,-,*,/ all binary: (x+y)
-
 x = 'Good '
 x+= 'Morning'
 print(x)
@@ -100,13 +101,11 @@ answer = 0
 # add your loop after this comment
 for n in range(multiplier):
     answer += number
-
 print(answer)
-print("*"*80)
+
 
 # use else in a loop - actually has another purpose
 # v contrived example
-
 numbers= [1,45,32,12,60]
 for num in numbers:
     if number % 8 == 0:
@@ -124,8 +123,9 @@ high = 1000
 print('Please think of a number between {} and {}'.format(low,high))
 input('Press enter to start: ')
 guesses = 0
+
 while low != high:
-    #print('\tGuessing in the range of {} to {}'.format(low,high))
+    print('\tGuessing in the range of {} to {}'.format(low,high))
     guess = low +(high-low) //2
     high_low = input('My guess is {}. '
                      'Should I go higher or lower or am I correct '.format(guess)).casefold()
@@ -146,6 +146,7 @@ else:
     print('You thought of the number {}'.format(low))
     print('I got it in {} guesses'.format(guesses))
 
+
 # Use else with the loop the same way you do with for loops
 available_exits = ['west','east','south','north']
 chosen_exit = " "
@@ -156,8 +157,6 @@ while chosen_exit not in available_exits:
         break
 else:
     print("You escaped")
-
-
 print('Hello my name\t is Eoin. What are\n you doing\n today')
 
 options = {1:'Hello ',2:'Fuck off', 3:'20:10', 4:'-.-',5:'quit'}
@@ -188,7 +187,6 @@ while choice != 0:
     else:
         print('Exiting...')
         break
-
 
 print('Please choose options from list below: ')
 print('1:\tLearn Python')
@@ -225,16 +223,13 @@ while choice != 0:
     choice = input()
 
 
-
 corpus = [w.casefold() for w in reuters.words() if len(w)== 5]
-
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 one = 's'
 two = alphabet
 three = alphabet
 four = ''.join([l for l in alphabet if not l in "pnle"])
 five = 'd'
-
 loop=0
 print('Have letters [s][][][][d]')
 
