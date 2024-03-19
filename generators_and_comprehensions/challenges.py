@@ -1,6 +1,9 @@
 # Similar to guessing game played before, but instead of only having two guesses or 3 etc, we want to
 # guess until we get right -> so no repeated ifs
 import random
+import nltk
+from itertools import product
+from nltk.corpus import reuters
 
 guess = int(input("Please guess a number: "))
 correct = random.randint(1,10)
@@ -238,9 +241,7 @@ else:
 #     choice = input()
 
 
-import nltk
-from itertools import product
-from nltk.corpus import reuters
+
 corpus = [w.casefold() for w in reuters.words() if len(w)== 5]
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
@@ -250,11 +251,9 @@ three = alphabet
 four = ''.join([l for l in alphabet if not l in "pnle"])
 five = 'd'
 
-
 loop=0
-# Wordle
 print('Have letters [s][][][][d]')
-print("-"*80)
+
 for a,b,c,d,e in product (one, two, three, four, five):
     loop += 1
     word = a+b+c+d+e
@@ -262,5 +261,3 @@ for a,b,c,d,e in product (one, two, three, four, five):
         print(a+b+c+d+e)
     if loop % 2000 == 0:
         print('{} letter combinations checked'.format(loop))
-
-
