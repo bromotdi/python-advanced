@@ -459,10 +459,9 @@ class Reader:
         """
         self.file.seek(-128, 2)
         tag = self.file.read(128)
-        # print("in _read_id3v1, tag is {}".format(tag))
+        print("in _read_id3v1, tag is {}".format(tag))
         if len(tag) != 128:
             return
-
         if tag[0:3] != b'TAG':
             return
         self.header = _Header()
@@ -475,13 +474,16 @@ class Reader:
         self._add_v1_frame('v1year', tag[93:97])
         self._add_v1_frame('v1comment', tag[97:127])
         self._add_v1_frame('v1genre', tag[127])
+        
         if tag[125] == '\0' and tag[126] != '\0':
-            # if _c: _coverage('id3v1.1')
+            if _c: 
+                _coverage('id3v1.1')
             self.header.revision = 1
-            # print("calling add_v1_frame with {}".format(tag[126]))
+            print("calling add_v1_frame with {}".format(tag[126]))
             self._add_v1_frame('v1track', str(tag[126]))
         else:
-            # if _c: _coverage('id3v1.0')
+            if _c: 
+                _coverage('id3v1.0')
             pass
         return
 
