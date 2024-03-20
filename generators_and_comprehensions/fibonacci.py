@@ -5,20 +5,21 @@ print(f"a is {a}, b is {b}")
 a, b = b, a
 print(f"a is {a}, b is {b}")
 
-# def fibonacci(n):
-#     now, last = 1, 0
-#     run = 1
-#     while run < n+1:
-#         if run == 1:
-#             yield now - 1
-#             run += 1
-#         elif run == 2:
-#             yield now
-#             run += 1
-#         else:
-#             run += 1
-#             last, now = now, now + last
-#             yield now
+def fibonacci(n):
+    now, last = 1, 0
+    run = 1
+    while run < n+1:
+        if run == 1:
+            yield now - 1
+            run += 1
+        elif run == 2:
+            yield now
+            run += 1
+        else:
+            run += 1
+            last, now = now, now + last
+            yield now
+            
 # def fibonacci(n):
 #     now, last = 1, 0
 #     result = None
@@ -35,8 +36,7 @@ print(f"a is {a}, b is {b}")
 # for ind, i in enumerate(val):
 #      print(f"index is {ind+1}, fib is {i}")
 
-# His fibonacci
-def fibonacci():
+def fibonacci3():
     current, previous = 0, 1
     while True:
         yield current
