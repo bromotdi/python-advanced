@@ -314,9 +314,9 @@ class Reader:
         return i
 
     def _add_v1_frame(self, f_id, rawdata):
-        # print("in _add_v1_frame, f_id is {}\n\trawdata is {}".format(f_id, rawdata))
+        print("in _add_v1_frame, f_id is {}\n\trawdata is {}".format(f_id, rawdata))
         if f_id == 'v1genre':
-            # assert len(rawdata) == 1
+            assert len(rawdata) == 1
             # genre = ord(rawdata)
             genre = rawdata
             try:
@@ -324,18 +324,16 @@ class Reader:
             except IndexError:
                 value = "{}".format(genre)
         else:
-            # print("in _add_v1_frame, rawdata is {}".format(rawdata))
+            print("in _add_v1_frame, rawdata is {}".format(rawdata))
             value = str(rawdata.strip(b' \t\r\n').split(b'\0')[0])
-
             encoding = rawdata[0]
-            # print("in _interpret, encoding is {}".format(encoding))
+            print("in _interpret, encoding is {}".format(encoding))
             if 0 <= encoding < len(_encodings):
                 value = rawdata.strip(b' \t\r\n\0').decode(_encodings[encoding])
             else:
                 # This is a bit iffy.
                 # It may seem more reasonable to try iso8859-1 first, but that fails the
                 # ID3v1 test 272 in the test pack at http://id3.org/Developer%20Information.
-                #
                 # This may be a bad decision, in which case swap the two decode lines.
                 # But we can only work with the test data available.
                 try:
