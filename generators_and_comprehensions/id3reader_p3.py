@@ -1,6 +1,7 @@
 import struct
 import sys
 import zlib
+import pprint
 
 """ 
 Read ID3 tags from a file.
@@ -641,7 +642,6 @@ class Reader:
         return None
 
     def dump(self):
-        import pprint
         print("Header:")
         print(self.header)
         print("Frames:")
@@ -707,7 +707,7 @@ if __name__ == '__main__':
 #           Support genre information, even if it is stupid.
 
 # 20040913: When dumping strings, be more robust when trying to print non-character data. 
-            Thanks to Duane Harkness for the fix.
+#            Thanks to Duane Harkness for the fix.
 
 # 20061230: Fix ommission of self. in a few places.
 
