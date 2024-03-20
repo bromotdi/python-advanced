@@ -253,9 +253,11 @@ class Reader:
             where 0xFF bytes may have had 0x00 bytes stuffed after
             them.  These zero bytes have to be removed transparently.
         """
-        # if _t: _trace("ask %d (%s)" % (num,desc))
+        if _t: 
+            _trace("ask %d (%s)" % (num,desc))
         if num > self.bytesLeft:
-            # if _c: _coverage('long!')
+            if _c: 
+                _coverage('long!')
             raise Id3Error('Long read {}: {} {}'.format(desc, num, self.bytesLeft))
         bytes_read = self.file.read(num)
         self.bytesLeft -= num
