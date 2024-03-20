@@ -412,7 +412,6 @@ class Reader:
 
         if self.header.majorVersion == 2:
             if self.header.flags & 0x40:
-                # if _c: _coverage('compressed')
                 # "Since no compression scheme has been decided yet,
                 # the ID3 decoder (for now) should just ignore the entire
                 # tag if the compression bit is set."
@@ -426,6 +425,7 @@ class Reader:
                     self._readExtHeader = self._read_ext_header_rev3
                 else:
                     self._readExtHeader = self._read_ext_header_rev4
+                    
             if self.header.flags & 0x20:
                 if _c: 
                     _coverage('experimental')
@@ -438,22 +438,24 @@ class Reader:
                 self.header.bFooter = True
 
     def _read_ext_header_rev3(self):
-        """ Read the ID3v2.3 extended header.
+        """
+        Read the ID3v2.3 extended header.
         """
         # We don't interpret this yet, just eat the bytes.
         size = self._get_integer(self._read_bytes(4, 'rev3ehlen'))
         self._read_bytes(size, 'rev3ehdata')
 
     def _read_ext_header_rev4(self):
-        """ Read the ID3v2.4 extended header.
+        """
+        Read the ID3v2.4 extended header.
         """
         # We don't interpret this yet, just eat the bytes.
         size = self._get_sync_safe_int(self._read_bytes(4, 'rev4ehlen'))
         self._read_bytes(size - 4, 'rev4ehdata')
 
     def _read_id3v1(self):
-        """ Read the ID3v1 tag.
-            spec: http://www.id3.org/id3v1.html
+        """ 
+        Read the ID3v1 tag, spec: http://www.id3.org/id3v1.html
         """
         self.file.seek(-128, 2)
         tag = self.file.read(128)
