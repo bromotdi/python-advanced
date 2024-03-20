@@ -41,7 +41,6 @@ def _coverage(feat):
         _trace('feature '+feat)
     _features[feat] = _features.setdefault(feat, 0) + 1
 
-
 def _safestr(s):
     """ 
     Get a good string for printing, that won't throw exceptions,
@@ -298,7 +297,6 @@ class Reader:
     @staticmethod
     def _get_sync_safe_int(bites):
         assert len(bites) == 4
-        # if type(bites) == type(''):
         if isinstance(bites, str):
             bites = [ord(c) for c in bites]
         return (bites[0] << 21) + (bites[1] << 14) + (bites[2] << 7) + bites[3]
@@ -306,7 +304,6 @@ class Reader:
     @staticmethod
     def _get_integer(bites):
         i = 0
-        # if type(bites) == type(''):
         if isinstance(bites, str):
             bites = [ord(c) for c in bites]
         for b in bites:
@@ -317,7 +314,6 @@ class Reader:
         print("in _add_v1_frame, f_id is {}\n\trawdata is {}".format(f_id, rawdata))
         if f_id == 'v1genre':
             assert len(rawdata) == 1
-            # genre = ord(rawdata)
             genre = rawdata
             try:
                 value = _genres[genre]
