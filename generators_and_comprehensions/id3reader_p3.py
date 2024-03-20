@@ -149,15 +149,17 @@ class _Frame:
 
         self.id = self.id.decode()  # no need to worry about the encoding here
         print("in _interpret, id is {}, id[0] is {}".format(self.id, self.id[0]))
+        
         if self.id[0] == 'T':
             # Text fields start with T
-            # encoding = ord(self.rawData[0])
+            encoding = ord(self.rawData[0])
             encoding = self.rawData[0]
-            # print("in _interpret, encoding is {}".format(encoding))
+            print("in _interpret, encoding is {}".format(encoding))
             if 0 <= encoding < len(_encodings):
-                # if _c: _coverage('encoding%d' % encoding)
+                if _c: 
+                    _coverage('encoding%d' % encoding)
                 value = self.rawData[1:].decode(_encodings[encoding])
-                # print("decoded value {}".format(value))
+                print("decoded value {}".format(value))
             else:
                 # if _c: _coverage('bad encoding')
                 value = self.rawData[1:]
