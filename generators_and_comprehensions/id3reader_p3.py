@@ -37,7 +37,8 @@ _c = False
 _features = {}
 
 def _coverage(feat):
-    # if _t: _trace('feature '+feat)
+    if _t: 
+        _trace('feature '+feat)
     _features[feat] = _features.setdefault(feat, 0) + 1
 
 
@@ -87,12 +88,11 @@ _genres = [
     'Contemporary Christian', 'Christian Rock', 'Merengue', 'Salsa', 'Thrash Metal', 'Anime', 'JPop', 'Synthpop'
 ]
 
-
 class Id3Error(Exception):
-    """ An exception caused by id3reader properly handling a bad ID3 tag.
+    """
+    An exception caused by id3reader properly handling a bad ID3 tag.
     """
     pass
-
 
 class _Header:
     """ 
