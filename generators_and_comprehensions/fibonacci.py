@@ -42,8 +42,7 @@ def fibonacci3():
         yield current
         current, previous = current + previous, current
 
-fib = fibonacci()
-
+fib = fibonacci3()
 print(next(fib))
 print(next(fib))
 print(next(fib))
