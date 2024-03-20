@@ -549,23 +549,23 @@ class Reader:
         frame.bFileAlterPreserve = (frame.flags & 0x4000 != 0)
         frame.bReadOnly = (frame.flags & 0x2000 != 0)
         frame.bCompressed = (frame.flags & 0x0080 != 0)
+        
         if frame.bCompressed:
             frame.decompressedSize = self._get_integer(self._read_bytes(4, 'decompsize'))
             cb_data -= 4
-            # if _c: _coverage('compress')
+            
         frame.bEncrypted = (frame.flags & 0x0040 != 0)
         if frame.bEncrypted:
             frame.encryptionMethod = self._read_bytes(1, 'encrmethod')
             cb_data -= 1
-            # if _c: _coverage('encrypt')
+            
         frame.bInGroup = (frame.flags & 0x0020 != 0)
         if frame.bInGroup:
             frame.groupid = self._read_bytes(1, 'groupid')
             cb_data -= 1
-            # if _c: _coverage('groupid')
 
         frame.rawData = self._read_bytes(cb_data, 'rev3data')
-        # print("in _read_frame_rev3, frame is {}".format(frame))
+        print("in _read_frame_rev3, frame is {}".format(frame))
         return frame
 
     def _read_frame_rev4(self):
