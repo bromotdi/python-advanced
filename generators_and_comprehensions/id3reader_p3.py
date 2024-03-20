@@ -268,20 +268,24 @@ class Reader:
             unsync = 0
             i = 0
             while True:
-                # print("Checking for \xFF\x00 in {}".format(bytes_read))
+                print("Checking for \xFF\x00 in {}".format(bytes_read))
                 i = bytes_read.find(b'\xFF\x00', i)
                 if i == -1:
                     break
-                # if _t: _trace("unsync at %d" % (i+1))
-                # if _c: _coverage('unsyncbyte')
+                if _t: 
+                    _trace("unsync at %d" % (i+1))
+                if _c: 
+                    _coverage('unsyncbyte')
                 unsync += 1
+        
                 # This is a stuffed byte to remove
                 bytes_read = bytes_read[:i + 1] + bytes_read[i + 2:]
+                
                 # Have to read one more byte from the file to adjust
                 bytes_read += self.file.read(1)
                 self.bytesLeft -= 1
                 i += 1
-                # if _t: _trace("unsync'ed %d" % (unsync))
+                if _t: _trace("unsync'ed %d" % (unsync))
 
         # print("in _read_bytes, returning {}".format(bytes_read))
         return bytes_read
