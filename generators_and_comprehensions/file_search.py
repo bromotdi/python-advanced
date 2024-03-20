@@ -19,9 +19,9 @@ def find_albums(root, artist):
 def find_songs(albums):
     for album in albums:
         print(f"Album - {album[1]}")
-        for song in os.listdir(album[0]): # we want the path, not the name of the album
+        for song in os.listdir(album[0]): 
+            # we want the path, not the name of the album
             yield song
-
 
 album_list = find_albums("music", "Aerosmith")
 # if wanted to use pattern matching
