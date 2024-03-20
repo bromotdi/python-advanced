@@ -402,11 +402,13 @@ class Reader:
                 break
 
     def _interpret_flags(self):
-        """ Interpret ID3v2.x flags.
+        """ 
+        Interpret ID3v2.x flags.
         """
         if self.header.flags & 0x80:
             self.header.bUnsynchronized = True
-            # if _c: _coverage('unsynctag')
+            if _c: 
+                _coverage('unsynctag')
 
         if self.header.majorVersion == 2:
             if self.header.flags & 0x40:
