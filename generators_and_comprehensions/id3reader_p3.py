@@ -42,14 +42,14 @@ def _coverage(feat):
 
 
 def _safestr(s):
-    """ Get a good string for printing, that won't throw exceptions,
-        no matter what's in it.
+    """ 
+    Get a good string for printing, that won't throw exceptions,
+    no matter what's in it.
     """
     try:
         return s.encode(sys.getdefaultencoding())
     except UnicodeError:
         return '?: ' + repr(s)
-
 
 # Can I just say that I think the whole concept of genres is bogus,
 # since they are so subjective?  And the idea of letting someone else pick
@@ -95,9 +95,9 @@ class Id3Error(Exception):
 
 
 class _Header:
-    """ Represent the ID3 header in a tag.
+    """ 
+    Represent the ID3 header in a tag.
     """
-
     def __init__(self):
         self.majorVersion = 0
         self.revision = 0
@@ -112,9 +112,9 @@ class _Header:
 
 
 class _Frame:
-    """ Represent an ID3 frame in a tag.
+    """ 
+    Represent an ID3 frame in a tag.
     """
-
     def __init__(self):
         self.id = ''
         self.size = 0
