@@ -1,9 +1,10 @@
 import os
 import fnmatch
 
-
 def find_albums(root, artist):
-    ''' Prints tuple (filepath, albumname)'''
+    '''
+    Prints tuple (filepath, albumname)
+    '''
     for path, dir, files in os.walk(root):
         #caps_name = artist.upper()
         for artist in fnmatch.filter(dir, artist):
