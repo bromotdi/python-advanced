@@ -199,24 +199,19 @@ class _Frame:
             # case we need to find the second \x00 to know where
             # where we start for a comment.  In case we only find
             # one \x00, lets just start at the beginning for the value
-            
             s = str(self.rawData)
             pos = 0
             count = 0
-            
             while pos < len(s) and count < 2:
                 if ord(s[pos]) == 0:
                     count = count + 1
                 pos = pos + 1
-                
             if count < 2:
                 pos = 1
-
             if 0 < pos < len(s):
                 s = s[pos:]
                 if ord(s[-1]) == 0:
                     s = s[:-1]
-
             self.value = s
 
 class Reader:
@@ -224,7 +219,6 @@ class Reader:
     An ID3 reader.
     Create one on a file object, and then use getValue('TIT2') (for example) to pull values.
     """
-
     def __init__(self, music_file):
         """
         Create a reader from a file or filename. 
@@ -235,8 +229,8 @@ class Reader:
         self.allFrames = []
         self.bytesLeft = 0
         self.padbytes = ''
-
         should_close = False
+        
         # If self.file is a string of some sort, then open it to get a file.
         if isinstance(self.file, (type(''), type(u''))):
             self.file = open(self.file, 'rb')
@@ -248,10 +242,11 @@ class Reader:
             self.file.close()
 
     def _read_bytes(self, num, desc=''):
-        """ Read some bytes from the file.
-            This method implements the "unsynchronization" scheme,
-            where 0xFF bytes may have had 0x00 bytes stuffed after
-            them.  These zero bytes have to be removed transparently.
+        """ 
+        Read some bytes from the file.
+        This method implements the "unsynchronization" scheme,
+        where 0xFF bytes may have had 0x00 bytes stuffed after them.  
+        These zero bytes have to be removed transparently.
         """
         if _t: 
             _trace("ask %d (%s)" % (num,desc))
