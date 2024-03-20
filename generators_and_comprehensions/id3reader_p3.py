@@ -603,28 +603,28 @@ class Reader:
             if _c: 
                 _coverage('compress')
             pass
+            
         frame.bEncrypted = (frame.flags & 0x0004 != 0)
         if frame.bEncrypted:
             frame.encryptionMethod = self._read_bytes(1, 'encrmethod')
             cb_data -= 1
-            # if _c: _coverage('encrypt')
+        
         frame.bUnsynchronized = (frame.flags & 0x0002 != 0)
         if frame.bUnsynchronized:
-            # if _c: _coverage('unsyncframe')
             pass
+            
         if frame.flags & 0x0001:
             frame.datalen = self._get_sync_safe_int(self._read_bytes(4, 'datalen'))
             cb_data -= 4
-            # if _c: _coverage('datalenindic')
 
         frame.rawData = self._read_bytes(cb_data, 'rev3data')
-
         return frame
 
     def get_value(self, tag_id):
-        """ Return the value for an ID3 tag id, or for a
-            convenience label ('title', 'performer', ...),
-            or return None if there is no such value.
+        """ 
+        Return the value for an ID3 tag id, or for a
+        convenience label ('title', 'performer', ...),
+        or return None if there is no such value.
         """
         if tag_id in self.frames:
             if hasattr(self.frames[tag_id], 'value'):
