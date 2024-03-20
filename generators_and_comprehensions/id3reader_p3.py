@@ -134,11 +134,13 @@ class _Frame:
         return str(self.__dict__)
 
     def _interpret(self):
-        """ Examine self.rawData and create a self.value from it.
+        """
+        Examine self.rawData and create a self.value from it.
         """
         if len(self.rawData) == 0:
             # This is counter to the spec, but seems harmless enough.
-            # if _c: _coverage('zero data')
+            if _c: 
+                _coverage('zero data')
             return
 
         if self.bCompressed:
@@ -146,7 +148,7 @@ class _Frame:
             self.rawData = zlib.decompress(self.rawData)
 
         self.id = self.id.decode()  # no need to worry about the encoding here
-        # print("in _interpret, id is {}, id[0] is {}".format(self.id, self.id[0]))
+        print("in _interpret, id is {}, id[0] is {}".format(self.id, self.id[0]))
         if self.id[0] == 'T':
             # Text fields start with T
             # encoding = ord(self.rawData[0])
