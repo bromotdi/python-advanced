@@ -358,10 +358,8 @@ class Reader:
         if len(header) < 10:
             return
         hstuff = struct.unpack('!3sBBBBBBB', header)
-        # print("Found hstuff {}".format(hstuff))
+        print("Found hstuff {}".format(hstuff))
         if hstuff[0] != b"ID3":
-            # Doesn't look like an ID3v2 tag,
-            # Try reading an ID3v1 tag.
             self._read_id3v1()
             return
 
