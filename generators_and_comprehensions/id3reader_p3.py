@@ -29,15 +29,12 @@ _simpleDataMapping = {
 # Tracing
 _t = False
 
-
 def _trace(msg):
     print(msg)
-
 
 # Coverage
 _c = False
 _features = {}
-
 
 def _coverage(feat):
     # if _t: _trace('feature '+feat)
