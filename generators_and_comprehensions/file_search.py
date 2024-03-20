@@ -24,9 +24,10 @@ def find_songs(albums):
             yield song
 
 album_list = find_albums("music", "Aerosmith")
+print(album_list)
 # if wanted to use pattern matching
-#album_list = find_albums("music", "black*")
-#print(album_list)
+album_list = find_albums("music", "black*")
+print(album_list)
 songs_list = find_songs(album_list)
 
 for s in songs_list:
