@@ -508,10 +508,12 @@ class Reader:
         """
         if self.bytesLeft < 6:
             return None
+            
         f_id = self._read_bytes(3, 'rev2id')
         if len(f_id) < 3 or not self._is_valid_id(f_id):
             self._unread_bytes(len(f_id))
             return None
+            
         hstuff = struct.unpack('!BBB', self._read_bytes(3, 'rev2len'))
         frame = _Frame()
         frame.id = f_id
@@ -520,7 +522,8 @@ class Reader:
         return frame
 
     def _read_frame_rev3(self):
-        """ Read a frame for ID3v2.3: four-byte ids and lengths.
+        """
+        Read a frame for ID3v2.3: four-byte ids and lengths.
         """
         if self.bytesLeft < 10:
             return None
