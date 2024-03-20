@@ -170,10 +170,8 @@ class _Frame:
             # The value can actually be a list.
             if '\0' in value:
                 value = value.split('\0')
-                if _c: 
-                    _coverage('textlist')
             self.value = value
-            # print("Assigned value {}".format(self.value))
+            print("Assigned value {}".format(self.value))
         elif self.id[0] == 'W':
             # URL fields start with W
             print("in _interpret, self.rawData is {}".format(self.rawData))
@@ -191,9 +189,7 @@ class _Frame:
             if self.rawData[0] == 'z':
                 self.rawData = zlib.decompress(self.rawData[5:])
             else:
-                # if _c: _coverage('badcdm!')
                 raise Id3Error('Unknown CDM compression: {:02x}'.format(self.rawData[0]))
-                # @TODO: re-interpret the decompressed frame.
 
         elif self.id in _simpleDataMapping['comment']:
             # comment field
