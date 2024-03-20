@@ -19,7 +19,6 @@ for meal in menu:
 def spamless():
     return [meal for meal in menu if "spam" not in meal]
 
-# Using filter
 def not_spam(meal_list: list):
     return "spam" not in meal_list
 
