@@ -655,19 +655,20 @@ if __name__ == '__main__':
         # if _c: id3.dumpCoverage()
 
 # History:
-# 20040104: Created.
+# 20040104: Created
+
 # 20040105: Two bugs: didn't read v1 properly, and didn't like empty strings in values.
-#
+
 # 20040109: Properly reads v2.3 properly (4-byte lens, but not synchsafe)
 #           Handles unsynchronized tags properly.
-#
+
 # 20040110: Total length was wrong for unsynchronized tags.
 #           Treat input filename better so path module can be used.
 #           Frame ids are more closely scrutinized for validity.
 #           Errors are now thrown as our own exception.
 #           Pad bytes aren't retained any more.
 #           Frame.value is not set if there is no interpretation performed.
-#
+
 # 20040111: Tracing and code coverage more formalized.
 #           Exceptions are now all Id3Error.
 #           Zero-length data in frames is handled pleasantly.
@@ -677,20 +678,20 @@ if __name__ == '__main__':
 #           Frame flags are read and interpreted.
 #           W*** frames are interpreted.
 #           Multi-string frames set .value to a list of strings.
-#
+
 # 20040113: Strip all trailing zero bytes from text strings.
 #           If we opened the file, we should close the file.
-#
+
 # 20040205: Do a better job printing strings without throwing.
 #           Support genre information, even if it is stupid.
-#
+
 # 20040913: When dumping strings, be more robust when trying to print
 #               non-character data. Thanks to Duane Harkness for the fix.
-#
+
 # 20061230: Fix ommission of self. in a few places.
-#
+
 # 20070415: Extended headers in ID3v2.4 weren't skipped properly, throwing
 #               everything out of whack.
 #           Be more generous about finding album and performer names in the tag.
-#
+
 # 20170522: Python 3 conversion (hack, really).
