@@ -10,8 +10,6 @@ This code is in the public domain.
 
 __version__ = '2.00.20170522'  # History at the end of the file.
 
-# ID3 specs: http://www.id3.org/develop.html
-
 # These are the text encodings, indexed by the first byte of a text value.
 _encodings = ['iso8859-1', 'utf-16', 'utf-16be', 'utf-8']
 
