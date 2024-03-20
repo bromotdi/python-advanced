@@ -368,23 +368,18 @@ class Reader:
         self.header.revision = hstuff[2]
         self.header.flags = hstuff[3]
         self.header.size = self._get_sync_safe_int(hstuff[4:8])
-        # print("Header size is {}".format(self.header.size))
+        print("Header size is {}".format(self.header.size))
 
         self.bytesLeft = self.header.size
-
         self._readExtHeader = self._pass
 
         if self.header.majorVersion == 2:
-            # if _c: _coverage('id3v2.2.%d' % self.header.revision)
             self._readFrame = self._read_frame_rev2
         elif self.header.majorVersion == 3:
-            # if _c: _coverage('id3v2.3.%d' % self.header.revision)
             self._readFrame = self._read_frame_rev3
         elif self.header.majorVersion == 4:
-            # if _c: _coverage('id3v2.4.%d' % self.header.revision)
             self._readFrame = self._read_frame_rev4
         else:
-            # if _c: _coverage('badmajor!')
             raise Id3Error("Unsupported major version: {}".format(self.header.majorVersion))
 
         # Interpret the flags
