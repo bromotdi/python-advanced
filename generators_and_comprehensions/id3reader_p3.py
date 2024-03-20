@@ -285,9 +285,10 @@ class Reader:
                 bytes_read += self.file.read(1)
                 self.bytesLeft -= 1
                 i += 1
-                if _t: _trace("unsync'ed %d" % (unsync))
-
-        # print("in _read_bytes, returning {}".format(bytes_read))
+                if _t: 
+                    _trace("unsync'ed %d" % (unsync))
+                    
+        print("in _read_bytes, returning {}".format(bytes_read))
         return bytes_read
 
     def _unread_bytes(self, num):
