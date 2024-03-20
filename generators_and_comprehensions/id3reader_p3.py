@@ -461,10 +461,13 @@ class Reader:
         self.file.seek(-128, 2)
         tag = self.file.read(128)
         print("in _read_id3v1, tag is {}".format(tag))
+        
         if len(tag) != 128:
             return
+            
         if tag[0:3] != b'TAG':
             return
+            
         self.header = _Header()
         self.header.majorVersion = 1
         self.header.revision = 0
@@ -645,15 +648,18 @@ class Reader:
         print("Header:")
         print(self.header)
         print("Frames:")
+        
         for fr in self.allFrames:
             if len(fr.rawData) > 30:
                 fr.rawData = fr.rawData[:30]
         pprint.pprint(self.allFrames)
+        
         for fr in self.allFrames:
             if hasattr(fr, 'value'):
                 print('{}: {}'.format(fr.id, _safestr(fr.value)))
             else:
                 print('{}= {}'.format(fr.id, _safestr(fr.rawData)))
+                
         for label in _simpleDataMapping.keys():
             v = self.get_value(label)
             if v:
