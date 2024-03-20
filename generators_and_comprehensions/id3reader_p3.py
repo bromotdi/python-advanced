@@ -161,7 +161,8 @@ class _Frame:
                 value = self.rawData[1:].decode(_encodings[encoding])
                 print("decoded value {}".format(value))
             else:
-                # if _c: _coverage('bad encoding')
+                if _c: 
+                    _coverage('bad encoding')
                 value = self.rawData[1:]
             # Don't let trailing zero bytes fool you.
             if value:
@@ -169,7 +170,8 @@ class _Frame:
             # The value can actually be a list.
             if '\0' in value:
                 value = value.split('\0')
-                # if _c: _coverage('textlist')
+                if _c: 
+                    _coverage('textlist')
             self.value = value
             # print("Assigned value {}".format(self.value))
         elif self.id[0] == 'W':
