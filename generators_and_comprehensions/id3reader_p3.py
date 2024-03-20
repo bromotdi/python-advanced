@@ -490,19 +490,21 @@ class Reader:
     _validIdChars = b'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
     def _is_valid_id(self, id_bytes):
-        """ Determine if the id bytes make a valid ID3 id.
+        """ 
+        Determine if the id bytes make a valid ID3 id.
         """
-        # print("id_bytes is {}".format(id_bytes))
+        print("id_bytes is {}".format(id_bytes))
         for c in id_bytes:
             if c not in self._validIdChars:
-                # if _c: _coverage('bad id')
                 return False
-        # if _c: _coverage('id '+id)
+        if _c: 
+            _coverage('id '+id)
         return True
 
     def _read_frame_rev2(self):
-        """ Read a frame for ID3v2.2: three-byte ids and lengths.
-            spec: http://www.id3.org/id3v2-00.txt
+        """ 
+        Read a frame for ID3v2.2: three-byte ids and lengths.
+        Spec: http://www.id3.org/id3v2-00.txt
         """
         if self.bytesLeft < 6:
             return None
