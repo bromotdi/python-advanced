@@ -25,11 +25,12 @@ def find_songs(albums):
 
 album_list = find_albums("music", "Aerosmith")
 print(album_list)
+
 # if wanted to use pattern matching
 album_list = find_albums("music", "black*")
 print(album_list)
+
 songs_list = find_songs(album_list)
 
 for s in songs_list:
     print(f"\t\t{s}")
-
