@@ -568,14 +568,18 @@ class Reader:
         return frame
 
     def _read_frame_rev4(self):
-        """ Read a frame for ID3v2.4: four-byte ids and lengths.
+        """
+        Read a frame for ID3v2.4: four-byte ids and lengths.
         """
         if self.bytesLeft < 10:
             return None
+            
         f_id = self._read_bytes(4, 'rev4id')
+        
         if len(f_id) < 4 or not self._is_valid_id(f_id):
             self._unread_bytes(len(f_id))
             return None
+            
         hstuff = struct.unpack('!BBBBh', self._read_bytes(6, 'rev4head'))
         frame = _Frame()
         frame.id = f_id
@@ -586,14 +590,17 @@ class Reader:
         frame.bFileAlterPreserve = (frame.flags & 0x2000 != 0)
         frame.bReadOnly = (frame.flags & 0x1000 != 0)
         frame.bInGroup = (frame.flags & 0x0040 != 0)
+        
         if frame.bInGroup:
             frame.groupid = self._read_bytes(1, 'groupid')
             cb_data -= 1
-            # if _c: _coverage('groupid')
+            if _c: 
+                _coverage('groupid')
 
         frame.bCompressed = (frame.flags & 0x0008 != 0)
         if frame.bCompressed:
-            # if _c: _coverage('compress')
+            if _c: 
+                _coverage('compress')
             pass
         frame.bEncrypted = (frame.flags & 0x0004 != 0)
         if frame.bEncrypted:
