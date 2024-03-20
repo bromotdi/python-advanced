@@ -2,9 +2,10 @@ import struct
 import sys
 import zlib
 
-""" Read ID3 tags from a file.
-    Ned Batchelder, http://nedbatchelder.com/code/modules/id3reader.html
-    This code is in the public domain.
+""" 
+Read ID3 tags from a file.
+Ned Batchelder, http://nedbatchelder.com/code/modules/id3reader.html
+This code is in the public domain.
 """
 
 __version__ = '2.00.20170522'  # History at the end of the file.
