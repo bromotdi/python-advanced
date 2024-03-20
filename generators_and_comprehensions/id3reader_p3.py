@@ -418,18 +418,21 @@ class Reader:
 
         if self.header.majorVersion >= 3:
             if self.header.flags & 0x40:
-                # if _c: _coverage('extheader')
+                if _c: 
+                    _coverage('extheader')
                 if self.header.majorVersion == 3:
                     self._readExtHeader = self._read_ext_header_rev3
                 else:
                     self._readExtHeader = self._read_ext_header_rev4
             if self.header.flags & 0x20:
-                # if _c: _coverage('experimental')
+                if _c: 
+                    _coverage('experimental')
                 self.header.bExperimental = True
 
         if self.header.majorVersion >= 4:
             if self.header.flags & 0x10:
-                # if _c: _coverage('footer')
+                if _c: 
+                    _coverage('footer')
                 self.header.bFooter = True
 
     def _read_ext_header_rev3(self):
