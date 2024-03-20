@@ -528,18 +528,22 @@ class Reader:
         if self.bytesLeft < 10:
             return None
         f_id = self._read_bytes(4, 'rev3id')
-        # print("in _read_frame_rev3, f_id is {}".format(f_id))
+        print("in _read_frame_rev3, f_id is {}".format(f_id))
+        
         if len(f_id) < 4 or not self._is_valid_id(f_id):
             self._unread_bytes(len(f_id))
             return None
         hstuff = struct.unpack('!BBBBh', self._read_bytes(6, 'rev3head'))
-        # print("in _read_frame_rev3, hstuff is {}".format(hstuff))
+        print("in _read_frame_rev3, hstuff is {}".format(hstuff))
+        
         frame = _Frame()
         frame.id = f_id
         frame.size = self._get_integer(hstuff[0:4])
         cb_data = frame.size
         frame.flags = hstuff[4]
-        # if _t: _trace('flags = %x' % frame.flags)
+        
+        if _t: 
+            _trace('flags = %x' % frame.flags)
         frame.bTagAlterPreserve = (frame.flags & 0x8000 != 0)
         frame.bFileAlterPreserve = (frame.flags & 0x4000 != 0)
         frame.bReadOnly = (frame.flags & 0x2000 != 0)
