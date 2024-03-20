@@ -49,6 +49,5 @@ print(next(fib))
 print(next(fib))
 print(next(fib))
 
-
 for i in range(10):
     print(next(fib))
