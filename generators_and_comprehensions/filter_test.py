@@ -16,13 +16,9 @@ for meal in menu:
     if "spam" not in meal:
         print(meal)
 
-print("-" * 40)
-
 def spamless():
     meals = [meal for meal in menu if "spam" not in meal]
     return meals
-
-print("-" * 40)
 
 # Using filter
 def not_spam(meal_list: list):
