@@ -384,21 +384,21 @@ class Reader:
 
         # Interpret the flags
         self._interpret_flags()
-
         # Read any extended header
         self._readExtHeader()
 
         # Read the frames
         while self.bytesLeft > 0:
             frame = self._readFrame()
-            # print("in _read_id3, frame is {}".format(frame))
+            print("in _read_id3, frame is {}".format(frame))
             if frame:
-                # print("in _read_id3, interpreting frame")
+                print("in _read_id3, interpreting frame")
                 frame._interpret()
                 self.frames[frame.id] = frame
                 self.allFrames.append(frame)
             else:
-                # if _c: _coverage('padding')
+                if _c: 
+                    _coverage('padding')
                 break
 
     def _interpret_flags(self):
