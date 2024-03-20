@@ -219,15 +219,16 @@ class _Frame:
 
             self.value = s
 
-
 class Reader:
-    """ An ID3 reader.
-        Create one on a file object, and then use getValue('TIT2') (for example)
-        to pull values.
+    """ 
+    An ID3 reader.
+    Create one on a file object, and then use getValue('TIT2') (for example) to pull values.
     """
 
     def __init__(self, music_file):
-        """ Create a reader from a file or filename. """
+        """
+        Create a reader from a file or filename. 
+        """
         self.file = music_file
         self.header = None
         self.frames = {}
