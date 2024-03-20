@@ -651,16 +651,17 @@ class Reader:
         for feat in feats:
             print("Feature {:12}: {}".format(feat, _features[feat]))
 
-
 if __name__ == '__main__':
     if len(sys.argv) < 2 or '-?' in sys.argv:
         print("Give me a filename")
     else:
         id3 = Reader(sys.argv[1])
         id3.dump()
-        # if _c: id3.dumpCoverage()
+        if _c: 
+            id3.dumpCoverage()
 
 # History:
+
 # 20040104: Created
 
 # 20040105: Two bugs: didn't read v1 properly, and didn't like empty strings in values.
@@ -691,13 +692,12 @@ if __name__ == '__main__':
 # 20040205: Do a better job printing strings without throwing.
 #           Support genre information, even if it is stupid.
 
-# 20040913: When dumping strings, be more robust when trying to print
-#               non-character data. Thanks to Duane Harkness for the fix.
+# 20040913: When dumping strings, be more robust when trying to print non-character data. 
+            Thanks to Duane Harkness for the fix.
 
 # 20061230: Fix ommission of self. in a few places.
 
-# 20070415: Extended headers in ID3v2.4 weren't skipped properly, throwing
-#               everything out of whack.
+# 20070415: Extended headers in ID3v2.4 weren't skipped properly, throwing everything out of whack.
 #           Be more generous about finding album and performer names in the tag.
 
 # 20170522: Python 3 conversion (hack, really).
