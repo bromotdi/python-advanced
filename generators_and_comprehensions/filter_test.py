@@ -17,16 +17,14 @@ for meal in menu:
         print(meal)
 
 def spamless():
-    meals = [meal for meal in menu if "spam" not in meal]
-    return meals
+    return [meal for meal in menu if "spam" not in meal]
 
 # Using filter
 def not_spam(meal_list: list):
     return "spam" not in meal_list
 
 def spamless_filter():
-    spamless_meals = list(filter(not_spam, menu))
-    return spamless_meals
+    return list(filter(not_spam, menu))
 
 if __name__ == "__main__":
     print(timeit.timeit(spamless, number=10000))
