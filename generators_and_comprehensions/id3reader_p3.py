@@ -172,6 +172,7 @@ class _Frame:
                 value = value.split('\0')
             self.value = value
             print("Assigned value {}".format(self.value))
+            
         elif self.id[0] == 'W':
             # URL fields start with W
             print("in _interpret, self.rawData is {}".format(self.rawData))
@@ -184,6 +185,7 @@ class _Frame:
                     self.value = self.value.split('\0')
                 else:
                     self.value = self.value.split(b'\0')
+                    
         elif self.id == 'CDM':
             # ID3v2.2.1 Compressed Data Metaframe
             if self.rawData[0] == 'z':
@@ -192,22 +194,21 @@ class _Frame:
                 raise Id3Error('Unknown CDM compression: {:02x}'.format(self.rawData[0]))
 
         elif self.id in _simpleDataMapping['comment']:
-            # comment field
-
             # In limited testing a typical comment looks like
             # '\x00XXXID3v1 Comment\x00comment test' so in this
             # case we need to find the second \x00 to know where
             # where we start for a comment.  In case we only find
-            # one \x00, lets just start at the beginning for the
-            # value
+            # one \x00, lets just start at the beginning for the value
+            
             s = str(self.rawData)
-
             pos = 0
             count = 0
+            
             while pos < len(s) and count < 2:
                 if ord(s[pos]) == 0:
                     count = count + 1
                 pos = pos + 1
+                
             if count < 2:
                 pos = 1
 
