@@ -2,11 +2,9 @@ a = 2
 b = 3
 print(f"a is {a}, b is {b}")
 
-# This works because rhs is evaluuated first & asisgned to other side
 a, b = b, a
 print(f"a is {a}, b is {b}")
 
-# my attempt at a fib gen using yield
 # def fibonacci(n):
 #     now, last = 1, 0
 #     run = 1
