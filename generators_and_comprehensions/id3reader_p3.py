@@ -258,8 +258,10 @@ class Reader:
         self.bytesLeft -= num
 
         if len(bytes_read) < num:
-            # if _t: _trace("short read with %d left, %d total" % (self.bytesLeft, self.header.size))
-            # if _c: _coverage('short!')
+            if _t: 
+                _trace("short read with %d left, %d total" % (self.bytesLeft, self.header.size))
+            if _c: 
+                _coverage('short!')
             raise Id3Error('Short read {}: {} {}'.format(desc, len(bytes_read), num))
 
         if self.header.bUnsynchronized:
