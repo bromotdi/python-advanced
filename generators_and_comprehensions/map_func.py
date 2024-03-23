@@ -6,17 +6,13 @@ def comp_caps():
     capitals = [char.upper() for char in text]
     return capitals
 
-
 def comp_words():
     words = [word.upper() for word in text.split(" ")]
     return words
 
+print(capitals)
+print(words)
 
-#print(capitals)
-#print(words)
-
-# can use map for the same thing
-print(80*'*')
 def map_caps():
     map_capitals = list(map(str.upper, text))
     return map_capitals
