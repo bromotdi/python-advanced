@@ -28,7 +28,43 @@ if __name__ == "__main__":
     print(timeit.timeit("x = factorial(100)", setup="from __main__ import factorial", number=10000))
 
 
+run_1 = """\
+fact(100)
+"""
 
+run_2 = """\
+factorial(100)
+"""
 
+result = []
+for func in [run_1, run_2]:
+    result.append(timeit.timeit(func, globals=globals(), number=10000))
+print(result)
 
+# Print the other methods
+test1 = """\
+def fact(n):
+    result = 1
+    if n > 1:
+        for f in range(2, n + 1):
+            result *= f
+    return result
 
+x = fact(100)
+"""
+
+test2="""\
+def factorial(n):
+    # n! can also be defined as n * (n-1)!
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+y = factorial(100)
+"""
+
+score = []
+for test in [test1, test2]:
+    score.append(timeit.timeit(test, number=10000))
+print(score)
