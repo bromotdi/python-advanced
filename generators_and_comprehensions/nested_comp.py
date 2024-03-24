@@ -3,13 +3,14 @@ toppings = ["cheese", "egg", "beans", "spam"]
 
 meals = [(burger, topping) for burger in burgers for topping in toppings]
 print(meals)
+
 # if want to just print instead of storing in a list
 for meal in [(burger, topping) for burger in burgers for topping in toppings]:
     print(meal)
 
-# for burger in burgers:
-#     for topping in toppings:
-#         print(burger,topping)
+for burger in burgers:
+    for topping in toppings:
+        print(burger,topping)
 
 print(80*"*")
 for nested_meal in [[(burger, topping) for burger in burgers] for topping in toppings]:
