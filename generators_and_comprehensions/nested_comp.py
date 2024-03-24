@@ -18,15 +18,11 @@ for nested_meal in [[(burger, topping) for burger in burgers] for topping in top
 val = [[(burger, topping) for burger in burgers] for topping in toppings]
 print(val)
 
-
-
-
-
-
 # Can loop in all exact same way as for loops, so can nest when inheriting but also without
-#XX = [("a", "b","c","d"), (1,2), ("e"), (1.0, "dove")]
-# for t in XX:
-#     for it in t:
-#         print(it)
-#val = [print(t, it, topping ) for t in XX for it in t for topping in toppings]
-# print(val)
+XX = [("a", "b","c","d"), (1,2), ("e"), (1.0, "dove")]
+for t in XX:
+    for it in t:
+        print(it)
+        
+val = [print(t, it, topping ) for t in XX for it in t for topping in toppings]
+print(val)
