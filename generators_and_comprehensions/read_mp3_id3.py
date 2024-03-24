@@ -2,6 +2,8 @@ import os
 import fnmatch as fn
 import id3reader_p3 as id3
 
+unread = []
+
 # return filename of mp3 files
 # start is arg + extension as second param
 def find_music(root, ext = "emp3"):
@@ -11,7 +13,6 @@ def find_music(root, ext = "emp3"):
             absolute_path = os.path.abspath(path)
             yield os.path.join(absolute_path, file)
 
-unread = []
 for f in find_music('music', 'emp3'):
     try:
         # first few of these pass because fle is big enough that reading tag succeeds
