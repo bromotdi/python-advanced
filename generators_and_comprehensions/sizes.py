@@ -9,7 +9,6 @@ def my_range(n: int):
 big_range = my_range(100)
 print(f"big_range is {sys.getsizeof(big_range)} bytes")
 
-# create a list containing all the values in big_range
 big_list = []
 for val in big_range:
     big_list.append(val)
