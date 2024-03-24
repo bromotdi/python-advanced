@@ -14,7 +14,6 @@ exits = {0: {"Q": 0},
          4: {"N": 1, "W": 2, "Q": 0},
          5: {"W": 2, "S": 1, "Q": 0}}
 
-
 def nested_loop():
     result = []
     for loc in sorted(locations):
@@ -25,7 +24,6 @@ def nested_loop():
         result.append(exits_to_destination)
     return result
 
-
 def loop_comp():
     result = []
     for loc in sorted(locations):
@@ -33,16 +31,14 @@ def loop_comp():
         result.append(exits_to_destination)
     return result
 
-
 def nested_comp():
     exits_to_destination = [[(ex, locations[ex]) for ex in exits if loc in exits[ex].values()] for loc in sorted(locations)]
     return exits_to_destination
 
-
-# can time the functions like this as long as they are funcs without args
 print(nested_loop())
 print(loop_comp())
 print(nested_comp())
+
 result = []
 for string in [nested_loop, loop_comp, nested_comp]:
     result.append(timeit.timeit(string, setup, number=1000))
