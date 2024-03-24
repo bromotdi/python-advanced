@@ -12,11 +12,9 @@ for burger in burgers:
     for topping in toppings:
         print(burger,topping)
 
-print(80*"*")
 for nested_meal in [[(burger, topping) for burger in burgers] for topping in toppings]:
     print(nested_meal)
 
-print(80*"*")
 val = [[(burger, topping) for burger in burgers] for topping in toppings]
 print(val)
 
