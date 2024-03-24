@@ -24,6 +24,7 @@ locations = {0: "You are sitting in front of a computer learning Python",
              3: "You are inside a building, a well house for a small stream",
              4: "You are in a valley beside a stream",
              5: "You are in the forest"}
+
 exits = {0: {"Q": 0},
          1: {"W": 2, "E": 3, "N": 5, "S": 4, "Q": 0},
          2: {"N": 5, "Q": 0},
@@ -40,9 +41,6 @@ def nested_loop():
             if loc in exits[ex].values():
                 exits_to_destination.append((ex, locations[ex]))
         result.append(exits_to_destination)
-    # show diff with comprehension and generator when iterating on generator
-    # for x in result:
-    #     pass
     return result
 
 
