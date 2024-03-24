@@ -6,8 +6,8 @@ def oddnumbers():
         n += 2
 
 odds = oddnumbers()
-#for i in range(100):
-#    print(next(odds))
+for i in range(100):
+   print(next(odds))
 
 # my attempt
 # def pi_series():
