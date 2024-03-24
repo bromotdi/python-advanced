@@ -9,6 +9,7 @@ locations = {0: "You are sitting in front of a computer learning Python",
              3: "You are inside a building, a well house for a small stream",
              4: "You are in a valley beside a stream",
              5: "You are in the forest"}
+             
 exits = {0: {"Q": 0},
          1: {"W": 2, "E": 3, "N": 5, "S": 4, "Q": 0},
          2: {"N": 5, "Q": 0},
@@ -49,16 +50,11 @@ def loop_comp():
     for loc in sorted(locations):
         exits_to_destination = [(ex, locations[ex]) for ex in exits if loc in exits[ex].values()]
         result.append(exits_to_destination)
-    # for x in result:
-    #     pass
     return result
 
 
 def nested_comp():
-    exits_to_destination = [[(ex, locations[ex]) for ex in exits if loc in exits[ex].values()]
-                            for loc in sorted(locations)]
-    # for x in exits_to_destination:
-    #     pass
+    exits_to_destination = [[(ex, locations[ex]) for ex in exits if loc in exits[ex].values()] for loc in sorted(locations)]
     return exits_to_destination
 
 
