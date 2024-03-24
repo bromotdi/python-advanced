@@ -9,4 +9,3 @@ for path, dir, files in os.walk(root, topdown=True):
         for f in files:
             song_details = f[:-5].split(' - ')
             print(song_details)
-        print('*' * 40)
