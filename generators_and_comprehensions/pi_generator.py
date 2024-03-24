@@ -22,8 +22,7 @@ def pi_series():
         start += val
         yield start
 
-# his effort
-def pi_series():
+def pi_series2():
     odds = oddnumbers()
     approx = 0
     while True:
@@ -31,8 +30,6 @@ def pi_series():
         yield approx
         approx -= (4 / next(odds))
         yield approx
-
-
 
 pi = pi_series()
 
