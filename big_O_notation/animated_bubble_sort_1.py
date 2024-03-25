@@ -1,6 +1,5 @@
 import colorama
 
-# Don't un on intelliJ, it comes out weid. Run from a virtual env on python cmd line
 CLEAR_SCREEN = '\u001b[2J'
 START_OF_LINE = '\u001b[1G'
 CLEAR_LINE = f'{START_OF_LINE}\u001b[0K'
@@ -23,7 +22,9 @@ def format_data(data, position=None):
     return result
 
 def bubble_sort(data: list) -> None:
-    """Sorts a list in place."""
+    """
+    Sorts a list in place.
+    """
     n = len(data)
     comparison_count = 0
     for i in range(n - 1):
@@ -40,7 +41,6 @@ def bubble_sort(data: list) -> None:
                 input(f"{PREVIOUS_LINE}")
             print(f"{CLEAR_LINE}j = {j}, {format_data(data, j)}", end="")
             input(f"{PREVIOUS_LINE}")
-
         print(f"End of pass {i}.  `data` is now {format_data(data)}")
     print(f"comparison_count is {comparison_count}")
 
@@ -48,9 +48,8 @@ def bubble_sort(data: list) -> None:
 colorama.init()
 
 numbers = [3, 2, 4, 1, 5, 7, 6]
-# numbers = [7, 6, 5, 4, 3, 2, 1]
-
 print(f"{CLEAR_SCREEN}{HIDE_CURSOR}Sorting {format_data(numbers)}")
+
 bubble_sort(numbers)
 print(f"The sorted data is {format_data(numbers)}")
 
