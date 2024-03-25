@@ -1,10 +1,6 @@
-# naive implementation
 def bubble_sort(data: list) -> None:
-    """Sorts a list in place"""
     n = len(data)
     comparison_count = 0
-
-    #compare all the way up til youre comparing penultimate thing to last thing (n-1 comparisons to be made)
     for i in range(n-1):
         for j in range(n-1):
             comparison_count += 1
