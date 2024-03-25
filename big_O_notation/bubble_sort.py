@@ -25,7 +25,6 @@ def bubble_sort_opt_more(data: list) -> None:
     comparison_count = 0
     for i in range(n-1):
         swapped = False
-        # reduce the amount of times it goes around, no more pointless comparisons
         for j in range(n-1-i):
             comparison_count += 1
             if data[j] > data[j+1]:
@@ -33,13 +32,8 @@ def bubble_sort_opt_more(data: list) -> None:
                 swapped = True
         print(f"End of pass {i}. `data` is now {data}")
         if not swapped:
-            # the last pass had no swaps, so early exit as data is now sorted
             break
-            # could while not swapped: version of loop using while instead of for loop
     print(f"comparison_count is {comparison_count}")
-
-# best worst and average case for algo
-# worst case is the data in reverse order, so everything must be sorted backward
 
 # best case - already sorted
 #numbers = [1, 2, 3, 4, 5, 6, 7] # when running this we're making n-1 comparisons, best case
