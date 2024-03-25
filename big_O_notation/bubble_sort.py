@@ -9,20 +9,16 @@ def bubble_sort(data: list) -> None:
         print(f"End of pass {i}. `data` is now {data}")
     print(f"comparison_count is {comparison_count}")
 
-
 def bubble_sort_opt(data: list) -> None:
-    """Sorts a list in place"""
     n = len(data)
     comparison_count = 0
     for i in range(n-1):
-        # reduce the amount of times it goes around, no more pointless comparisons
         for j in range(n-1-i):
             comparison_count += 1
             if data[j] > data[j+1]:
                 data[j], data[j + 1] = data[j +1], data[j]
         print(f"End of pass {i}. `data` is now {data}")
     print(f"comparison_count is {comparison_count}")
-
 
 def bubble_sort_opt_more(data: list) -> None:
     """Sorts a list in place"""
