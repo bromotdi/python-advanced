@@ -44,7 +44,6 @@ def bubble_sort(data: list) -> None:
         print(f"End of pass {i}.  `data` is now {format_data(data)}")
     print(f"comparison_count is {comparison_count}")
 
-
 colorama.init()
 
 numbers = [3, 2, 4, 1, 5, 7, 6]
