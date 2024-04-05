@@ -2,6 +2,7 @@ from data import people, basic_plants_list, plants_list, plants_dict
 
 # writing an email and choose whos getting the email from contacts email
 # Check everyone has an email
+
 if all([person[1] for person in people]):
     print("Sending email")
 else:
