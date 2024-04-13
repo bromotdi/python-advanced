@@ -8,9 +8,6 @@
 # The forest can be reached from the road, and the hill; so those should be the descriptions that appear in your list.
 # Test your program with different destinations (such as 1 for the road) to make sure it works.
 
-# Once it's working, modify the program so that the comprehension returns a list of tuples.
-# Each tuple consists of the location number and the description.
-
 # Finally, wrap your comprehension in a for loop, and print the lists of all 
 # the locations that lead to each of the other locations in turn.
 # In other words, use a for loop to run the comprehension for each of the keys in the locations dictionary.
